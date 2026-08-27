@@ -1,0 +1,19 @@
+{
+  "2026": [
+    { "date": "2026-02-05", "title": "Kashmir Solidarity Day", "categoryId": "public-holiday", "categoryLabel": "Public Holiday" },
+    { "date": "2026-03-20", "title": "Eid ul-Fitr (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-03-21", "title": "Eid ul-Fitr Holiday (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-03-22", "title": "Eid ul-Fitr Holiday (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-03-23", "title": "Pakistan Day", "categoryId": "public-holiday", "categoryLabel": "Public Holiday" },
+    { "date": "2026-05-01", "title": "Labour Day", "categoryId": "public-holiday", "categoryLabel": "Public Holiday" },
+    { "date": "2026-05-27", "title": "Eid ul-Adha (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-05-28", "title": "Eid ul-Adha Holiday (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-05-29", "title": "Eid ul-Adha Holiday (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-06-25", "title": "Ashura (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-06-26", "title": "Ashura Holiday (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-08-14", "title": "Independence Day", "categoryId": "public-holiday", "categoryLabel": "Public Holiday" },
+    { "date": "2026-08-26", "title": "Eid Milad-un-Nabi (expected)", "categoryId": "eid-religious-holiday", "categoryLabel": "Eid / Religious Holiday" },
+    { "date": "2026-11-09", "title": "Iqbal Day", "categoryId": "important-day", "categoryLabel": "Important Day" },
+    { "date": "2026-12-25", "title": "Quaid-e-Azam Day / Christmas", "categoryId": "public-holiday", "categoryLabel": "Public Holiday" }
+  ]
+}

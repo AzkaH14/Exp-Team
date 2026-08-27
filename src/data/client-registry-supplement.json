@@ -1,0 +1,892 @@
+{
+  "version": 1,
+  "description": "Aliases and status overrides merged on top of Google Sheet sacred registry",
+  "byBenefactor": {
+    "Natasha/Noor Noman": {
+      "aliases": [
+        "Noor Natasha",
+        "NoorNatasha"
+      ]
+    },
+    "Omar Biabani": {
+      "aliases": [
+        "OmarBiabani"
+      ]
+    },
+    "Azhar Biabani": {
+      "aliases": [
+        "Dr. Azhar Biabani",
+        "AzharBiabani",
+        "Mohsyn X Azhar Biabani"
+      ]
+    },
+    "Nisar Akbar": {
+      "aliases": [
+        "A Nisar Akbar"
+      ]
+    },
+    "Beenish Tariq": {
+      "aliases": [
+        "Malik Azfar",
+        "Beenish Tariq/ Malik Azfar"
+      ]
+    },
+    "Dr Faisal Khan": {
+      "aliases": [
+        "Dr. Faisal Khan"
+      ]
+    },
+    "Tarim Wasim": {
+      "canonicalBenefactor": "Tarim Wasim",
+      "aliases": [
+        "Faisal POC",
+        "Tarim/ Faisal (POC)",
+        "Tarim/Faisal (POC)",
+        "TarimWasim",
+        "Faisal Wasim"
+      ],
+      "beneficiary": "Cdre. Wasim Ahmad / Shahnaz Wasim (Shehnaz)",
+      "city": "Islamabad"
+    },
+    "Tarim/ Faisal (POC)": {
+      "canonicalBenefactor": "Tarim Wasim",
+      "aliases": [
+        "Tarim Wasim",
+        "Faisal POC",
+        "Tarim/Faisal (POC)",
+        "TarimWasim",
+        "Faisal Wasim"
+      ],
+      "beneficiary": "Cdre. Wasim Ahmad / Shahnaz Wasim (Shehnaz)",
+      "city": "Islamabad"
+    },
+    "Soban Jalil": {
+      "aliases": [
+        "Sobhan Jalil"
+      ],
+      "status": "pause"
+    },
+    "Mehreen Tahir": {
+      "aliases": [
+        "Syeda Mehreen Tahir"
+      ]
+    },
+    "Ambassador Ahmed Farooq": {
+      "aliases": [
+        "Ambassador Ahmad Farooq"
+      ],
+      "status": "gratis"
+    },
+    "Syed Safee Ullah Shah": {
+      "aliases": [
+        "Syed Safeeullah Shah",
+        "SyedSafeeullah Shah"
+      ]
+    },
+    "Shehryar Salam": {
+      "aliases": [
+        "Syed Shehryar Salam"
+      ]
+    },
+    "Shoaib Rana Sadiq": {
+      "aliases": [
+        "Shoaib Sadiq",
+        "Shoaib   Sadiq",
+        "Rana Shoaib",
+        "Shoaib Rana"
+      ]
+    },
+    "Hina Guzmair": {
+      "aliases": [
+        "Hina Guezmir",
+        "HinaGuezmir"
+      ]
+    },
+    "Kalsoom Saleem": {
+      "aliases": [
+        "Mahrukh"
+      ]
+    },
+    "Azeem Waqar": {
+      "aliases": [
+        "Jamal Waqar"
+      ]
+    },
+    "Affan Ahmed": {
+      "aliases": [
+        "Affan Khan",
+        "AffanKhan"
+      ]
+    },
+    "Fatima Naeem": {
+      "aliases": [
+        "Fatima  Naeem"
+      ]
+    },
+    "Mujtaba Mahmood": {
+      "status": "pause",
+      "aliases": [
+        "MujtabaRana",
+        "Mujtaba Rana",
+        "Mujtaba mehmood",
+        "Mujtaba Mehmood"
+      ]
+    },
+    "Mohammad Salman Khan": {
+      "canonicalBenefactor": "Mohammad Salman Khan",
+      "aliases": [
+        "Mohammed Salman",
+        "Muhammad Salman Khan",
+        "Mohammad Salman Khan (Deactivated)",
+        "Mohsyn x Mohammad Salman Khan",
+        "MohammadS Khan",
+        "Mohammad S Khan"
+      ],
+      "beneficiary": "Saleem Akhtar / Shahnaz Saleem",
+      "city": "Lahore"
+    },
+    "Mohammed Salman": {
+      "canonicalBenefactor": "Mohammad Salman Khan",
+      "aliases": [
+        "Muhammad Salman Khan",
+        "Mohammad Salman Khan (Deactivated)",
+        "Mohsyn x Mohammad Salman Khan"
+      ],
+      "beneficiary": "Saleem Akhtar / Shahnaz Saleem",
+      "city": "Lahore"
+    },
+    "Syed Shazib Sarwar": {
+      "aliases": [
+        "Syed Shazib Ali Sarwar"
+      ],
+      "status": "cancelled"
+    },
+    "Saima Amin": {
+      "aliases": [
+        "SaimaAmin"
+      ],
+      "status": "cancelled"
+    },
+    "Abdul Rehman Nazar": {
+      "status": "cancelled"
+    },
+    "Salman Hamid": {
+      "aliases": [
+        "Salman Hameed",
+        "Mohsyn X Salman Hamid"
+      ]
+    },
+    "Saqib Javed": {
+      "status": "gratis",
+      "aliases": [
+        "Saqib javed"
+      ]
+    },
+    "Syed Faraz Ali": {
+      "aliases": [
+        "SyedFaraz Ali"
+      ],
+      "status": "cancelled"
+    },
+    "Syed Muddassir Ghazanffar": {
+      "aliases": [
+        "Syed Muddassir Ghazanfar",
+        "Mohsyn x Mudassir/Shafaq",
+        "Mudassir",
+        "Shafaq"
+      ]
+    },
+    "Mohammed Azhar Ratnani": {
+      "aliases": [
+        "Mohammad Azhar Ratnani",
+        "Mohammad Azher Ratnani",
+        "MohammadAzher Ratnani"
+      ]
+    },
+    "Shamaila Siddiqui": {
+      "aliases": [
+        "ShamailaSiddiqi",
+        "Syed Farhan Zafar",
+        "SyedFarhan Zafar"
+      ]
+    },
+    "Syeda Zehra Ali": {
+      "aliases": [
+        "Bilal",
+        "Syeda Zehra Ali",
+        "SyedaZehra Ali"
+      ]
+    },
+    "Mehpara Hunzai": {
+      "aliases": [
+        "Mehpara (Para) Hunzai"
+      ]
+    },
+    "Osama Ali": {
+      "aliases": [
+        "Umaira Ali"
+      ]
+    },
+    "Umair Y Khan": {
+      "aliases": [
+        "Umair Yar Khan"
+      ]
+    },
+    "Syed Masood": {
+      "aliases": [
+        "Syed Masood Ahmed"
+      ]
+    },
+    "Wajiha Khan": {
+      "status": "pause"
+    },
+    "Qurratulain Chundigar": {
+      "aliases": [
+        "Qurratulain Chundriger"
+      ]
+    },
+    "Saima Jamshed": {
+      "aliases": [
+        "Samreen Jamshed"
+      ]
+    },
+    "Saad Ali Khan": {
+      "aliases": [
+        "SaadKhan"
+      ]
+    },
+    "Harris Mateen": {
+      "aliases": [
+        "Harris Matin",
+        "HarrisMatin"
+      ],
+      "status": "cancelled"
+    },
+    "Harris Matin": {
+      "status": "cancelled"
+    },
+    "Faheem Yousaf": {
+      "aliases": [
+        "Faheem Yousuf",
+        "FaheemYousuf"
+      ]
+    },
+    "Natasha Kazmi": {
+      "aliases": [
+        "NatashaKazmi"
+      ]
+    },
+    "Ensherah Khan": {
+      "aliases": [
+        "Ghazi Khan",
+        "GhaziKhan",
+        "Ghazi",
+        "Mohsyn X Ghazi Khan",
+        "Ghazi Khan/Ensherah",
+        "Ensherah/ Ghazi Khan",
+        "Ensherah / Ghazi Khan"
+      ],
+      "beneficiary": "Masooda Sultana / Gul e Naz Tahir"
+    },
+    "Neha Mashhood Temuri": {
+      "aliases": [
+        "Neha Temuri"
+      ],
+      "status": "pause"
+    },
+    "Omar A Ali": {
+      "aliases": [
+        "Omar Ali",
+        "Omar A Ali"
+      ],
+      "status": "pause"
+    },
+    "Rabia Rauf": {
+      "aliases": [
+        "Rabia Irfan Rauf"
+      ],
+      "city": "Gujranwala",
+      "engagementCities": [
+        "Lahore"
+      ]
+    },
+    "Muhammad Umar Habib": {
+      "aliases": [
+        "Muhammad Umar",
+        "Umar Habib"
+      ],
+      "city": "Lodhran",
+      "engagementCities": [
+        "Lahore"
+      ]
+    },
+    "Navaid Razzaq": {
+      "aliases": [
+        "NavaidRazzaq",
+        "Nawaid Razzaq",
+        "Navaid Razza"
+      ],
+      "city": "Faisalabad",
+      "engagementCities": [
+        "Lahore"
+      ],
+      "beneficiary": "TBC"
+    },
+    "Muhammad Ahsan Iqbal": {
+      "aliases": [
+        "Ahsan Iqbal",
+        "Ahsan iqbal",
+        "Muhammad Ahsan"
+      ]
+    },
+    "Irfan Haqqi": {
+      "beneficiary": "Tanzim Ul Haq Haqqi / Yasmin Haqqi"
+    },
+    "Khurram Zia": {
+      "aliases": [
+        "Kiran Fatima",
+        "KiranFatima"
+      ],
+      "beneficiary": "Kiran Fatima (sister, Lahore) · property care (Islamabad)",
+      "engagementCities": [
+        "Islamabad",
+        "Lahore"
+      ]
+    },
+    "Ayesha Faheem": {
+      "beneficiary": "Abdul Aziz / Khadija Aziz",
+      "aliases": [
+        "Aisha Faheem",
+        "AyeshaFaheem",
+        "AishaFaheem"
+      ]
+    },
+    "Adeel Fahim": {
+      "aliases": [
+        "AdeelFahim",
+        "Adeel Faheem"
+      ]
+    },
+    "Naila Makhdumi": {
+      "beneficiary": "Parveen Makhdumi",
+      "aliases": [
+        "NailaMakhdumi"
+      ],
+      "city": "Karachi",
+      "status": "active"
+    },
+    "Ali Asghar Moiz": {
+      "beneficiary": "Farzana Salehboy",
+      "aliases": [
+        "AliAsghar Moiz"
+      ],
+      "status": "pause"
+    },
+    "Noor Noman": {
+      "beneficiary": "Akbar Noman",
+      "aliases": [
+        "Natasha Noman",
+        "NatashaNoman",
+        "Noor (Natasha) Noman",
+        "Mohsyn X Noor Noman"
+      ]
+    },
+    "Sardar Shahmir Ali": {
+      "beneficiary": "Sardar Abdul Qayyum / Rukhsana Shah / Nabigha Qayyum"
+    },
+    "Uzma Lakhani": {
+      "beneficiary": "Zakaria Lakhani / Maimoona Lakhani"
+    },
+    "Maria Faraz": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "MariaFaraz",
+        "Kiran Hassan Saleem",
+        "KiranHassanSaleem"
+      ],
+      "city": "Karachi"
+    },
+    "Shahmeen Islam": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "ShahmeenIslam",
+        "Kiran Hassan Saleem",
+        "KiranHassanSaleem"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "hassan.saleem@gmail.com"
+      ]
+    },
+    "Faiz Hanif": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "FaizHanif",
+        "Faiz"
+      ],
+      "city": "Karachi"
+    },
+    "Sabeen Ahmed": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "SabeenAhmed",
+        "Sabeen Ahmad",
+        "SabeenAhmad",
+        "Sabeen"
+      ],
+      "city": "Islamabad",
+      "contactEmails": [
+        "sabynali@hotmail.com"
+      ]
+    },
+    "Nasir Ali": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "NasirAli",
+        "Muhammad Nasir Ali",
+        "MuhammadNasirAli"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "nasirdec@gmail.com"
+      ]
+    },
+    "Ahmed Aftab": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "AhmedAftab",
+        "Aftab Ahmed",
+        "Ahmad Aftab",
+        "Aftab"
+      ],
+      "city": "Islamabad",
+      "contactEmails": [
+        "ahmedaftab55@gmail.com"
+      ]
+    },
+    "Ambreen Khurshid": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "AmbreenKhurshid",
+        "Ambreen"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "ambreen.khurshid5@gmail.com"
+      ]
+    },
+    "Amir Anis": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "Ameer Anis Gul",
+        "AmeerAnis Gul",
+        "Ameer Anis",
+        "AmirAnis",
+        "AmeerAnis"
+      ],
+      "city": "Lahore",
+      "contactEmails": [
+        "ameer.anis@yahoo.com"
+      ]
+    },
+    "Monam Awan": {
+      "beneficiary": "Bashir Ahmad Alvi / Muniba Alvi",
+      "aliases": [
+        "MonamAwan"
+      ],
+      "city": "Lahore",
+      "contactEmails": [
+        "monambashir@gmail.com"
+      ]
+    },
+    "Imran Khalid": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "ImranKhalid"
+      ],
+      "city": "Lahore",
+      "contactEmails": [
+        "mhikhalid@gmail.com"
+      ]
+    },
+    "Owais Khan": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "Muhammad Owais Khan",
+        "MuhammadOwais Khan",
+        "OwaisKhan"
+      ],
+      "city": "Lahore",
+      "contactEmails": [
+        "mohdowaiskhan@gmail.com"
+      ]
+    },
+    "Aamir Hanif": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "AamirHanif",
+        "Amir Hanif"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "aamirregs@gmail.com"
+      ]
+    },
+    "Fahad Malik": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "FahadMalik"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "malikfahduae@gmail.com"
+      ]
+    },
+    "Zohra Niazi": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "ZohraNiazi"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "katdekarachi@gmail.com"
+      ]
+    },
+    "Iftikhar Ahmed Niazi": {
+      "beneficiary": "TBC",
+      "aliases": [
+        "IftikharAhmed Niazi",
+        "Iftikhar Niazi"
+      ],
+      "city": "Karachi",
+      "contactEmails": [
+        "maryamiftikhar52@gmail.com"
+      ]
+    }
+  },
+  "additionalClients": [
+    {
+      "id": "aleya-salam",
+      "benefactor": "Aleya Salam",
+      "beneficiary": "Muhammad Salam / Farhat Salam",
+      "city": "Karachi",
+      "signupDate": "2026-02-16",
+      "status": "active",
+      "aliases": [
+        "AleyaSalam"
+      ]
+    },
+    {
+      "id": "faraz-ali",
+      "benefactor": "Syed Faraz Ali",
+      "beneficiary": "Syed Rashid Mubashir / Shumaila Rashid",
+      "city": "Lahore",
+      "signupDate": "2025-08-01",
+      "status": "cancelled",
+      "aliases": [
+        "SyedFaraz Ali"
+      ]
+    },
+    {
+      "id": "romaisa",
+      "benefactor": "Romaisa",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-07-01",
+      "status": "cancelled",
+      "aliases": [
+        "Romaisa"
+      ]
+    },
+    {
+      "id": "muhammad-hassaan-anwar",
+      "benefactor": "Muhammad Hassaan Anwar",
+      "beneficiary": "Kishwar Sultana / Feroz Anwar Khan",
+      "city": "Karachi",
+      "signupDate": "2026-07-11",
+      "status": "active",
+      "aliases": [
+        "Muhammad Hassan",
+        "Muhammad Hassaan",
+        "MuhammadHassaan Anwar"
+      ]
+    },
+    {
+      "id": "huda-rizvi",
+      "benefactor": "Huda Rizvi",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-12",
+      "status": "active",
+      "aliases": [
+        "Syeda Huda",
+        "HudaRizvi"
+      ]
+    },
+    {
+      "id": "fahad-khan",
+      "benefactor": "Fahad Khan",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-12",
+      "status": "active",
+      "aliases": [
+        "Fahad",
+        "FahadKhan"
+      ]
+    },
+    {
+      "id": "rafay-aleem",
+      "benefactor": "Rafay Aleem",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-12",
+      "status": "active",
+      "aliases": [
+        "RafayAleem"
+      ]
+    },
+    {
+      "id": "navaid-razzaq",
+      "benefactor": "Navaid Razzaq",
+      "beneficiary": "TBC",
+      "city": "Faisalabad",
+      "signupDate": "2026-07-14",
+      "status": "active",
+      "aliases": [
+        "NavaidRazzaq",
+        "Nawaid Razzaq",
+        "Navaid Razza"
+      ],
+      "engagementCities": [
+        "Lahore"
+      ]
+    },
+    {
+      "id": "maria-faraz",
+      "benefactor": "Maria Faraz",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-16",
+      "status": "active",
+      "aliases": [
+        "MariaFaraz",
+        "Kiran Hassan Saleem",
+        "KiranHassanSaleem"
+      ]
+    },
+    {
+      "id": "shahmeen-islam",
+      "benefactor": "Shahmeen Islam",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-16",
+      "status": "active",
+      "aliases": [
+        "ShahmeenIslam",
+        "Kiran Hassan Saleem",
+        "KiranHassanSaleem"
+      ],
+      "contactEmails": [
+        "hassan.saleem@gmail.com"
+      ]
+    },
+    {
+      "id": "faiz-hanif",
+      "benefactor": "Faiz Hanif",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-22",
+      "status": "active",
+      "aliases": [
+        "FaizHanif",
+        "Faiz"
+      ]
+    },
+    {
+      "id": "sabeen-ahmed",
+      "benefactor": "Sabeen Ahmed",
+      "beneficiary": "TBC",
+      "city": "Islamabad",
+      "signupDate": "2026-07-22",
+      "status": "active",
+      "aliases": [
+        "SabeenAhmed",
+        "Sabeen Ahmad",
+        "SabeenAhmad",
+        "Sabeen"
+      ],
+      "contactEmails": [
+        "sabynali@hotmail.com"
+      ]
+    },
+    {
+      "id": "nasir-ali",
+      "benefactor": "Nasir Ali",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-22",
+      "status": "active",
+      "aliases": [
+        "NasirAli",
+        "Muhammad Nasir Ali",
+        "MuhammadNasirAli"
+      ],
+      "contactEmails": [
+        "nasirdec@gmail.com"
+      ]
+    },
+    {
+      "id": "ahmed-aftab",
+      "benefactor": "Ahmed Aftab",
+      "beneficiary": "TBC",
+      "city": "Islamabad",
+      "signupDate": "2026-07-22",
+      "status": "active",
+      "aliases": [
+        "AhmedAftab",
+        "Aftab Ahmed",
+        "Ahmad Aftab",
+        "Aftab"
+      ],
+      "contactEmails": [
+        "ahmedaftab55@gmail.com"
+      ]
+    },
+    {
+      "id": "ambreen-khurshid",
+      "benefactor": "Ambreen Khurshid",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-24",
+      "status": "active",
+      "aliases": [
+        "AmbreenKhurshid",
+        "Ambreen"
+      ],
+      "contactEmails": [
+        "ambreen.khurshid5@gmail.com"
+      ]
+    },
+    {
+      "id": "amir-anis",
+      "benefactor": "Amir Anis",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-05-31",
+      "status": "active",
+      "aliases": [
+        "Ameer Anis Gul",
+        "AmeerAnis Gul",
+        "Ameer Anis",
+        "AmirAnis",
+        "AmeerAnis"
+      ],
+      "contactEmails": [
+        "ameer.anis@yahoo.com"
+      ]
+    },
+    {
+      "id": "monam-awan",
+      "benefactor": "Monam Awan",
+      "beneficiary": "Bashir Ahmad Alvi / Muniba Alvi",
+      "city": "Lahore",
+      "signupDate": "2026-06-26",
+      "status": "active",
+      "aliases": [
+        "MonamAwan"
+      ],
+      "contactEmails": [
+        "monambashir@gmail.com"
+      ]
+    },
+    {
+      "id": "imran-khalid",
+      "benefactor": "Imran Khalid",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-07-26",
+      "status": "active",
+      "aliases": [
+        "ImranKhalid"
+      ],
+      "contactEmails": [
+        "mhikhalid@gmail.com"
+      ]
+    },
+    {
+      "id": "owais-khan",
+      "benefactor": "Owais Khan",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-07-27",
+      "status": "active",
+      "aliases": [
+        "Muhammad Owais Khan",
+        "MuhammadOwais Khan",
+        "OwaisKhan"
+      ],
+      "contactEmails": [
+        "mohdowaiskhan@gmail.com"
+      ]
+    },
+    {
+      "id": "aamir-hanif",
+      "benefactor": "Aamir Hanif",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-21",
+      "status": "active",
+      "aliases": [
+        "AamirHanif",
+        "Amir Hanif"
+      ],
+      "contactEmails": [
+        "aamirregs@gmail.com"
+      ]
+    },
+    {
+      "id": "fahad-malik",
+      "benefactor": "Fahad Malik",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-21",
+      "status": "active",
+      "aliases": [
+        "FahadMalik"
+      ],
+      "contactEmails": [
+        "malikfahduae@gmail.com"
+      ]
+    },
+    {
+      "id": "zohra-niazi",
+      "benefactor": "Zohra Niazi",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-27",
+      "status": "active",
+      "aliases": [
+        "ZohraNiazi"
+      ],
+      "contactEmails": [
+        "katdekarachi@gmail.com"
+      ]
+    },
+    {
+      "id": "iftikhar-ahmed-niazi",
+      "benefactor": "Iftikhar Ahmed Niazi",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-27",
+      "status": "active",
+      "aliases": [
+        "IftikharAhmed Niazi",
+        "Iftikhar Niazi"
+      ],
+      "contactEmails": [
+        "maryamiftikhar52@gmail.com"
+      ]
+    }
+  ]
+}

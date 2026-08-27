@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "src/app/api/sync/hubspot/route.ts": {
+      "maxDuration": 300
+    },
+    "src/app/api/sync/ticket-notes/route.ts": {
+      "maxDuration": 300
+    },
+    "src/app/api/sync/notes/route.ts": {
+      "maxDuration": 120
+    },
+    "src/app/api/sync/birthdays/route.ts": {
+      "maxDuration": 120
+    },
+    "src/app/api/sync/registry/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}

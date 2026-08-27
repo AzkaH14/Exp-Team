@@ -1,0 +1,15 @@
+const c = await import("../src/lib/cutover.ts");
+console.log("CUTOVER_DATE     :", c.CUTOVER_DATE);
+console.log("CUTOVER_MS       :", c.CUTOVER_MS, "->", new Date(c.CUTOVER_MS).toISOString());
+console.log("CUTOVER_ODOO_UTC :", c.CUTOVER_ODOO_UTC);
+const t=(s,e)=>{const v=c.parsePktTimestamp(s);const got=v!==null&&c.isHistorical(v);
+  console.log(`  ${got===e?"PASS":"FAIL"}  ${s} historical=${got} (expected ${e})`);return got===e;};
+console.log("boundary tests:");
+let ok=true;
+ok=t("2026-08-14 23:59",true)&&ok;
+ok=t("2026-08-15 00:00",false)&&ok;
+ok=t("2026-08-15 00:01",false)&&ok;
+ok=t("2025-11-01 12:52",true)&&ok;
+ok=t("2026-08-17 22:48",false)&&ok;
+console.log(c.CUTOVER_ODOO_UTC==="2026-08-14 19:00:00"?"  PASS  odoo UTC string":"  FAIL  odoo UTC string");
+process.exit(ok&&c.CUTOVER_ODOO_UTC==="2026-08-14 19:00:00"?0:1);

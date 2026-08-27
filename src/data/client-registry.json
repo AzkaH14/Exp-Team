@@ -1,0 +1,2334 @@
+{
+  "version": 3,
+  "updatedAt": "2026-08-25",
+  "source": "Google Sheet (live CSV)",
+  "sheetUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoo-mn25LvSODIecDcpgChSUgZzPDAGbDv651m40RT9L8qHTLZ_dI6OgvOkt6wOMtNk6y_SrBqnG1i/pub?gid=0&single=true&output=csv",
+  "summary": {
+    "total": 141,
+    "active": 130,
+    "pause": 9,
+    "cancelled": 4,
+    "gratis": 2,
+    "byCity": {
+      "Islamabad": 25,
+      "Karachi": 64,
+      "Lahore": 31,
+      "Lodhran": 7,
+      "Gujranwala": 1,
+      "Faisalabad": 1,
+      "Other": 1
+    },
+    "sheetRows": 264,
+    "addedFromHubSpot": 4
+  },
+  "clients": [
+    {
+      "benefactor": "Aamir Hanif",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-22",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "AamirHanif",
+        "Amir Hanif"
+      ],
+      "contactEmails": [
+        "aamirregs@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "aamir-hanif"
+    },
+    {
+      "benefactor": "Abdul Rehman",
+      "beneficiary": "Abdul Hameed / Farzana Hameed",
+      "city": "Karachi",
+      "signupDate": "2026-05-21",
+      "serviceTier": "premium",
+      "status": "cancelled",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "abdul-rehman"
+    },
+    {
+      "benefactor": "Abdul Rehman Nazar",
+      "beneficiary": "Shoukat Nazar / Bina Shaukat",
+      "city": "Lahore",
+      "signupDate": "2025-12-15",
+      "serviceTier": "premium",
+      "status": "cancelled",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "abdul-rehman-nazar"
+    },
+    {
+      "benefactor": "Adeel Fahim",
+      "beneficiary": "Fahim Sulaiman / Qudsia Fahim",
+      "city": "Karachi",
+      "signupDate": "2024-08-01",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "AdeelFahim",
+        "Adeel Faheem"
+      ],
+      "source": "sacred",
+      "id": "adeel-fahim"
+    },
+    {
+      "benefactor": "Adnan Leghari",
+      "beneficiary": "Rehana Leghari / Nawaz Ali Leghari / Zulfiqar Leghari",
+      "city": "Karachi",
+      "signupDate": "2026-05-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "adnan-leghari"
+    },
+    {
+      "benefactor": "Affan Ahmed",
+      "beneficiary": "Samina Shamim Ahmed Khan",
+      "city": "Lahore",
+      "signupDate": "2026-02-04",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Affan Khan",
+        "AffanKhan"
+      ],
+      "source": "sacred",
+      "id": "affan-ahmed"
+    },
+    {
+      "benefactor": "Ahmed Aftab",
+      "beneficiary": "TBC",
+      "city": "Islamabad",
+      "signupDate": "2026-07-17",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "AhmedAftab",
+        "Aftab Ahmed",
+        "Ahmad Aftab",
+        "Aftab"
+      ],
+      "contactEmails": [
+        "ahmedaftab55@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "ahmed-aftab"
+    },
+    {
+      "benefactor": "Ahsan Yousufzai",
+      "beneficiary": "Tahira Qurat- ul- Ain",
+      "city": "Karachi",
+      "signupDate": "2025-12-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ahsan Iqbal",
+        "Ahsan iqbal",
+        "Muhammad Ahsan"
+      ],
+      "source": "sacred",
+      "id": "ahsan-yousufzai"
+    },
+    {
+      "benefactor": "Aleya Salam",
+      "beneficiary": "Salam Khan / Farhat Salam",
+      "city": "Karachi",
+      "signupDate": "2026-02-16",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "aleya-salam"
+    },
+    {
+      "benefactor": "Ali Almakky",
+      "beneficiary": "Firdaus Sajjad Almakky",
+      "city": "Lahore",
+      "signupDate": "2026-04-26",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "ali-almakky"
+    },
+    {
+      "benefactor": "Ali Asghar Moiz",
+      "beneficiary": "Farzana Salehboy",
+      "city": "Karachi",
+      "signupDate": "2026-06-15",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "AliAsghar Moiz"
+      ],
+      "source": "sacred",
+      "id": "ali-asghar-moiz"
+    },
+    {
+      "benefactor": "Ali Wahab",
+      "beneficiary": "Sarah Siddiqui / Safina Siddiqui (not a poc)",
+      "city": "Islamabad",
+      "signupDate": "2025-12-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "ali-wahab"
+    },
+    {
+      "benefactor": "Ambassador Ahmed Farooq",
+      "beneficiary": "Khalida Farooq",
+      "city": "Islamabad",
+      "signupDate": "2025-06-02",
+      "serviceTier": "premium",
+      "status": "gratis",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ambassador Ahmad Farooq"
+      ],
+      "source": "sacred",
+      "id": "ambassador-ahmed-farooq"
+    },
+    {
+      "benefactor": "Ambreen Khurshid",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "AmbreenKhurshid",
+        "Ambreen"
+      ],
+      "contactEmails": [
+        "ambreen.khurshid5@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "ambreen-khurshid"
+    },
+    {
+      "benefactor": "Ameer Anis Gul",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-05-31",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ameer Anis Gul",
+        "AmeerAnis Gul",
+        "Ameer Anis",
+        "AmirAnis",
+        "AmeerAnis"
+      ],
+      "contactEmails": [
+        "ameer.anis@yahoo.com"
+      ],
+      "source": "sacred",
+      "id": "ameer-anis-gul"
+    },
+    {
+      "benefactor": "Amir Muhammad",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2025-04-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ameer Anis Gul",
+        "AmeerAnis Gul",
+        "Ameer Anis",
+        "AmirAnis",
+        "AmeerAnis"
+      ],
+      "contactEmails": [
+        "ameer.anis@yahoo.com"
+      ],
+      "source": "sacred",
+      "id": "amir"
+    },
+    {
+      "benefactor": "Anas Athar",
+      "beneficiary": "Izhar Ahmed Athar / Shaheen Athar",
+      "city": "Karachi",
+      "signupDate": "2025-10-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "anas-athar"
+    },
+    {
+      "benefactor": "Anny Adnan Rafiq",
+      "beneficiary": "Anjum Ara / Ishratun Nisa",
+      "city": "Karachi",
+      "signupDate": "2025-08-30",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "anny-adnan-rafiq"
+    },
+    {
+      "benefactor": "Arif Kamruddin",
+      "beneficiary": "Zarin Kamruddin",
+      "city": "Karachi",
+      "signupDate": "2025-09-18",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "arif-kamruddin"
+    },
+    {
+      "benefactor": "Asif Janjua",
+      "beneficiary": "Qasim Janjua (deceased) / M. Azam Janjua",
+      "city": "Islamabad",
+      "signupDate": "2025-02-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "asif-janjua"
+    },
+    {
+      "benefactor": "Asim Memon",
+      "beneficiary": "TBC",
+      "city": "Lodhran",
+      "signupDate": "2026-08-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "asim-memon"
+    },
+    {
+      "benefactor": "Atif Kazmi",
+      "beneficiary": "Syed Sajid Ali Kazmi / Shahgul (Musarrat Afroze) Kazmi",
+      "city": "Karachi",
+      "signupDate": "2026-04-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "atif-kazmi"
+    },
+    {
+      "benefactor": "Atif Khan",
+      "beneficiary": "Musharaf Sherry Khan",
+      "city": "Karachi",
+      "signupDate": "2026-05-17",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "atif-khan"
+    },
+    {
+      "benefactor": "Ayesha Faheem",
+      "beneficiary": "Abdul Aziz / Khadija Aziz",
+      "city": "Karachi",
+      "signupDate": "2026-06-03",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Aisha Faheem",
+        "AyeshaFaheem",
+        "AishaFaheem"
+      ],
+      "source": "sacred",
+      "id": "ayesha-faheem"
+    },
+    {
+      "benefactor": "Azeem Waqar/Jamal Waqar",
+      "beneficiary": "Amin Waqar / Nigar Amin",
+      "city": "Lahore",
+      "signupDate": "2026-01-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Jamal Waqar"
+      ],
+      "source": "sacred",
+      "id": "azeem-waqar-jamal-waqar"
+    },
+    {
+      "benefactor": "Azhar Biabani",
+      "beneficiary": "Nuzhat Biabani / Admiral Biabani",
+      "city": "Islamabad",
+      "signupDate": "2026-06-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Dr. Azhar Biabani",
+        "AzharBiabani",
+        "Mohsyn X Azhar Biabani"
+      ],
+      "source": "sacred",
+      "id": "azhar-biabani"
+    },
+    {
+      "benefactor": "Beenish Tariq/ Malik Azfar",
+      "beneficiary": "Khawaja Tariq Saeed",
+      "city": "Islamabad",
+      "signupDate": "2025-10-01",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Malik Azfar",
+        "Beenish Tariq/ Malik Azfar"
+      ],
+      "source": "sacred",
+      "id": "beenish-tariq-malik-azfar"
+    },
+    {
+      "benefactor": "Bilal Iqbal Hameed",
+      "beneficiary": "Iqbal Hameed / Sheerin Iqbal",
+      "city": "Karachi",
+      "signupDate": "2025-12-28",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Bilal",
+        "Syeda Zehra Ali",
+        "SyedaZehra Ali"
+      ],
+      "source": "sacred",
+      "id": "bilal-iqbal-hameed"
+    },
+    {
+      "benefactor": "Danish Subzwari",
+      "beneficiary": "Mahmood Subzwari / Salma Mahmood",
+      "city": "Karachi",
+      "signupDate": "2025-04-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "danish-subzwari"
+    },
+    {
+      "benefactor": "Dr Faisal Khan",
+      "beneficiary": "Dr Shahida Rashid",
+      "city": "Islamabad",
+      "signupDate": "2025-10-20",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Dr. Faisal Khan"
+      ],
+      "source": "sacred",
+      "id": "faisal-khan"
+    },
+    {
+      "benefactor": "Dr. Najeeb Ahmed",
+      "beneficiary": "Syed Muzafar Ali / Nuzhat Sabir / Syed Faisal Ali",
+      "city": "Karachi",
+      "signupDate": "2025-04-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "najeeb-ahmed"
+    },
+    {
+      "benefactor": "Durdana Farid",
+      "beneficiary": "Riffat Mirza",
+      "city": "Islamabad",
+      "signupDate": "2025-10-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "durdana-farid"
+    },
+    {
+      "benefactor": "Fahad Khan",
+      "beneficiary": "Naseem Imtiaz / Tehmina Nasim",
+      "city": "Karachi",
+      "signupDate": "2026-07-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "fahad-khan"
+    },
+    {
+      "benefactor": "Fahad Tanver Malik",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-22",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "FahadMalik"
+      ],
+      "contactEmails": [
+        "malikfahduae@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "fahad-tanver-malik"
+    },
+    {
+      "benefactor": "Fahd Saghir",
+      "beneficiary": "Saghir Mohammad / Azra Parveen",
+      "city": "Islamabad",
+      "signupDate": "2025-08-30",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "fahd-saghir"
+    },
+    {
+      "benefactor": "Faheem Yousaf",
+      "beneficiary": "Muhammad Yousuf Adil",
+      "city": "Karachi",
+      "signupDate": "2026-05-31",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Faheem Yousuf",
+        "FaheemYousuf"
+      ],
+      "source": "sacred",
+      "id": "faheem-yousaf"
+    },
+    {
+      "benefactor": "Faisal Zaman",
+      "beneficiary": "Muhammad Zaman",
+      "city": "Karachi",
+      "signupDate": "2026-05-18",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "faisal-zaman"
+    },
+    {
+      "benefactor": "Faiza Amin",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2025-04-13",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "FaizHanif",
+        "Faiz"
+      ],
+      "source": "sacred",
+      "id": "faiza-amin"
+    },
+    {
+      "benefactor": "Fatima Naeem",
+      "beneficiary": "Taskeen Akhtar",
+      "city": "Lahore",
+      "signupDate": "2026-02-19",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Fatima  Naeem"
+      ],
+      "source": "sacred",
+      "id": "fatima-naeem"
+    },
+    {
+      "benefactor": "Ghazi Khan/Ensherah",
+      "beneficiary": "Masooda Sultana / Gul e Naz Tahir",
+      "city": "Karachi",
+      "signupDate": "2026-04-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ghazi Khan",
+        "GhaziKhan",
+        "Ghazi",
+        "Mohsyn X Ghazi Khan",
+        "Ghazi Khan/Ensherah",
+        "Ensherah/ Ghazi Khan",
+        "Ensherah / Ghazi Khan"
+      ],
+      "source": "sacred",
+      "id": "ghazi-khan-ensherah"
+    },
+    {
+      "benefactor": "Hafiz Talha Javed",
+      "beneficiary": "Javed Akhtar / Farkhanda Javed",
+      "city": "Karachi",
+      "signupDate": "2025-11-18",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "hafiz-talha-javed"
+    },
+    {
+      "benefactor": "Hassan Kamal",
+      "beneficiary": "Kamal Akhtar/ Azra Kamal",
+      "city": "Islamabad",
+      "signupDate": "2026-08-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "hassan-kamal"
+    },
+    {
+      "benefactor": "Hina Guzmair",
+      "beneficiary": "Mohammad Ashraf Mehr / Muzammal Ashraf",
+      "city": "Lahore",
+      "signupDate": "2025-11-06",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Hina Guezmir",
+        "HinaGuezmir"
+      ],
+      "source": "sacred",
+      "id": "hina-guzmair"
+    },
+    {
+      "benefactor": "Hisham Hasan",
+      "beneficiary": "Hassan Sarmad / Neelum Sarmad",
+      "city": "Lahore",
+      "signupDate": "2026-02-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "hisham-hasan"
+    },
+    {
+      "benefactor": "Huda Rizvi",
+      "beneficiary": "Asad Abbas Rizvi / Azra Batool",
+      "city": "Karachi",
+      "signupDate": "2026-07-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "huda-rizvi"
+    },
+    {
+      "benefactor": "Humeraa Qamar",
+      "beneficiary": "Humeraa Qamar",
+      "city": "Lahore",
+      "signupDate": "2025-12-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "humeraa-qamar"
+    },
+    {
+      "benefactor": "Ibrahim Masood",
+      "beneficiary": "Almas Masud (Deceased)",
+      "city": "Lahore",
+      "signupDate": "2025-05-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed Masood Ahmed"
+      ],
+      "source": "sacred",
+      "id": "ibrahim-masood"
+    },
+    {
+      "benefactor": "Imran Khalid",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-07-26",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "ImranKhalid"
+      ],
+      "contactEmails": [
+        "mhikhalid@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "imran-khalid"
+    },
+    {
+      "benefactor": "Irfan Haqqi",
+      "beneficiary": "Tanzim Ul Haq Haqqi / Yasmin Haqqi",
+      "city": "Karachi",
+      "signupDate": "2026-01-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "irfan-haqqi"
+    },
+    {
+      "benefactor": "Javaria Waqar",
+      "beneficiary": "Shahid Latif Qureshi / Zakia Tasneem",
+      "city": "Lahore",
+      "signupDate": "2026-06-07",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "javaria-waqar"
+    },
+    {
+      "benefactor": "Javeria Fatima",
+      "beneficiary": "Syed Zain ul Abbas Zaidi / Bushra Fatima",
+      "city": "Islamabad",
+      "signupDate": "2025-09-24",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "javeria-fatima"
+    },
+    {
+      "benefactor": "Kalsoom Saleem/ Mahrukh",
+      "beneficiary": "Saleem Murtaza / Nilofar Saleem",
+      "city": "Lahore",
+      "signupDate": "2026-01-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Mahrukh"
+      ],
+      "source": "sacred",
+      "id": "kalsoom-saleem-mahrukh"
+    },
+    {
+      "benefactor": "Kashif Janjua",
+      "beneficiary": "Afzal Janjua / Salma Shahnaz",
+      "city": "Islamabad",
+      "signupDate": "2025-02-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "kashif-janjua"
+    },
+    {
+      "benefactor": "Khurram Zia",
+      "beneficiary": "Kiran Fatima (sister, Lahore) · property care (Islamabad)",
+      "city": "Islamabad",
+      "signupDate": "2025-11-04",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Kiran Fatima",
+        "KiranFatima"
+      ],
+      "engagementCities": [
+        "Islamabad",
+        "Lahore"
+      ],
+      "source": "sacred",
+      "id": "khurram-zia"
+    },
+    {
+      "benefactor": "Kiran Hasan (Shahmeen Islam)",
+      "beneficiary": "Saleem Lodhia",
+      "city": "Karachi",
+      "signupDate": "2026-07-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "kiran-hasan"
+    },
+    {
+      "benefactor": "Madiha Ahsan",
+      "beneficiary": "Ghazala Siddiqi",
+      "city": "Karachi",
+      "signupDate": "2026-02-18",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ahsan Iqbal",
+        "Ahsan iqbal",
+        "Muhammad Ahsan"
+      ],
+      "source": "sacred",
+      "id": "madiha-ahsan"
+    },
+    {
+      "benefactor": "Mahjabeen Wasim",
+      "beneficiary": "Property",
+      "city": "Lodhran",
+      "signupDate": "2026-08-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "mahjabeen-wasim"
+    },
+    {
+      "benefactor": "Mamnoon Zaidi",
+      "beneficiary": "Musharraf Hussain Zaidi / Farhat Ruby Zaidi",
+      "city": "Lahore",
+      "signupDate": "2025-11-09",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "mamnoon-zaidi"
+    },
+    {
+      "benefactor": "Mansoora Sajjad",
+      "beneficiary": "Mansoora Sajjad",
+      "city": "Lahore",
+      "signupDate": "2025-09-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "mansoora-sajjad"
+    },
+    {
+      "benefactor": "Maria Faraz (Offboarded- 5th August)",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "MariaFaraz",
+        "Kiran Hassan Saleem",
+        "KiranHassanSaleem"
+      ],
+      "source": "sacred",
+      "id": "maria-faraz"
+    },
+    {
+      "benefactor": "Maria Hasnie",
+      "beneficiary": "Kabir Omar / Nadira Omar",
+      "city": "Lahore",
+      "signupDate": "2026-01-10",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "maria-hasnie"
+    },
+    {
+      "benefactor": "Mehpara Hunzai",
+      "beneficiary": "Zewar Bibi",
+      "city": "Karachi",
+      "signupDate": "2025-11-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Mehpara (Para) Hunzai"
+      ],
+      "source": "sacred",
+      "id": "mehpara-hunzai"
+    },
+    {
+      "benefactor": "Mehreen Tahir",
+      "beneficiary": "Syed Tahir Hussain",
+      "city": "Islamabad",
+      "signupDate": "2026-05-02",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syeda Mehreen Tahir"
+      ],
+      "source": "sacred",
+      "id": "mehreen-tahir"
+    },
+    {
+      "benefactor": "Mir Amir",
+      "beneficiary": "TBC",
+      "city": "Lodhran",
+      "signupDate": "2026-08-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "mir-amir"
+    },
+    {
+      "benefactor": "Mirza Humayun Afsar",
+      "beneficiary": "TBC",
+      "city": "Lodhran",
+      "signupDate": "2026-08-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "mirza-humayun-afsar"
+    },
+    {
+      "benefactor": "Mohammed Azhar Ratnani",
+      "beneficiary": "Ameen Muhammad Ratnani / Neelofar Ratnani",
+      "city": "Karachi",
+      "signupDate": "2025-06-30",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Mohammad Azhar Ratnani",
+        "Mohammad Azher Ratnani",
+        "MohammadAzher Ratnani"
+      ],
+      "source": "sacred",
+      "id": "mohammed-azhar-ratnani"
+    },
+    {
+      "benefactor": "Mohammad Salman Khan",
+      "beneficiary": "Saleem Akhtar / Shahnaz Saleem",
+      "city": "Lahore",
+      "signupDate": "2025-04-01",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Muhammad Salman Khan",
+        "Mohammad Salman Khan (Deactivated)",
+        "Mohsyn x Mohammad Salman Khan"
+      ],
+      "source": "sacred",
+      "id": "salman-khan"
+    },
+    {
+      "benefactor": "Monam Awan",
+      "beneficiary": "Bashir Ahmad Alvi / Muniba Alvi",
+      "city": "Lahore",
+      "signupDate": "2026-06-26",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "MonamAwan"
+      ],
+      "contactEmails": [
+        "monambashir@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "monam-awan"
+    },
+    {
+      "benefactor": "Muhammad Ahsan Iqbal",
+      "beneficiary": "Salma Shaheen / Haider Iqbal",
+      "city": "Lahore",
+      "signupDate": "2026-03-01",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ahsan Iqbal",
+        "Ahsan iqbal",
+        "Muhammad Ahsan"
+      ],
+      "source": "sacred",
+      "id": "ahsan-iqbal"
+    },
+    {
+      "benefactor": "Muhammad Akbar Bosan",
+      "beneficiary": "TBC",
+      "city": "Other",
+      "signupDate": "2026-08-10",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "akbar-bosan"
+    },
+    {
+      "benefactor": "Muhammad Hassaan Anwar",
+      "beneficiary": "Feroze Anwar Khan / Kishwar Sultana",
+      "city": "Karachi",
+      "signupDate": "2026-07-11",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "hassaan-anwar"
+    },
+    {
+      "benefactor": "Muhammad Ijaz Rehman",
+      "beneficiary": "Zahida Tauqeer / Rabiya",
+      "city": "Lahore",
+      "signupDate": "2025-07-31",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "ijaz-rehman"
+    },
+    {
+      "benefactor": "Muhammad Nasir Ali",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-19",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "NasirAli",
+        "Muhammad Nasir Ali",
+        "MuhammadNasirAli"
+      ],
+      "contactEmails": [
+        "nasirdec@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "nasir-ali"
+    },
+    {
+      "benefactor": "Muhammad Umar Habib",
+      "beneficiary": "Bilquees Habib / Aisha Habib / Hamza Habib / Fatima Habib",
+      "city": "Lodhran",
+      "signupDate": "2024-12-22",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Muhammad Umar",
+        "Umar Habib"
+      ],
+      "engagementCities": [
+        "Lahore"
+      ],
+      "source": "sacred",
+      "id": "umar-habib"
+    },
+    {
+      "benefactor": "Mujtaba Mahmood",
+      "beneficiary": "Mehmood Ul Haq",
+      "city": "Lahore",
+      "signupDate": "2026-03-26",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "MujtabaRana",
+        "Mujtaba Rana",
+        "Mujtaba mehmood",
+        "Mujtaba Mehmood"
+      ],
+      "source": "sacred",
+      "id": "mujtaba-mahmood"
+    },
+    {
+      "benefactor": "Muneer Usman",
+      "beneficiary": "Muneer Usman",
+      "city": "Karachi",
+      "signupDate": "2025-09-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "muneer-usman"
+    },
+    {
+      "benefactor": "Nabeel Mian",
+      "beneficiary": "Kishwar Mian",
+      "city": "Islamabad",
+      "signupDate": "2026-04-03",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "nabeel-mian"
+    },
+    {
+      "benefactor": "Naeem Tahirkheli",
+      "beneficiary": "Col Mushtaq Tahirkheli",
+      "city": "Lahore",
+      "signupDate": "2025-12-23",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "naeem-tahirkheli"
+    },
+    {
+      "benefactor": "Naila Makhdumi",
+      "beneficiary": "Parveen Makhdumi",
+      "city": "Karachi",
+      "signupDate": "2026-06-21",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "NailaMakhdumi"
+      ],
+      "source": "sacred",
+      "id": "naila-makhdumi"
+    },
+    {
+      "benefactor": "Natasha Najmi- Kazmi",
+      "beneficiary": "Kehkashan Najmi",
+      "city": "Karachi",
+      "signupDate": "2026-06-03",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "NatashaKazmi"
+      ],
+      "source": "sacred",
+      "id": "natasha-najmi-kazmi"
+    },
+    {
+      "benefactor": "Navaid Razzaq",
+      "beneficiary": "TBC",
+      "city": "Faisalabad",
+      "signupDate": "2026-07-13",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "NavaidRazzaq",
+        "Nawaid Razzaq",
+        "Navaid Razza"
+      ],
+      "engagementCities": [
+        "Lahore"
+      ],
+      "source": "sacred",
+      "id": "navaid-razzaq"
+    },
+    {
+      "benefactor": "Naveed K Shams",
+      "beneficiary": "Sultana Iqbal / Iqbal Bin Shams",
+      "city": "Karachi",
+      "signupDate": "2026-07-27",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "naveed-k-shams"
+    },
+    {
+      "benefactor": "Neha Temuri",
+      "beneficiary": "Mashhood ul Hassan Temuri",
+      "city": "Karachi",
+      "signupDate": "2025-09-06",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Neha Temuri"
+      ],
+      "source": "sacred",
+      "id": "neha-temuri"
+    },
+    {
+      "benefactor": "Nisar Akbar",
+      "beneficiary": "Muhammad Akbar / Maqsuda Akbar",
+      "city": "Islamabad",
+      "signupDate": "2025-08-08",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "A Nisar Akbar"
+      ],
+      "source": "sacred",
+      "id": "nisar-akbar"
+    },
+    {
+      "benefactor": "Noor Noman/ Natasha Noman",
+      "beneficiary": "Akbar Noman",
+      "city": "Karachi",
+      "signupDate": "2026-06-08",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Noor Natasha",
+        "NoorNatasha"
+      ],
+      "source": "sacred",
+      "id": "noor-noman-natasha-noman"
+    },
+    {
+      "benefactor": "Omar A Ali",
+      "beneficiary": "Iqbal Begum / Rubina Aziz / Rukhsana Yaseen / Urooj Fatima",
+      "city": "Karachi",
+      "signupDate": "2026-03-26",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Omar Ali",
+        "Omar A Ali"
+      ],
+      "source": "sacred",
+      "id": "omar-a-ali"
+    },
+    {
+      "benefactor": "Omar Biabani",
+      "beneficiary": "Cdre. Usman / Veera Umar",
+      "city": "Islamabad",
+      "signupDate": "2024-11-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "OmarBiabani"
+      ],
+      "source": "sacred",
+      "id": "omar-biabani"
+    },
+    {
+      "benefactor": "Omar Mufti",
+      "beneficiary": "Rehana Mufti",
+      "city": "Islamabad",
+      "signupDate": "2025-11-12",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "omar-mufti"
+    },
+    {
+      "benefactor": "Osama Ali",
+      "beneficiary": "Tauquir Ali / Rana Tauquir / Umaira Ali (Main POC)",
+      "city": "Karachi",
+      "signupDate": "2025-12-09",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Umaira Ali"
+      ],
+      "source": "sacred",
+      "id": "osama-ali"
+    },
+    {
+      "benefactor": "Owais Khan",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-07-27",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Muhammad Owais Khan",
+        "MuhammadOwais Khan",
+        "OwaisKhan"
+      ],
+      "contactEmails": [
+        "mohdowaiskhan@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "owais-khan"
+    },
+    {
+      "benefactor": "Qurratulain Chundigar (offboarded)",
+      "beneficiary": "Razia Bano Chundrigar",
+      "city": "Karachi",
+      "signupDate": "2026-04-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Qurratulain Chundriger"
+      ],
+      "source": "sacred",
+      "id": "qurratulain-chundigar"
+    },
+    {
+      "benefactor": "Raazi Hassan",
+      "beneficiary": "Syed Najam Ul Hassan / Nasreen Najam",
+      "city": "Karachi",
+      "signupDate": "2024-10-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "raazi-hassan"
+    },
+    {
+      "benefactor": "Rabia Rauf",
+      "beneficiary": "Irfan Rauf / Tanveer Hameed",
+      "city": "Gujranwala",
+      "signupDate": "2026-02-27",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Rabia Irfan Rauf"
+      ],
+      "engagementCities": [
+        "Lahore"
+      ],
+      "source": "sacred",
+      "id": "rabia-rauf"
+    },
+    {
+      "benefactor": "Rafay Aleem",
+      "beneficiary": "Ausaf Aleem",
+      "city": "Karachi",
+      "signupDate": "2026-07-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "rafay-aleem"
+    },
+    {
+      "benefactor": "Saad Ali Khan",
+      "beneficiary": "Jawaid Ali Khan / Lubna Jawaid",
+      "city": "Karachi",
+      "signupDate": "2026-05-10",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "SaadKhan"
+      ],
+      "source": "sacred",
+      "id": "saad-ali-khan"
+    },
+    {
+      "benefactor": "Sabeen Ahmad",
+      "beneficiary": "TBC",
+      "city": "Islamabad",
+      "signupDate": "2026-07-20",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "SabeenAhmed",
+        "Sabeen Ahmad",
+        "SabeenAhmad",
+        "Sabeen"
+      ],
+      "contactEmails": [
+        "sabynali@hotmail.com"
+      ],
+      "source": "sacred",
+      "id": "sabeen-ahmad"
+    },
+    {
+      "benefactor": "Saima Amin",
+      "beneficiary": "Nuzhat Shahav",
+      "city": "Lahore",
+      "signupDate": "2025-04-10",
+      "serviceTier": "premium",
+      "status": "cancelled",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "SaimaAmin"
+      ],
+      "source": "sacred",
+      "id": "saima-amin"
+    },
+    {
+      "benefactor": "Saima Jamshed/Samreen Jamshed",
+      "beneficiary": "Jamshed Aslam Khan / Rakhshan Jamshed",
+      "city": "Karachi",
+      "signupDate": "2026-04-16",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Samreen Jamshed"
+      ],
+      "source": "sacred",
+      "id": "saima-jamshed-samreen-jamshed"
+    },
+    {
+      "benefactor": "Salma Bukhari",
+      "beneficiary": "Mohammed Irshad Hussain / Habiba Malick",
+      "city": "Islamabad",
+      "signupDate": "2025-05-22",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "salma-bukhari"
+    },
+    {
+      "benefactor": "Salman Hamid",
+      "beneficiary": "Abdul Hameed",
+      "city": "Lahore",
+      "signupDate": "2026-05-16",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Salman Hameed",
+        "Mohsyn X Salman Hamid"
+      ],
+      "source": "sacred",
+      "id": "salman-hamid"
+    },
+    {
+      "benefactor": "Sameer Ul Haque",
+      "beneficiary": "S.M. Nasim ul Haque / Tahera Nasim",
+      "city": "Karachi",
+      "signupDate": "2026-03-28",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "sameer-ul-haque"
+    },
+    {
+      "benefactor": "Saqib Javed",
+      "beneficiary": "Asma Fakhr",
+      "city": "Lahore",
+      "signupDate": "2025-03-01",
+      "serviceTier": "premium",
+      "status": "gratis",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Saqib javed"
+      ],
+      "source": "sacred",
+      "id": "saqib-javed"
+    },
+    {
+      "benefactor": "Sarah Mirza",
+      "beneficiary": "Wajahat Mirza / Misbah Wajahat",
+      "city": "Lahore",
+      "signupDate": "2026-01-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "sarah-mirza"
+    },
+    {
+      "benefactor": "Sardar Shahmir Ali",
+      "beneficiary": "Sardar Abdul Qayyum / Rukhsana Shah / Nabigha Qayyum",
+      "city": "Karachi",
+      "signupDate": "2026-05-01",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "sardar-shahmir-ali"
+    },
+    {
+      "benefactor": "Sarwat Waseem",
+      "beneficiary": "Mumshad Ahmed / Kausar Mumshad",
+      "city": "Karachi",
+      "signupDate": "2025-12-18",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "sarwat-waseem"
+    },
+    {
+      "benefactor": "Shahab Jaffrey",
+      "beneficiary": "Syed Muhammad Salman Jaffrey / Khalida Jaffrey",
+      "city": "Karachi",
+      "signupDate": "2025-07-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "shahab-jaffrey"
+    },
+    {
+      "benefactor": "Shahzad Akbar",
+      "beneficiary": "Noureen Akbar",
+      "city": "Islamabad",
+      "signupDate": "2025-01-22",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "shahzad-akbar"
+    },
+    {
+      "benefactor": "Shahzad Jamal",
+      "beneficiary": "Muhammad Jamal Ud Din / Qudsia Jamal",
+      "city": "Islamabad",
+      "signupDate": "2025-12-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "shahzad-jamal"
+    },
+    {
+      "benefactor": "Shahzada Azam",
+      "beneficiary": "Raana Khurrum",
+      "city": "Lahore",
+      "signupDate": "2025-09-02",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "shahzada-azam"
+    },
+    {
+      "benefactor": "Shamaila Siddiqui",
+      "beneficiary": "Riaz Ahmed Siddiqui",
+      "city": "Karachi",
+      "signupDate": "2025-10-04",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "ShamailaSiddiqi",
+        "Syed Farhan Zafar",
+        "SyedFarhan Zafar"
+      ],
+      "source": "sacred",
+      "id": "shamaila-siddiqui"
+    },
+    {
+      "benefactor": "Shamoon Atique",
+      "beneficiary": "Muhammad Atique Ahmed Baig / Zakia Rana Atique",
+      "city": "Karachi",
+      "signupDate": "2026-03-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "shamoon-atique"
+    },
+    {
+      "benefactor": "Sharmeen Suri",
+      "beneficiary": "Musheer Ahmad Suri / Shahida Suri",
+      "city": "Karachi",
+      "signupDate": "2026-01-22",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "sharmeen-suri"
+    },
+    {
+      "benefactor": "Shazia Afzal",
+      "beneficiary": "Muhammad Siddiqui / Anjum Ara Siddiqui",
+      "city": "Karachi",
+      "signupDate": "2026-03-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "shazia-afzal"
+    },
+    {
+      "benefactor": "Shehryar Salam",
+      "beneficiary": "Syed Khalid Salam / Nasreen Khalid",
+      "city": "Lahore",
+      "signupDate": "2025-10-19",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed Shehryar Salam"
+      ],
+      "source": "sacred",
+      "id": "shehryar-salam"
+    },
+    {
+      "benefactor": "Shoaib S/O Rana S Sadiq",
+      "beneficiary": "Rana S Sadiq",
+      "city": "Lahore",
+      "signupDate": "2025-10-31",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Shoaib Sadiq",
+        "Shoaib   Sadiq",
+        "Rana Shoaib",
+        "Shoaib Rana"
+      ],
+      "source": "sacred",
+      "id": "shoaib-s-o-rana-s-sadiq"
+    },
+    {
+      "benefactor": "Soban Jalil",
+      "beneficiary": "Jalil Aali / Hasina Jalil",
+      "city": "Islamabad",
+      "signupDate": "2026-02-24",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Sobhan Jalil"
+      ],
+      "source": "sacred",
+      "id": "soban-jalil"
+    },
+    {
+      "benefactor": "Sobia Khalid",
+      "beneficiary": "Muhammad Abdul Samad / Saleha Rizwana Abdul Samad",
+      "city": "Lahore",
+      "signupDate": "2025-09-26",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "sobia-khalid"
+    },
+    {
+      "benefactor": "Syed Ahsan Baqi",
+      "beneficiary": "Syed Umar Baqi / Nighat Baqi / Syed Hasan Baqi",
+      "city": "Karachi",
+      "signupDate": "2025-11-28",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Ahsan Iqbal",
+        "Ahsan iqbal",
+        "Muhammad Ahsan"
+      ],
+      "source": "sacred",
+      "id": "ahsan-baqi"
+    },
+    {
+      "benefactor": "Syed Faraz Karim",
+      "beneficiary": "TBC",
+      "city": "Lodhran",
+      "signupDate": "2026-08-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "faraz-karim"
+    },
+    {
+      "benefactor": "Syed Masood",
+      "beneficiary": "Syed Abdul Rasheed / Naeema Rasheed",
+      "city": "Karachi",
+      "signupDate": "2026-04-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed Masood Ahmed"
+      ],
+      "source": "sacred",
+      "id": "masood"
+    },
+    {
+      "benefactor": "Syed Muddassir Ghazanffar",
+      "beneficiary": "Syed Ghazanfar Ali / Anjum Ghazanfar",
+      "city": "Karachi",
+      "signupDate": "2025-06-10",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed Muddassir Ghazanfar",
+        "Mohsyn x Mudassir/Shafaq",
+        "Mudassir",
+        "Shafaq"
+      ],
+      "source": "sacred",
+      "id": "muddassir-ghazanffar"
+    },
+    {
+      "benefactor": "Syed Safee Ullah Shah",
+      "beneficiary": "Syed Atiq Ullah Shah / Samra Atiq",
+      "city": "Lahore",
+      "signupDate": "2025-05-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed Safeeullah Shah",
+        "SyedSafeeullah Shah"
+      ],
+      "source": "sacred",
+      "id": "safee-ullah-shah"
+    },
+    {
+      "benefactor": "Syed Shazib Sarwar",
+      "beneficiary": "Syed Muhammad Ehsaan / Syeda Tehmina / Syeda Najaf",
+      "city": "Lahore",
+      "signupDate": "2025-04-13",
+      "serviceTier": "premium",
+      "status": "cancelled",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed Shazib Ali Sarwar"
+      ],
+      "source": "sacred",
+      "id": "shazib-sarwar"
+    },
+    {
+      "benefactor": "Syeda Zehra Ali/Bilal",
+      "beneficiary": "Syed Shahid Ali",
+      "city": "Karachi",
+      "signupDate": "2025-10-20",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Bilal",
+        "Syeda Zehra Ali",
+        "SyedaZehra Ali"
+      ],
+      "source": "sacred",
+      "id": "syeda-zehra-ali-bilal"
+    },
+    {
+      "benefactor": "Talha Aquil",
+      "beneficiary": "Abdul Shakoor Khan Aquil / Dr. Razia Khan Aquil",
+      "city": "Karachi",
+      "signupDate": "2024-10-20",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "talha-aquil"
+    },
+    {
+      "benefactor": "Tarim Wasim",
+      "beneficiary": "Cdre. Wasim Ahmad / Shahnaz Wasim (Shehnaz)",
+      "city": "Islamabad",
+      "signupDate": "2025-10-31",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Tarim Wasim",
+        "Faisal POC",
+        "Tarim/Faisal (POC)",
+        "TarimWasim",
+        "Faisal Wasim"
+      ],
+      "source": "sacred",
+      "id": "tarim-wasim"
+    },
+    {
+      "benefactor": "Tauseef Ali",
+      "beneficiary": "Muhammad Asghar",
+      "city": "Lahore",
+      "signupDate": "2026-02-24",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "tauseef-ali"
+    },
+    {
+      "benefactor": "Umair Khan",
+      "beneficiary": "Azimuddin Khan / Humra Khan / Maimoona Hashim / Aitzaz Qureshi",
+      "city": "Karachi",
+      "signupDate": "2026-01-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Umair Yar Khan"
+      ],
+      "source": "sacred",
+      "id": "umair-khan"
+    },
+    {
+      "benefactor": "Umair Y Khan",
+      "beneficiary": "Safia Athar",
+      "city": "Karachi",
+      "signupDate": "2026-02-25",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Umair Yar Khan"
+      ],
+      "source": "sacred",
+      "id": "umair-y-khan"
+    },
+    {
+      "benefactor": "Umar Farooq",
+      "beneficiary": "Choudary Yaqoob / Najma Yaqoob",
+      "city": "Lodhran",
+      "signupDate": "2026-01-03",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Muhammad Umar",
+        "Umar Habib"
+      ],
+      "engagementCities": [
+        "Lahore"
+      ],
+      "source": "sacred",
+      "id": "umar-farooq"
+    },
+    {
+      "benefactor": "Umer Farooq Hussain",
+      "beneficiary": "Mr Hussain Farooq / Ms Kishwer Hussain",
+      "city": "Lahore",
+      "signupDate": "2025-12-19",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "umer-farooq-hussain"
+    },
+    {
+      "benefactor": "Uzma Lakhani",
+      "beneficiary": "Zakaria Lakhani / Maimoona Lakhani",
+      "city": "Karachi",
+      "signupDate": "2026-01-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "uzma-lakhani"
+    },
+    {
+      "benefactor": "Wahaj Tahir",
+      "beneficiary": "Muhammad Tahir",
+      "city": "Karachi",
+      "signupDate": "2025-10-10",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "wahaj-tahir"
+    },
+    {
+      "benefactor": "Wajiha Khan",
+      "beneficiary": "Mujtaba Ali Khan / Shagufta Mujtaba",
+      "city": "Karachi",
+      "signupDate": "2026-04-14",
+      "serviceTier": "premium",
+      "status": "pause",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "wajiha-khan"
+    },
+    {
+      "benefactor": "Waqas Raja",
+      "beneficiary": "Raja Muhammad Asif / Musarrat Asif / Ayesha Waqar",
+      "city": "Karachi",
+      "signupDate": "2025-09-24",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "waqas-raja"
+    },
+    {
+      "benefactor": "Yasir Siddiqui",
+      "beneficiary": "Afroze Jehan / Tahir Siddiqui",
+      "city": "Karachi",
+      "signupDate": "2025-09-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "yasir-siddiqui"
+    },
+    {
+      "benefactor": "Yousaf Majid",
+      "beneficiary": "Abdul Majid / Majida Majid / Jamal Majid",
+      "city": "Islamabad",
+      "signupDate": "2026-04-04",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "yousaf-majid"
+    },
+    {
+      "benefactor": "Zaheer Ahmed Waheed",
+      "beneficiary": "Nazeer Ahmed Waheed / Perveen Waheed",
+      "city": "Karachi",
+      "signupDate": "2025-09-27",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "zaheer-ahmed-waheed"
+    },
+    {
+      "benefactor": "Ziad Asghar",
+      "beneficiary": "Rabia Asghar",
+      "city": "Islamabad",
+      "signupDate": "2026-04-07",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "ziad-asghar"
+    },
+    {
+      "benefactor": "Zohare Haider",
+      "beneficiary": "Faryda Fayz Ur Rehman",
+      "city": "Islamabad",
+      "signupDate": "2025-01-21",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "source": "sacred",
+      "id": "zohare-haider"
+    },
+    {
+      "benefactor": "Zohra Niazi",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-27",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "ZohraNiazi"
+      ],
+      "contactEmails": [
+        "katdekarachi@gmail.com"
+      ],
+      "source": "sacred",
+      "id": "zohra-niazi"
+    },
+    {
+      "benefactor": "Syed Faraz Kazim",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-08-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Syed FarazKazim"
+      ],
+      "source": "sacred",
+      "id": "faraz-kazim"
+    },
+    {
+      "benefactor": "Shahmeen Islam",
+      "beneficiary": "TBC",
+      "city": "Karachi",
+      "signupDate": "2026-07-15",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "ShahmeenIslam"
+      ],
+      "source": "sacred",
+      "id": "shahmeen-islam"
+    },
+    {
+      "benefactor": "Dr. Rumaisa Ayub",
+      "beneficiary": "TBC",
+      "city": "Lahore",
+      "signupDate": "2026-07-03",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Dr. RumaisaAyub"
+      ],
+      "source": "sacred",
+      "id": "rumaisa-ayub"
+    },
+    {
+      "benefactor": "Test Beneficiary",
+      "beneficiary": "TBC",
+      "city": "Islamabad",
+      "signupDate": null,
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Test Person"
+      ],
+      "source": "sacred",
+      "id": "test-beneficiary"
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "version": 1,
+  "source": "Beneficiary Information & Risk Assessment documents",
+  "importedAt": "2026-06-18T07:32:30.252150Z",
+  "sourceFolder": "/Users/elahhamashrequi/Downloads/drive-download-20260618T064911Z-3-001",
+  "summary": {
+    "filesScanned": 84,
+    "matchedClients": 47,
+    "withBeneficiaryBirthday": 47,
+    "withBenefactorBirthday": 0,
+    "unmatchedFiles": 17
+  },
+  "clients": [
+    {
+      "id": "abdul-rehman",
+      "benefactor": "Abdul Rehman",
+      "beneficiary": "Abdul Hameed / Farzana Hameed",
+      "sourceFile": "Muhammad Rehman Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Imtiaz ul Rehman",
+          "birthday": "1961-03-02"
+        }
+      ],
+      "beneficiaryBirthday": "1961-03-02"
+    },
+    {
+      "id": "abdul-rehman-nazar",
+      "benefactor": "Abdul Rehman Nazar",
+      "beneficiary": "Shoukat Nazar / Bina Shaukat",
+      "sourceFile": "Abdul Rehman Nazar- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Shauket Nazar",
+          "birthday": "1948-08-28"
+        },
+        {
+          "name": "Bina Shaukat",
+          "birthday": "1953-08-21"
+        }
+      ],
+      "beneficiaryBirthday": "1953-08-21"
+    },
+    {
+      "id": "adeel-fahim",
+      "benefactor": "Adeel Fahim",
+      "beneficiary": "Fahim Sulaiman / Qudsia Fahim",
+      "sourceFile": "Fahim Sulaiman family Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1966-05-14"
+        }
+      ],
+      "beneficiaryBirthday": "1966-05-14"
+    },
+    {
+      "id": "ahsan-yousufzai",
+      "benefactor": "Ahsan Yousufzai",
+      "beneficiary": "Tahira Qurat- ul- Ain",
+      "sourceFile": "Ahsan Yousufzai- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Tahira Qurat- ul- Ain",
+          "birthday": "1945-01-01"
+        }
+      ],
+      "beneficiaryBirthday": "1945-01-01"
+    },
+    {
+      "id": "ali-wahab",
+      "benefactor": "Ali Wahab",
+      "beneficiary": "Sarah Siddiqui / Safina Siddiqui (not a poc)",
+      "sourceFile": "Ali Wahab- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Safina Siddiqui",
+          "birthday": "1931-09-30"
+        },
+        {
+          "name": "Sara Siddiqui",
+          "birthday": "1955-03-28"
+        }
+      ],
+      "beneficiaryBirthday": "1931-09-30"
+    },
+    {
+      "id": "ambassador-ahmed-farooq",
+      "benefactor": "Ambassador Ahmed Farooq",
+      "beneficiary": "Khalida Farooq",
+      "sourceFile": "Khalida Farooq Beneficiary Information & Risk Assessment (1).pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1939-03-30"
+        }
+      ],
+      "beneficiaryBirthday": "1939-03-30"
+    },
+    {
+      "id": "anas-athar",
+      "benefactor": "Anas Athar",
+      "beneficiary": "Izhar Ahmed Athar / Shaheen Athar",
+      "sourceFile": "Anas Athar- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Izhar Ahmad Athar",
+          "birthday": "1943-06-10"
+        },
+        {
+          "name": "Shaheen Athar",
+          "birthday": "1950-02-20"
+        }
+      ],
+      "beneficiaryBirthday": "1943-06-10"
+    },
+    {
+      "id": "anny-adnan-rafiq",
+      "benefactor": "Anny Adnan Rafiq",
+      "beneficiary": "Anjum Ara / Ishratun Nisa",
+      "sourceFile": "Anny Adnan Rafiq- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Anjum Ara",
+          "birthday": "1960-04-13"
+        },
+        {
+          "name": "Ishratun Nisa",
+          "birthday": "1939-05-12"
+        }
+      ],
+      "beneficiaryBirthday": "1960-04-13"
+    },
+    {
+      "id": "arif-kamruddin",
+      "benefactor": "Arif Kamruddin",
+      "beneficiary": "Zarin Kamruddin / Farida Bukhari",
+      "sourceFile": "Arif Kamruddin- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Zarina Kamruddin Premji",
+          "birthday": "1936-08-30"
+        }
+      ],
+      "beneficiaryBirthday": "1936-08-30"
+    },
+    {
+      "id": "azhar-biabani",
+      "benefactor": "Azhar Biabani",
+      "beneficiary": "Nuzhat Biabani / Admiral Biabani",
+      "sourceFile": "Azhar Family Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1964-07-04"
+        },
+        {
+          "name": "Complete Bene",
+          "birthday": "1966-03-21"
+        },
+        {
+          "name": "Ameen Muhammad Ratnani",
+          "birthday": "1964-07-04"
+        },
+        {
+          "name": "Neelofar Ratnani",
+          "birthday": "1966-03-21"
+        }
+      ],
+      "beneficiaryBirthday": "1964-07-04"
+    },
+    {
+      "id": "beenish-tariq-malik-azfar",
+      "benefactor": "Beenish Tariq/ Malik Azfar",
+      "beneficiary": "Khawaja Tariq Saeed / Nuzhat Parveen",
+      "sourceFile": "Beenish Tariq- Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Rawalpindi Police",
+          "birthday": "1948-10-10"
+        }
+      ],
+      "beneficiaryBirthday": "1948-10-10"
+    },
+    {
+      "id": "bilal-iqbal-hameed",
+      "benefactor": "Bilal Iqbal Hameed",
+      "beneficiary": "Iqbal Hameed / Sheerin Iqbal",
+      "sourceFile": "Bilal Iqbal Hameed- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Iqbal Hameed",
+          "birthday": "1944-10-24"
+        },
+        {
+          "name": "Shireen Iqbal",
+          "birthday": "1955-08-18"
+        }
+      ],
+      "beneficiaryBirthday": "1944-10-24"
+    },
+    {
+      "id": "faisal-khan",
+      "benefactor": "Dr Faisal Khan",
+      "beneficiary": "Dr Shahida Rashid",
+      "sourceFile": "Dr Faisal Khan- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Dr Shahida Rashid",
+          "birthday": "1947-03-27"
+        }
+      ],
+      "beneficiaryBirthday": "1947-03-27"
+    },
+    {
+      "id": "durdana-farid",
+      "benefactor": "Durdana Farid",
+      "beneficiary": "Riffat Mirza",
+      "sourceFile": "Durdana Farid- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Riffat Mirza",
+          "birthday": "1959-12-29"
+        }
+      ],
+      "beneficiaryBirthday": "1959-12-29"
+    },
+    {
+      "id": "hafiz-talha-javed",
+      "benefactor": "Hafiz Talha Javed",
+      "beneficiary": "Javed Akhtar / Farkhanda Javed",
+      "sourceFile": "Akhtars Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Bahria Town",
+          "birthday": "1981-05-31"
+        },
+        {
+          "name": "Javed Akhtar",
+          "birthday": "1952-01-01"
+        },
+        {
+          "name": "Farkhanda Javed",
+          "birthday": "1958-01-01"
+        }
+      ],
+      "beneficiaryBirthday": "1981-05-31"
+    },
+    {
+      "id": "hassan-hanif-c-o-hassan-lodhi",
+      "benefactor": "Hassan Hanif C/O Hassan Lodhi",
+      "beneficiary": "TBC",
+      "sourceFile": "Hasan Lodhi- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Wajahat Ullah Khan Lodhi",
+          "birthday": "1925-09-19"
+        }
+      ],
+      "beneficiaryBirthday": "1925-09-19"
+    },
+    {
+      "id": "hina-arshad",
+      "benefactor": "Hina Arshad",
+      "beneficiary": "TBC",
+      "sourceFile": "Hina Arshad- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Arshad Ahmad",
+          "birthday": "1956-06-10"
+        },
+        {
+          "name": "Nuzhat Parveen",
+          "birthday": "1958-01-01"
+        }
+      ],
+      "beneficiaryBirthday": "1956-06-10"
+    },
+    {
+      "id": "hina-guzmair",
+      "benefactor": "Hina Guzmair",
+      "beneficiary": "Mohammad Ashraf Mehr / Muzammal Ashraf",
+      "sourceFile": "Hina Guezmir- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Mohammad Ashraf Mehr",
+          "birthday": "1943-08-15"
+        },
+        {
+          "name": "Muzammal Ashraf",
+          "birthday": "1950-12-31"
+        }
+      ],
+      "beneficiaryBirthday": "1943-08-15"
+    },
+    {
+      "id": "javeria-fatima",
+      "benefactor": "Javeria Fatima",
+      "beneficiary": "Syed Zain ul Abbas Zaidi / Bushra Fatima",
+      "sourceFile": "Javeria Fatima- Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1955-11-22"
+        },
+        {
+          "name": "Complete Bene",
+          "birthday": "1960-02-23"
+        }
+      ],
+      "beneficiaryBirthday": "1955-11-22"
+    },
+    {
+      "id": "kashif-janjua",
+      "benefactor": "Kashif Janjua",
+      "beneficiary": "Afzal Janjua / Salma Shahnaz",
+      "sourceFile": "Janjua 1 Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1942-04-04"
+        },
+        {
+          "name": "Complete Bene",
+          "birthday": "1952-07-07"
+        }
+      ],
+      "beneficiaryBirthday": "1942-04-04"
+    },
+    {
+      "id": "khurram-zia",
+      "benefactor": "Khurram Zia",
+      "beneficiary": "Kiran Fatima",
+      "sourceFile": "Ayesha Zia- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Farzana Zia Khan",
+          "birthday": "1967-12-12"
+        }
+      ],
+      "beneficiaryBirthday": "1967-12-12"
+    },
+    {
+      "id": "mamnoon-zaidi",
+      "benefactor": "Mamnoon Zaidi",
+      "beneficiary": "Musharraf Hussain Zaidi / Farhat Ruby Zaidi",
+      "sourceFile": "Mamnoon Zaidi- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Musharraf Hussain Zaidi",
+          "birthday": "1941-01-31"
+        },
+        {
+          "name": "Farhat Ruby Zaidi",
+          "birthday": "1954-02-21"
+        }
+      ],
+      "beneficiaryBirthday": "1941-01-31"
+    },
+    {
+      "id": "mehpara-hunzai",
+      "benefactor": "Mehpara Hunzai",
+      "beneficiary": "Zewar Bibi",
+      "sourceFile": "Para Hunzai- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Zewar Bibi",
+          "birthday": "1961-01-01"
+        }
+      ],
+      "beneficiaryBirthday": "1961-01-01"
+    },
+    {
+      "id": "umar-habib",
+      "benefactor": "Muhammad Umar Habib",
+      "beneficiary": "Bilquees Habib / Aisha Habib / Hamza Habib / Fatima Habib",
+      "sourceFile": "Habib Family Beneficiary Information and Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "2002-04-13"
+        }
+      ],
+      "beneficiaryBirthday": "2002-04-13"
+    },
+    {
+      "id": "muneer-usman",
+      "benefactor": "Muneer Usman",
+      "beneficiary": "Muneer Usman",
+      "sourceFile": "Muneer Usman- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Muneer Usman",
+          "birthday": "1980-09-03"
+        }
+      ],
+      "beneficiaryBirthday": "1980-09-03"
+    },
+    {
+      "id": "neha-temuri",
+      "benefactor": "Neha Temuri",
+      "beneficiary": "Mashhood ul Hassan Temuri",
+      "sourceFile": "Neha Temuri- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Mashhood ul Hassan Temuri",
+          "birthday": "1955-07-12"
+        }
+      ],
+      "beneficiaryBirthday": "1955-07-12"
+    },
+    {
+      "id": "nisar-akbar",
+      "benefactor": "Nisar Akbar",
+      "beneficiary": "Muhammad Akbar / Maqsuda Akbar",
+      "sourceFile": "A Nisar Akbar Family- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Muhammad Akbar",
+          "birthday": "1936-06-01"
+        },
+        {
+          "name": "Maqsuda Akbar",
+          "birthday": "1939-05-10"
+        },
+        {
+          "name": "City Assessment",
+          "birthday": "1981-04-17"
+        }
+      ],
+      "beneficiaryBirthday": "1936-06-01"
+    },
+    {
+      "id": "omar-mufti",
+      "benefactor": "Omar Mufti",
+      "beneficiary": "Rehana Mufti",
+      "sourceFile": "Omar Mufti- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Rehana Mufti",
+          "birthday": "1959-01-19"
+        }
+      ],
+      "beneficiaryBirthday": "1959-01-19"
+    },
+    {
+      "id": "osama-ali",
+      "benefactor": "Osama Ali",
+      "beneficiary": "Tauquir Ali / Rana Tauquir / Umaira Ali (Main POC)",
+      "sourceFile": "Osama Ali- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Tauqir Ali",
+          "birthday": "1947-11-14"
+        },
+        {
+          "name": "Rana Tauqir",
+          "birthday": "1954-05-10"
+        }
+      ],
+      "beneficiaryBirthday": "1947-11-14"
+    },
+    {
+      "id": "raazi-hassan",
+      "benefactor": "Raazi Hassan",
+      "beneficiary": "Syed Najam Ul Hassan / Nasreen Najam / Iffat Fatima",
+      "sourceFile": "Emergency Raazi Hassan family Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1942-05-05"
+        }
+      ],
+      "beneficiaryBirthday": "1942-05-05"
+    },
+    {
+      "id": "saad-ali-khan",
+      "benefactor": "Saad Ali Khan",
+      "beneficiary": "Jawaid Ali Khan / Lubna Jawaid",
+      "sourceFile": "Saad Salahuddin Khan- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Salauddin Khan",
+          "birthday": "1957-03-15"
+        },
+        {
+          "name": "Lubna Salahuddin",
+          "birthday": "1964-06-28"
+        }
+      ],
+      "beneficiaryBirthday": "1957-03-15"
+    },
+    {
+      "id": "salma-bukhari",
+      "benefactor": "Salma Bukhari",
+      "beneficiary": "Mohammed Irshad Hussain / Habiba Malick",
+      "sourceFile": "Salma Bukhari Family Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Complete Bene",
+          "birthday": "1941-10-27"
+        }
+      ],
+      "beneficiaryBirthday": "1941-10-27"
+    },
+    {
+      "id": "sarwat-waseem",
+      "benefactor": "Sarwat Waseem",
+      "beneficiary": "Mumshad Ahmed / Kausar Mumshad",
+      "sourceFile": "Sarwat Waseem- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Mumshad Ahmed",
+          "birthday": "1954-11-16"
+        },
+        {
+          "name": "Kausar Mumshad",
+          "birthday": "1956-08-25"
+        }
+      ],
+      "beneficiaryBirthday": "1954-11-16"
+    },
+    {
+      "id": "shahzad-jamal",
+      "benefactor": "Shahzad Jamal",
+      "beneficiary": "Muhammad Jamal Ud Din / Qudsia Jamal",
+      "sourceFile": "Shahzad Jamal Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Muhammad Jamaluddin",
+          "birthday": "1943-12-03"
+        },
+        {
+          "name": "Qudsia Jamal",
+          "birthday": "1955-06-10"
+        }
+      ],
+      "beneficiaryBirthday": "1943-12-03"
+    },
+    {
+      "id": "shahzada-azam",
+      "benefactor": "Shahzada Azam",
+      "beneficiary": "Raana Khurrum / Dr Salahuddin Khan / Abid Lateef Minhas",
+      "sourceFile": "Shahzada Azam- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Syed Shahzada Khurram",
+          "birthday": "1954-02-14"
+        }
+      ],
+      "beneficiaryBirthday": "1954-02-14"
+    },
+    {
+      "id": "shamaila-siddiqui",
+      "benefactor": "Shamaila Siddiqui",
+      "beneficiary": "Riaz Ahmed Siddiqui",
+      "sourceFile": "Shamaila Siddiqui- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Riaz Ahmed Siddiqui",
+          "birthday": "1940-02-15"
+        }
+      ],
+      "beneficiaryBirthday": "1940-02-15"
+    },
+    {
+      "id": "shehryar-salam",
+      "benefactor": "Shehryar Salam",
+      "beneficiary": "Syed Khalid Salam / Nasreen Khalid",
+      "sourceFile": "Shehryar Salam- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Syed Khalid Salam",
+          "birthday": "1942-11-23"
+        },
+        {
+          "name": "Nasreen Khalid",
+          "birthday": "1952-03-21"
+        }
+      ],
+      "beneficiaryBirthday": "1942-11-23"
+    },
+    {
+      "id": "shoaib-s-o-rana-s-sadiq",
+      "benefactor": "Shoaib S/O Rana S Sadiq",
+      "beneficiary": "Rana S Sadiq",
+      "sourceFile": "Shoaib- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Rana Sadiq",
+          "birthday": "1945-10-01"
+        }
+      ],
+      "beneficiaryBirthday": "1945-10-01"
+    },
+    {
+      "id": "sobia-khalid",
+      "benefactor": "Sobia Khalid",
+      "beneficiary": "Muhammad Abdul Samad / Saleha Rizwana Abdul Samad",
+      "sourceFile": "Sobia Khalid- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Muhammad Abdul Samad",
+          "birthday": "1944-01-01"
+        },
+        {
+          "name": "Saleha Rizwana Abdul Samad",
+          "birthday": "1952-07-17"
+        },
+        {
+          "name": "Bahria Town",
+          "birthday": "1944-01-01"
+        },
+        {
+          "name": "Complete Bene",
+          "birthday": "1952-07-17"
+        }
+      ],
+      "beneficiaryBirthday": "1944-01-01"
+    },
+    {
+      "id": "ahsan-baqi",
+      "benefactor": "Syed Ahsan Baqi",
+      "beneficiary": "Syed Umar Baqi / Nighat Baqi / Syed Hasan Baqi / Raheela Kamran",
+      "sourceFile": "Syed Ahsan Baqi- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Syed Umar Baqi",
+          "birthday": "1953-07-14"
+        },
+        {
+          "name": "Nighat Baqi",
+          "birthday": "1955-04-04"
+        },
+        {
+          "name": "Syed Hasan Baqi",
+          "birthday": "1984-02-02"
+        }
+      ],
+      "beneficiaryBirthday": "1953-07-14"
+    },
+    {
+      "id": "faraz-ali",
+      "benefactor": "Syed Faraz Ali",
+      "beneficiary": "Syed Rashid Mubashir / Qaiser Mubeen hashmi / Shumaila Rashid / Rehana Kousar",
+      "sourceFile": "Syed Faraz Family Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Syed Rashid Mubashir",
+          "birthday": "1958-08-01"
+        },
+        {
+          "name": "Qaiser Mubeen Hashmi",
+          "birthday": "1956-09-08"
+        },
+        {
+          "name": "Shumaila Rashid",
+          "birthday": "1984-10-28"
+        }
+      ],
+      "beneficiaryBirthday": "1958-08-01"
+    },
+    {
+      "id": "safee-ullah-shah",
+      "benefactor": "Syed Safee Ullah Shah",
+      "beneficiary": "Syed Atiq Ullah Shah / Samra Atiq / Noshin Zohair / Eesha Zohair / Khush Naseeb Khilji",
+      "sourceFile": "Safeeullah Family Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Bahria Town",
+          "birthday": "1987-03-01"
+        }
+      ],
+      "beneficiaryBirthday": "1987-03-01"
+    },
+    {
+      "id": "talha-aquil",
+      "benefactor": "Talha Aquil",
+      "beneficiary": "Abdul Shakoor Khan Aquil / Dr. Razia Khan Aquil",
+      "sourceFile": "Aquil Family Beneficiary Information & Risk Assessment (1).pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1938-05-21"
+        },
+        {
+          "name": "Complete Bene",
+          "birthday": "1944-03-24"
+        }
+      ],
+      "beneficiaryBirthday": "1938-05-21"
+    },
+    {
+      "id": "tarim-faisal",
+      "benefactor": "Tarim Wasim",
+      "beneficiary": "TBC",
+      "sourceFile": "Tarim Wasim- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Wasim Ahmad",
+          "birthday": "1941-03-24"
+        },
+        {
+          "name": "Shahnaz Wasim",
+          "birthday": "1947-03-11"
+        }
+      ],
+      "beneficiaryBirthday": "1941-03-24"
+    },
+    {
+      "id": "waqas-raja",
+      "benefactor": "Waqas Raja",
+      "beneficiary": "Raja Muhammad Asif / Musarrat Asif / Ayesha Waqar",
+      "sourceFile": "Waqas Raja- Beneficiary Information & Risk Assessment.pdf",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "City Assessment",
+          "birthday": "1949-08-15"
+        },
+        {
+          "name": "Complete Bene",
+          "birthday": "1954-04-01"
+        }
+      ],
+      "beneficiaryBirthday": "1949-08-15"
+    },
+    {
+      "id": "yasir-siddiqui",
+      "benefactor": "Yasir Siddiqui",
+      "beneficiary": "Afroze Jehan / Tahir Siddiqui",
+      "sourceFile": "Yasir Siddiqui- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Afroze Jehan",
+          "birthday": "1957-01-23"
+        },
+        {
+          "name": "Tahir Siddiqui",
+          "birthday": "1987-10-03"
+        }
+      ],
+      "beneficiaryBirthday": "1957-01-23"
+    },
+    {
+      "id": "zaheer-ahmed-waheed",
+      "benefactor": "Zaheer Ahmed Waheed",
+      "beneficiary": "Nazeer Ahmed Waheed / Perveen Waheed",
+      "sourceFile": "Zaheer Ahmed Waheed- Beneficiary Information & Risk Assessment.docx",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Nazeer Ahmed Waheed",
+          "birthday": "1950-01-18"
+        },
+        {
+          "name": "Perveen Waheed",
+          "birthday": "1960-05-15"
+        }
+      ],
+      "beneficiaryBirthday": "1950-01-18"
+    }
+  ]
+}
