@@ -6,11 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   ENGAGEMENT_EVENT_STATUS_LABELS,
-  ENGAGEMENT_EVENT_TYPE_LABELS,
+  engagementEventTypeLabel,
   type EngagementCalendarData,
   type EngagementEvent,
   type EngagementEventStatus,
   type EngagementEventType,
+  type ExperienceSubcategory,
 } from "@/lib/types/engagement-calendar";
 import { defaultDoctorForCity, listDoctorsForPicker } from "@/lib/engagement/doctors";
 
@@ -26,16 +27,8 @@ const LEAD_CITY: Record<Lead, string> = {
   Labeba: "Karachi",
 };
 
-const EVENT_TYPES: EngagementEventType[] = [
-  "checkin_call",
-  "visit",
-  "doctor_call",
-  "psychologist_call",
-  "outing",
-  "other",
-];
-
 const TYPE_VARIANT: Record<EngagementEventType, "default" | "secondary" | "outline" | "destructive"> = {
+  experience: "secondary",
   doctor_call: "destructive",
   psychologist_call: "destructive",
   checkin_call: "secondary",
@@ -88,11 +81,17 @@ interface FormState {
   type: EngagementEventType;
   date: string;
   time: string;
+  endDate: string;
+  endTime: string;
   title: string;
   notes: string;
   status: EngagementEventStatus;
   assignedDoctor: string;
   hubspotTicketId: string | null;
+  /** Odoo Experience sub category — the entry's Type. Null on legacy entries until re-picked. */
+  odooSubcategoryId: number | null;
+  odooSubcategoryName: string | null;
+  odooTaskId: number | null;
 }
 
 interface EngagementCalendarProps {
@@ -150,7 +149,6 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
     }
   }
 
-  const leadCity = actingAs ? LEAD_CITY[actingAs] : null;
 
   const defaultDate = useMemo(() => {
     const t = todayKey();
@@ -165,14 +163,19 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
       registryId: client.registryId,
       clientLabel: client.label,
       clientCity: client.city,
-      type: "checkin_call",
+      type: "experience",
       date: defaultDate,
-      time: "",
+      time: "10:00",
+      endDate: defaultDate,
+      endTime: "11:00",
       title: "",
       notes: "",
       status: "planned",
-      assignedDoctor: defaultDoctorForCity(client.city),
+      assignedDoctor: "",
       hubspotTicketId: null,
+      odooSubcategoryId: null,
+      odooSubcategoryName: null,
+      odooTaskId: null,
     });
   }
 
@@ -185,20 +188,38 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
       clientCity: event.city,
       type: event.type,
       date: event.date,
-      time: event.time ?? "",
+      time: event.time ?? "10:00",
+      endDate: event.endDate ?? event.date,
+      endTime: event.endTime ?? "11:00",
       title: event.title,
       notes: event.notes,
       status: event.status,
       assignedDoctor: event.assignedDoctor ?? defaultDoctorForCity(event.city),
       hubspotTicketId: event.hubspotTicketId,
+      odooSubcategoryId: event.odooSubcategoryId ?? null,
+      odooSubcategoryName: event.odooSubcategoryName ?? null,
+      odooTaskId: event.odooTaskId ?? null,
     });
   }
 
-  async function submitForm() {
-    if (!form) return;
+  /** Save the form. Returns the saved event, or null (error already shown). */
+  async function saveForm(opts: { close: boolean }): Promise<EngagementEvent | null> {
+    if (!form) return null;
     if (!actingAs) {
       setError("Pick who you are (top right) before adding entries.");
-      return;
+      return null;
+    }
+    if (form.type === "experience" && !form.odooSubcategoryId) {
+      setError("Pick a type.");
+      return null;
+    }
+    if (!form.date || !form.time || !form.endDate || !form.endTime) {
+      setError("Start and end date/time are required.");
+      return null;
+    }
+    if (`${form.endDate}T${form.endTime}` < `${form.date}T${form.time}`) {
+      setError("End must not be before start.");
+      return null;
     }
     setSaving(true);
     setError(null);
@@ -211,8 +232,11 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
           id: form.id ?? undefined,
           registryId: form.registryId,
           type: form.type,
+          odooSubcategoryId: form.type === "experience" ? form.odooSubcategoryId : undefined,
           date: form.date,
-          time: form.time || null,
+          time: form.time,
+          endDate: form.endDate,
+          endTime: form.endTime,
           title: form.title,
           notes: form.notes,
           status: form.status,
@@ -229,15 +253,51 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
         const body = await res.json().catch(() => ({}));
         throw new Error(body.error ?? "Could not save");
       }
-      const body = (await res.json()) as { hubspotWarning?: string };
+      const body = (await res.json()) as { hubspotWarning?: string; event: EngagementEvent };
       if (body.hubspotWarning) {
         setError(`Saved to calendar, but HubSpot: ${body.hubspotWarning}`);
-      } else {
+      } else if (opts.close) {
         setForm(null);
       }
       void fetchData({ silent: true });
+      return body.event;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Could not save");
+      return null;
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function submitForm() {
+    await saveForm({ close: true });
+  }
+
+  /**
+   * Save any unsaved edits first so the task matches what is on screen, then
+   * create the Odoo task. The server makes this idempotent.
+   */
+  async function createOdooTicket() {
+    if (!form?.id) return;
+    const saved = await saveForm({ close: false });
+    if (!saved) return;
+    setSaving(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/engagement-calendar/odoo-task", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: saved.id }),
+      });
+      const body = (await res.json().catch(() => ({}))) as {
+        error?: string;
+        odooTaskId?: number;
+      };
+      if (!res.ok || !body.odooTaskId) throw new Error(body.error ?? "Could not create the Odoo task");
+      setForm((f) => (f ? { ...f, odooTaskId: body.odooTaskId! } : f));
+      void fetchData({ silent: true });
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Could not create the Odoo task");
     } finally {
       setSaving(false);
     }
@@ -253,7 +313,7 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
   }
 
   async function removeEvent(event: EngagementEvent) {
-    if (!window.confirm(`Delete this ${ENGAGEMENT_EVENT_TYPE_LABELS[event.type]} for ${event.clientLabel}?`)) {
+    if (!window.confirm(`Delete this ${engagementEventTypeLabel(event)} for ${event.clientLabel}?`)) {
       return;
     }
     await fetch(`/api/engagement-calendar?id=${encodeURIComponent(event.id)}`, {
@@ -277,10 +337,9 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
     return map;
   }, [data.weekEvents]);
 
-  const canAddFor = (client: { city: string; scheduleCity: string }) =>
-    Boolean(leadCity) &&
-    (client.scheduleCity === leadCity ||
-      client.city.split(" / ").includes(leadCity!));
+  // Any coordinator can add for any city (cover for each other); an identity is
+  // still required because every entry records who created it.
+  const canAddFor = (_client: { city: string; scheduleCity: string }) => Boolean(actingAs);
 
   return (
     <div className="space-y-6">
@@ -455,8 +514,13 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
                           </div>
                           <div className="mt-1 flex flex-wrap items-center gap-1">
                             <Badge variant={TYPE_VARIANT[e.type]} className="text-[10px]">
-                              {ENGAGEMENT_EVENT_TYPE_LABELS[e.type]}
+                              {engagementEventTypeLabel(e)}
                             </Badge>
+                            {e.odooTaskId && (
+                              <Badge variant="outline" className="text-[10px]">
+                                Odoo ✓
+                              </Badge>
+                            )}
                             {e.status !== "planned" && (
                               <Badge variant={STATUS_VARIANT[e.status]} className="text-[10px]">
                                 {ENGAGEMENT_EVENT_STATUS_LABELS[e.status]}
@@ -560,7 +624,7 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
                           <button
                             key={e.id}
                             onClick={() => openEdit(e)}
-                            title={`${ENGAGEMENT_EVENT_TYPE_LABELS[e.type]} · ${formatDayLabel(e.date)}`}
+                            title={`${engagementEventTypeLabel(e)} · ${formatDayLabel(e.date)}`}
                           >
                             <Badge variant={TYPE_VARIANT[e.type]} className="text-[10px]">
                               {formatDayLabel(e.date).split(",")[0]}
@@ -577,8 +641,10 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
                       disabled={!canAddFor(c)}
                       title={
                         canAddFor(c)
-                          ? "Add entry"
-                          : `Only ${c.lead} can add for ${c.city}`
+                          ? c.lead && actingAs !== c.lead
+                            ? `Add entry (city lead: ${c.lead})`
+                            : "Add entry"
+                          : "Choose who you are acting as first"
                       }
                       onClick={() =>
                         openAdd({
@@ -609,9 +675,12 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
         <EventModal
           form={form}
           setForm={setForm}
+          experienceTypes={data.experienceTypes}
+          odooUrl={data.odooUrl}
           hubspotAutoCreate={data.hubspotAutoCreate}
           hubSpotPortalId={data.hubSpotPortalId}
           onSubmit={submitForm}
+          onCreateOdooTicket={createOdooTicket}
           onClose={() => setForm(null)}
           onDelete={form.id ? () => removeEvent({ ...form, id: form.id! } as unknown as EngagementEvent) : undefined}
           onComplete={
@@ -648,9 +717,12 @@ function SummaryCard({
 function EventModal({
   form,
   setForm,
+  experienceTypes,
+  odooUrl,
   hubspotAutoCreate,
   hubSpotPortalId,
   onSubmit,
+  onCreateOdooTicket,
   onClose,
   onDelete,
   onComplete,
@@ -659,9 +731,12 @@ function EventModal({
 }: {
   form: FormState;
   setForm: (f: FormState) => void;
+  experienceTypes: ExperienceSubcategory[];
+  odooUrl: string | null;
   hubspotAutoCreate: boolean;
   hubSpotPortalId: string | null;
   onSubmit: () => void;
+  onCreateOdooTicket: () => void;
   onClose: () => void;
   onDelete?: () => void;
   onComplete?: () => void;
@@ -669,6 +744,7 @@ function EventModal({
   error: string | null;
 }) {
   const doctors = listDoctorsForPicker(form.clientCity);
+  const isExperience = form.type === "experience";
 
   return (
     <div
@@ -691,27 +767,58 @@ function EventModal({
               Type
               <select
                 className="mt-1 w-full rounded-md border bg-background px-2 py-1.5 text-sm"
-                value={form.type}
+                value={isExperience && form.odooSubcategoryId ? String(form.odooSubcategoryId) : form.type}
+                disabled={Boolean(form.odooTaskId)}
                 onChange={(e) => {
-                  const type = e.target.value as EngagementEventType;
+                  const v = e.target.value;
+                  // Legacy entries (no Odoo type yet) keep their old type options;
+                  // everything else is an Odoo Experience sub category id.
+                  if (["doctor_call", "psychologist_call", "checkin_call", "visit", "outing", "other"].includes(v)) {
+                    const type = v as EngagementEventType;
+                    setForm({
+                      ...form,
+                      type,
+                      odooSubcategoryId: null,
+                      odooSubcategoryName: null,
+                      assignedDoctor:
+                        type === "psychologist_call"
+                          ? "Dr Farwa"
+                          : type === "doctor_call"
+                            ? form.assignedDoctor || defaultDoctorForCity(form.clientCity)
+                            : "",
+                    });
+                    return;
+                  }
+                  const sub = experienceTypes.find((s) => String(s.id) === v);
                   setForm({
                     ...form,
-                    type,
-                    assignedDoctor:
-                      type === "psychologist_call"
-                        ? "Dr Farwa"
-                        : type === "doctor_call"
-                          ? form.assignedDoctor || defaultDoctorForCity(form.clientCity)
-                          : "",
+                    type: "experience",
+                    odooSubcategoryId: sub?.id ?? null,
+                    odooSubcategoryName: sub?.name ?? null,
+                    assignedDoctor: "",
                   });
                 }}
               >
-                {EVENT_TYPES.map((t) => (
-                  <option key={t} value={t}>
-                    {ENGAGEMENT_EVENT_TYPE_LABELS[t]}
-                  </option>
-                ))}
+                {!isExperience && !form.odooSubcategoryId && (
+                  <option value={form.type}>{engagementEventTypeLabel(form)} (legacy)</option>
+                )}
+                <optgroup label="Experience (Odoo)">
+                  {experienceTypes.map((s) => (
+                    <option key={s.id} value={String(s.id)}>
+                      {s.label}
+                    </option>
+                  ))}
+                </optgroup>
               </select>
+              {form.odooTaskId ? (
+                <span className="mt-1 block text-[11px] text-muted-foreground">
+                  Type is locked — an Odoo task already exists for this entry.
+                </span>
+              ) : (
+                <span className="mt-1 block text-[11px] text-muted-foreground">
+                  Creates a Field Service · Experience task in Odoo.
+                </span>
+              )}
             </label>
 
             {form.type === "doctor_call" && (
@@ -753,22 +860,55 @@ function EventModal({
               )}
 
             <label className="text-xs font-medium">
-              Date
+              Start date <span className="text-destructive">*</span>
               <input
                 type="date"
+                required
                 className="mt-1 w-full rounded-md border bg-background px-2 py-1.5 text-sm"
                 value={form.date}
-                onChange={(e) => setForm({ ...form, date: e.target.value })}
+                onChange={(e) => {
+                  const date = e.target.value;
+                  // Keep the end on or after the new start.
+                  setForm({
+                    ...form,
+                    date,
+                    endDate: !form.endDate || form.endDate < date ? date : form.endDate,
+                  });
+                }}
               />
             </label>
 
             <label className="text-xs font-medium">
-              Time (optional)
+              Start time <span className="text-destructive">*</span>
               <input
                 type="time"
+                required
                 className="mt-1 w-full rounded-md border bg-background px-2 py-1.5 text-sm"
                 value={form.time}
                 onChange={(e) => setForm({ ...form, time: e.target.value })}
+              />
+            </label>
+
+            <label className="text-xs font-medium">
+              End date <span className="text-destructive">*</span>
+              <input
+                type="date"
+                required
+                min={form.date}
+                className="mt-1 w-full rounded-md border bg-background px-2 py-1.5 text-sm"
+                value={form.endDate}
+                onChange={(e) => setForm({ ...form, endDate: e.target.value })}
+              />
+            </label>
+
+            <label className="text-xs font-medium">
+              End time <span className="text-destructive">*</span>
+              <input
+                type="time"
+                required
+                className="mt-1 w-full rounded-md border bg-background px-2 py-1.5 text-sm"
+                value={form.endTime}
+                onChange={(e) => setForm({ ...form, endTime: e.target.value })}
               />
             </label>
 
@@ -815,6 +955,23 @@ function EventModal({
               </label>
             )}
 
+            {form.odooTaskId && (
+              <p className="col-span-2 text-xs text-muted-foreground">
+                Odoo task created:{" "}
+                {odooUrl ? (
+                  <a
+                    href={`${odooUrl}/odoo/project/2/${form.odooTaskId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline"
+                  >
+                    #{form.odooTaskId}
+                  </a>
+                ) : (
+                  <>#{form.odooTaskId}</>
+                )}
+              </p>
+            )}
             {form.hubspotTicketId && (
               <p className="col-span-2 text-xs text-muted-foreground">
                 HubSpot ticket linked:{" "}
@@ -853,7 +1010,13 @@ function EventModal({
               <Button variant="outline" size="sm" onClick={onClose} disabled={saving}>
                 Cancel
               </Button>
-              <Button size="sm" onClick={onSubmit} disabled={saving}>
+              {/* Task creation lives on a saved entry, per the "log first, create on click" flow. */}
+              {form.id && isExperience && !form.odooTaskId && (
+                <Button size="sm" onClick={onCreateOdooTicket} disabled={saving}>
+                  {saving ? "Working…" : "Create ticket in Odoo"}
+                </Button>
+              )}
+              <Button variant={form.id && isExperience && !form.odooTaskId ? "outline" : "default"} size="sm" onClick={onSubmit} disabled={saving}>
                 {saving ? "Saving…" : "Save"}
               </Button>
             </div>

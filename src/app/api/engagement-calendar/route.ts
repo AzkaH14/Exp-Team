@@ -9,6 +9,8 @@ import {
   deleteEvent,
   updateEvent,
 } from "@/lib/engagement/calendar-store";
+import { findExperienceSubcategory } from "@/lib/integrations/odoo-engagement";
+import { isOdooRegistryEnabled } from "@/lib/integrations/odoo-registry";
 import type {
   EngagementEventType,
   EngagementEventStatus,
@@ -18,6 +20,7 @@ export const dynamic = "force-dynamic";
 
 const VALID_CITIES = ["all", "Islamabad", "Karachi", "Lahore"];
 const VALID_TYPES: EngagementEventType[] = [
+  "experience",
   "doctor_call",
   "psychologist_call",
   "checkin_call",
@@ -32,6 +35,37 @@ const VALID_STATUS: EngagementEventStatus[] = [
   "cancelled",
 ];
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const TIME_RE = /^\d{2}:\d{2}$/;
+
+/** Validate the required start/end date+time window. Returns an error message or null. */
+function validateSchedule(body: Record<string, unknown>): string | null {
+  const date = String(body.date ?? "").trim();
+  const time = String(body.time ?? "").trim();
+  const endDate = String(body.endDate ?? "").trim();
+  const endTime = String(body.endTime ?? "").trim();
+  if (!DATE_RE.test(date)) return "Start date is required (YYYY-MM-DD)";
+  if (!TIME_RE.test(time)) return "Start time is required (HH:MM)";
+  if (!DATE_RE.test(endDate)) return "End date is required (YYYY-MM-DD)";
+  if (!TIME_RE.test(endTime)) return "End time is required (HH:MM)";
+  if (`${endDate}T${endTime}` < `${date}T${time}`) return "End must not be before start";
+  return null;
+}
+
+/**
+ * "experience" entries must name a real Odoo Experience sub category.
+ * Returns the resolved fields, or an error message.
+ */
+async function resolveExperienceType(
+  type: EngagementEventType | undefined,
+  rawId: unknown
+): Promise<{ odooSubcategoryId: number | null; odooSubcategoryName: string | null } | { error: string } | null> {
+  if (type !== "experience") return null;
+  const id = Number(rawId);
+  if (!Number.isInteger(id) || id <= 0) return { error: "Pick a type (Odoo sub category)" };
+  const sub = await findExperienceSubcategory(id);
+  if (!sub) return { error: "That type is not an Odoo Experience sub category" };
+  return { odooSubcategoryId: sub.id, odooSubcategoryName: sub.name };
+}
 
 function normalizeCity(raw: string | null): string {
   const city = raw ?? "all";
@@ -74,18 +108,32 @@ export async function POST(request: NextRequest) {
   if (!VALID_TYPES.includes(type)) {
     return NextResponse.json({ error: "Invalid type" }, { status: 400 });
   }
-  if (!DATE_RE.test(date)) {
-    return NextResponse.json({ error: "date must be YYYY-MM-DD" }, { status: 400 });
+  const scheduleError = validateSchedule(body);
+  if (scheduleError) {
+    return NextResponse.json({ error: scheduleError }, { status: 400 });
+  }
+  if (isOdooRegistryEnabled() && type !== "experience") {
+    return NextResponse.json(
+      { error: "New entries must use an Odoo Experience type" },
+      { status: 400 }
+    );
+  }
+  const experience = await resolveExperienceType(type, body.odooSubcategoryId);
+  if (experience && "error" in experience) {
+    return NextResponse.json({ error: experience.error }, { status: 400 });
   }
 
   try {
     const { event, hubspotWarning } = await addEvent({
       registryId,
       type,
+      ...(experience ?? {}),
       title: typeof body.title === "string" ? body.title : undefined,
       notes: typeof body.notes === "string" ? body.notes : undefined,
       date,
       time: typeof body.time === "string" ? body.time : null,
+      endDate: typeof body.endDate === "string" ? body.endDate : null,
+      endTime: typeof body.endTime === "string" ? body.endTime : null,
       status: VALID_STATUS.includes(body.status as EngagementEventStatus)
         ? (body.status as EngagementEventStatus)
         : undefined,
@@ -125,16 +173,31 @@ export async function PATCH(request: NextRequest) {
   if (body.status !== undefined && !VALID_STATUS.includes(body.status as EngagementEventStatus)) {
     return NextResponse.json({ error: "Invalid status" }, { status: 400 });
   }
-  if (body.date !== undefined && !DATE_RE.test(String(body.date))) {
-    return NextResponse.json({ error: "date must be YYYY-MM-DD" }, { status: 400 });
+  // A full form save carries the schedule; a quick status/complete patch does not.
+  if (body.date !== undefined) {
+    const scheduleError = validateSchedule(body);
+    if (scheduleError) {
+      return NextResponse.json({ error: scheduleError }, { status: 400 });
+    }
+  }
+
+  const experience = await resolveExperienceType(
+    body.type as EngagementEventType | undefined,
+    body.odooSubcategoryId
+  );
+  if (experience && "error" in experience) {
+    return NextResponse.json({ error: experience.error }, { status: 400 });
   }
 
   const updated = await updateEvent(id, {
     type: body.type as EngagementEventType | undefined,
+    ...(experience ?? {}),
     title: typeof body.title === "string" ? body.title : undefined,
     notes: typeof body.notes === "string" ? body.notes : undefined,
     date: typeof body.date === "string" ? body.date : undefined,
     time: body.time === null ? null : typeof body.time === "string" ? body.time : undefined,
+    endDate: body.endDate === null ? null : typeof body.endDate === "string" ? body.endDate : undefined,
+    endTime: body.endTime === null ? null : typeof body.endTime === "string" ? body.endTime : undefined,
     status: body.status as EngagementEventStatus | undefined,
     assignedDoctor:
       body.assignedDoctor === null

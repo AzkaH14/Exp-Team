@@ -5,6 +5,8 @@ import { isTicketOpen } from "../ticket-queue-intelligence";
 import { getReportTicketIndex } from "../reports/ticket-index";
 import { getAllEvents, getCalendarStorageMode } from "./calendar-store";
 import { isHubSpotTicketCreateEnabled } from "../integrations/hubspot-ticket-create";
+import { isOdooRegistryEnabled } from "../integrations/odoo-registry";
+import { getExperienceSubcategories } from "../integrations/odoo-engagement";
 import { CITY_LEADS, ENGAGEMENT_CITIES, getCityLead } from "./team";
 import {
   calendarRowCity,
@@ -333,8 +335,11 @@ export async function getEngagementCalendarData(
     weekEvents,
     observanceBanner: calendarWeekObservanceBanner(now),
     storageMode: getCalendarStorageMode(),
-    hubspotAutoCreate: isHubSpotTicketCreateEnabled(),
+    // HubSpot is retired once Odoo is the registry — tasks go to Odoo on demand.
+    hubspotAutoCreate: isHubSpotTicketCreateEnabled() && !isOdooRegistryEnabled(),
     hubSpotPortalId: process.env.HUBSPOT_PORTAL_ID?.trim() || null,
+    experienceTypes: await getExperienceSubcategories(),
+    odooUrl: process.env.ODOO_URL?.trim().replace(/\/+$/, "") || null,
     summary: {
       interactionsYesterday: eventsYesterday + ticketsYesterday,
       eventsYesterday,

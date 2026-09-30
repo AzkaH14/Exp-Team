@@ -1,5 +1,54 @@
 {
   "version": 1,
   "description": "Coordinator engagement calendar entries (planned/logged client touchpoints)",
-  "events": []
+  "events": [
+    {
+      "id": "evt_munx1f5s_vegabk",
+      "registryId": "rizwan-saleem",
+      "clientLabel": "Rizwan Saleem",
+      "city": "Lahore",
+      "lead": "Seemab",
+      "type": "experience",
+      "title": "",
+      "notes": "",
+      "date": "2026-09-30",
+      "time": "10:00",
+      "endDate": "2026-09-30",
+      "endTime": "17:00",
+      "status": "planned",
+      "rescheduledFrom": null,
+      "assignedDoctor": null,
+      "hubspotTicketId": null,
+      "odooSubcategoryId": 173,
+      "odooSubcategoryName": "Engagaement Visit",
+      "odooTaskId": 73743,
+      "createdBy": "Seemab",
+      "createdAt": "2026-09-30T09:41:35.872Z",
+      "updatedAt": "2026-09-30T09:42:28.393Z"
+    },
+    {
+      "id": "evt_munx29ve_2a785a",
+      "registryId": "umar-farooq",
+      "clientLabel": "Umar Farooq",
+      "city": "Lahore",
+      "lead": "Seemab",
+      "type": "experience",
+      "title": "",
+      "notes": "",
+      "date": "2026-09-30",
+      "time": "10:00",
+      "endDate": "2026-09-30",
+      "endTime": "16:00",
+      "status": "planned",
+      "rescheduledFrom": null,
+      "assignedDoctor": null,
+      "hubspotTicketId": null,
+      "odooSubcategoryId": 173,
+      "odooSubcategoryName": "Engagaement Visit",
+      "odooTaskId": null,
+      "createdBy": "Seemab",
+      "createdAt": "2026-09-30T09:42:15.674Z",
+      "updatedAt": "2026-09-30T09:42:15.674Z"
+    }
+  ]
 }

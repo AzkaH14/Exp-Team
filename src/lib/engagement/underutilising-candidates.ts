@@ -10,6 +10,7 @@ import {
   resolveEngagementClientMeta,
 } from "./client-meta";
 import { isUnderutilisingClient } from "./last-activity";
+import { isExcludedFromUtilization } from "./calendar-clients";
 import type { UnderutilisingSheetEntry } from "./underutilising-sheet";
 
 export interface UnderutilisingCandidate {
@@ -44,13 +45,7 @@ function findAnalyticsForRegistry(
 }
 
 function shouldExcludeFromEngagement(hubspotKey: string): boolean {
-  const meta = resolveEngagementClientMeta(hubspotKey);
-  return (
-    meta.isPaused ||
-    meta.isGratis ||
-    meta.isCancelled ||
-    meta.status === "potential_pause"
-  );
+  return isExcludedFromUtilization(resolveEngagementClientMeta(hubspotKey).status);
 }
 
 function addCandidate(

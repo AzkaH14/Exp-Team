@@ -5,6 +5,7 @@ import localJson from "@/data/celebrations-calendar.json";
 import holidaysJson from "@/data/pakistan-holidays.json";
 import { getHubSpotBirthdayForClient } from "../client-registry/hubspot-birthdays";
 import { getRiskAssessmentForClient } from "../client-registry/risk-assessment";
+import { getOdooFamily } from "../client-registry/odoo-families";
 import {
   getEnrichmentMap,
   getOverrides,
@@ -222,6 +223,41 @@ function generatedProfileEvents(month: string): CelebrationEvent[] {
   for (const record of getSacredRegistry()) {
     const cities = citiesForRegistry(record);
     if (!cities.length) continue;
+
+    if (record.source === "odoo") {
+      // Odoo is the only birthday source: x_studio_date_of_birth on the
+      // family members and the benefactor. Odoo has no anniversary field.
+      const family = getOdooFamily(record.id);
+      const tagged = family?.members.filter((m) => m.isBeneficiary) ?? [];
+      const people = tagged.length ? tagged : family?.members ?? [];
+      for (const person of people) {
+        const date = annualDate(person.birthday, year);
+        if (!date || !date.startsWith(month)) continue;
+        const event = profileEvent({
+          registryId: record.id,
+          personKey: `beneficiary:${person.name}:${date.slice(5)}`,
+          personLabel: person.name,
+          relation: "beneficiary",
+          date,
+          cities,
+        });
+        events.set(event.id, event);
+      }
+      const benefactorDate = annualDate(family?.benefactorBirthday ?? null, year);
+      if (benefactorDate?.startsWith(month)) {
+        const event = profileEvent({
+          registryId: record.id,
+          personKey: `benefactor:${record.benefactor}:${benefactorDate.slice(5)}`,
+          personLabel: record.benefactor,
+          relation: "benefactor",
+          date: benefactorDate,
+          cities,
+        });
+        events.set(event.id, event);
+      }
+      continue;
+    }
+
     const hs = getHubSpotBirthdayForClient(record.id);
     const risk = getRiskAssessmentForClient(record.id);
     const internal = enrichment.get(record.id);

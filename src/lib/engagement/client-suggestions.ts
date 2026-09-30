@@ -23,6 +23,7 @@ import {
   isOnUnderutilisingSheet,
 } from "./underutilising-sheet";
 import { collectUnderutilisingCandidates } from "./underutilising-candidates";
+import { isExcludedFromUtilization } from "./calendar-clients";
 
 const PAGE_SIZE = 12;
 
@@ -124,14 +125,7 @@ export function getEngagementClientsPage(
     const ticketBasedUnderutilising = analytics.clients
       .filter((c) => {
         const meta = resolveEngagementClientMeta(c.client);
-        if (
-          meta.isPaused ||
-          meta.isGratis ||
-          meta.isCancelled ||
-          meta.status === "potential_pause"
-        ) {
-          return false;
-        }
+        if (isExcludedFromUtilization(meta.status)) return false;
         return isUnderutilisingClient(c.client, lastByRegistry);
       })
       .map((c) => ({ client: c.client, email: c.email }));
@@ -155,7 +149,7 @@ export function getEngagementClientsPage(
 
   let filtered = analytics.clients.filter((c) => {
     const meta = resolveEngagementClientMeta(c.client);
-    if (meta.isPaused || meta.isGratis || meta.isCancelled || meta.status === "potential_pause") return false;
+    if (isExcludedFromUtilization(meta.status)) return false;
     const seg = classifySegment(c.client, c.tickets, topNames, lastByRegistry);
     if (seg !== segment) return false;
     if (!engagementCityMatches(city, meta, c.city)) return false;

@@ -3,8 +3,11 @@ import type { AnalyticsClient } from "../analytics-data";
 import { getAnalyticsData } from "../analytics-data";
 import type {
   ClientProfileListItem,
+  ClientRegistryRecord,
   MergedClientProfile,
+  OdooFamilyProfile,
 } from "../types/client-registry";
+import { getOdooFamiliesVersion, getOdooFamily } from "./odoo-families";
 import { getHubSpotBirthdayForClient, getHubSpotBirthdaysVersion } from "./hubspot-birthdays";
 import { getHubSpotNotesForClient, getHubSpotNotesVersion } from "./hubspot-notes";
 import { mergeEngagementNotes } from "../integrations/hubspot-notes-sync";
@@ -81,6 +84,53 @@ function buildHubspotTicketIndex(
 let profilesCache: { version: string; profiles: MergedClientProfile[] } | null = null;
 let listCache: { version: string; rows: ClientProfileListItem[] } | null = null;
 
+/** Beneficiaries first; if nobody is tagged Beneficiary, every recorded relative. */
+function odooBeneficiaries(family: OdooFamilyProfile | null) {
+  if (!family) return [];
+  const tagged = family.members.filter((m) => m.isBeneficiary);
+  return tagged.length ? tagged : family.members;
+}
+
+/**
+ * Odoo is the only source in registry mode — no local overrides, internal-doc
+ * imports, risk-assessment docs or HubSpot contacts. A missing value means it
+ * has not been entered in Odoo yet.
+ */
+function buildOdooProfile(
+  r: ClientRegistryRecord,
+  hs: { count: number; matchedAs: string | null }
+): MergedClientProfile {
+  const family = getOdooFamily(r.id) ?? null;
+  const beneficiaries = odooBeneficiaries(family);
+  const beneficiaryBirthday = beneficiaries.find((m) => m.birthday)?.birthday ?? null;
+
+  const missing: string[] = [];
+  if (!beneficiaries.length) missing.push("Beneficiary in Odoo");
+  else if (beneficiaries.some((m) => !m.birthday)) missing.push("Beneficiary birthday");
+  const checks = 2;
+  const done =
+    (beneficiaries.length ? 1 : 0) +
+    (beneficiaries.length && beneficiaries.every((m) => m.birthday) ? 1 : 0);
+
+  return {
+    ...r,
+    slug: slugFromBenefactor(r.benefactor),
+    odoo: family,
+    enrichment: null,
+    riskAssessment: null,
+    hubspot: null,
+    hubspotNotes: null,
+    overrides: {},
+    hubspotTicketCount: hs.count,
+    hubspotMatchedAs: hs.matchedAs,
+    profileCompleteness: Math.round((done / checks) * 100),
+    missingFields: missing,
+    resolvedBenefactorBirthday: family?.benefactorBirthday ?? null,
+    resolvedBeneficiaryBirthday: beneficiaryBirthday,
+    resolvedEngagementNotes: (family?.notes ?? []).map((n) => n.body),
+  };
+}
+
 function buildMergedClientProfiles(): MergedClientProfile[] {
   const registry = getSacredRegistry();
   const enrichmentMap = getEnrichmentMap();
@@ -90,6 +140,7 @@ function buildMergedClientProfiles(): MergedClientProfile[] {
 
   const profiles: MergedClientProfile[] = registry.map((r) => {
     const hs = ticketIndex.get(r.id) ?? { count: 0, matchedAs: null };
+    if (r.source === "odoo") return buildOdooProfile(r, hs);
 
     const lookupId = legacyRegistryId(r.id);
     const enrichment = enrichmentMap.get(r.id) ?? enrichmentMap.get(lookupId) ?? null;
@@ -109,6 +160,7 @@ function buildMergedClientProfiles(): MergedClientProfile[] {
       ...r,
       beneficiary: ovr.beneficiaryName?.trim() || r.beneficiary,
       slug: slugFromBenefactor(r.benefactor),
+      odoo: null,
       enrichment,
       riskAssessment,
       hubspot,
@@ -147,6 +199,15 @@ function toProfileListItem(p: MergedClientProfile): ClientProfileListItem {
   const notes = p.hubspotNotes?.notes ?? [];
   return {
     ...p,
+    odoo: p.odoo
+      ? {
+          partnerId: p.odoo.partnerId,
+          benefactorCode: p.odoo.benefactorCode,
+          members: p.odoo.members,
+          noteCount: p.odoo.notes.length,
+          hasOverview: p.odoo.overviewSections.length > 0,
+        }
+      : null,
     hubspotNotes: p.hubspotNotes
       ? {
           beneficiaryNames: p.hubspotNotes.beneficiaryNames,
@@ -174,8 +235,12 @@ function toProfileListItem(p: MergedClientProfile): ClientProfileListItem {
   };
 }
 
+function profilesVersion(): string {
+  return `${getRegistryVersion()}:bd:${getHubSpotBirthdaysVersion()}:hn:${getHubSpotNotesVersion()}:od:${getOdooFamiliesVersion()}`;
+}
+
 export function getMergedClientProfiles(): MergedClientProfile[] {
-  const version = `${getRegistryVersion()}:bd:${getHubSpotBirthdaysVersion()}:hn:${getHubSpotNotesVersion()}`;
+  const version = profilesVersion();
   if (profilesCache?.version === version) {
     return profilesCache.profiles;
   }
@@ -187,7 +252,7 @@ export function getMergedClientProfiles(): MergedClientProfile[] {
 
 /** Profiles table payload — strips full HubSpot/doc note bodies */
 export function getClientProfileListItems(): ClientProfileListItem[] {
-  const version = `${getRegistryVersion()}:bd:${getHubSpotBirthdaysVersion()}:hn:${getHubSpotNotesVersion()}`;
+  const version = profilesVersion();
   if (listCache?.version === version) return listCache.rows;
   const rows = getMergedClientProfiles().map(toProfileListItem);
   listCache = { version, rows };

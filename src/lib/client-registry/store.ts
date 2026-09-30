@@ -3,9 +3,10 @@ import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import registryJson from "@/data/client-registry.json";
 import enrichmentJson from "@/data/client-enrichment.json";
-import { filterSacredRegistryClients, REGISTRY_BLOCKLIST_VERSION } from "./hubspot-blocklist";
+import { filterSacredRegistryClients } from "./hubspot-blocklist";
 import { applyRegistrySupplement } from "./registry-supplement";
 import { canonicalRegistryId, legacyRegistryId } from "./registry-id-aliases";
+import { registryContentVersion } from "./registry-version";
 import type {
   ClientEnrichment,
   ClientProfileOverrides,
@@ -28,7 +29,6 @@ interface EnrichmentFile {
 let overridesCache: Record<string, ClientProfileOverrides> | null = null;
 let runtimeRegistry: ClientRegistryRecord[] | null = null;
 let runtimeSummary: Record<string, unknown> | null = null;
-let runtimeVersion: string | null = null;
 
 export function setSacredRegistryCache(
   clients: ClientRegistryRecord[],
@@ -36,7 +36,12 @@ export function setSacredRegistryCache(
 ): void {
   runtimeRegistry = filterSacredRegistryClients(applyRegistrySupplement(clients));
   if (summary) runtimeSummary = summary;
-  runtimeVersion = `live:${new Date().toISOString()}:${runtimeRegistry.length}:bl${REGISTRY_BLOCKLIST_VERSION}`;
+}
+
+/** Where the live registry came from — "odoo" once an Odoo sync has run or the file was built from Odoo. */
+export function getRegistrySource(): "odoo" | "sacred" {
+  const raw = rawRegistry();
+  return raw.length > 0 && raw.every((c) => c.source === "odoo") ? "odoo" : "sacred";
 }
 
 /**
@@ -108,7 +113,9 @@ export function buildRegistrySummary(clients: ClientRegistryRecord[]) {
 }
 
 export function getRegistrySummary() {
-  const clients = getSacredRegistry();
+  // buildRegistrySummary hides cancelled itself; passing getSacredRegistry()
+  // (already cancelled-free) made the cancelled count always 0.
+  const clients = getSacredRegistryIncludingCancelled();
   const fileSummary = runtimeSummary ?? (registryJson as RegistryFile).summary;
   return {
     ...fileSummary,
@@ -117,21 +124,19 @@ export function getRegistrySummary() {
 }
 
 /**
- * Count from the bundled registry file. The file is a static import, so this
- * never changes for the life of the process — compute it once. It is on the
- * hot path via getRegistryVersion(), which per-ticket callers hit through
- * getCancelledClientKeys().
+ * Memoized on the raw array reference, which only changes via
+ * setSacredRegistryCache(). It is on the hot path — per-ticket callers hit it
+ * through getCancelledClientKeys() — so never hash on every call.
  */
-let fileClientCount: number | null = null;
+let versionCache: { raw: ClientRegistryRecord[]; version: string } | null = null;
 
-/** Bust HubSpot session cache when sacred registry or blocklist changes */
+/** Bust session caches when the registry content or blocklist changes */
 export function getRegistryVersion(): string {
-  if (runtimeVersion) return `${runtimeVersion}:bl${REGISTRY_BLOCKLIST_VERSION}`;
-  const file = registryJson as RegistryFile;
-  if (fileClientCount === null) {
-    fileClientCount = filterSacredRegistryClients(file.clients).length;
+  const raw = rawRegistry();
+  if (versionCache?.raw !== raw) {
+    versionCache = { raw, version: registryContentVersion(raw) };
   }
-  return `${file.version ?? 1}:${file.updatedAt ?? "0"}:${fileClientCount}:bl${REGISTRY_BLOCKLIST_VERSION}`;
+  return versionCache.version;
 }
 
 export function getEnrichmentMap(): Map<string, ClientEnrichment> {

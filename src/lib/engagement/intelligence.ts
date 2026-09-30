@@ -34,7 +34,7 @@ export function generateIntelligenceSuggestions(
     suggestions.push(
       ...getHobbySuggestions({
         hobbies: profile.overrides.hobbies ?? profile.enrichment?.hobbies ?? [],
-        interests: profile.enrichment?.interests ?? [],
+        interests: profile.odoo?.interests ?? profile.enrichment?.interests ?? [],
         indoorOnly: profile.enrichment?.indoorOnly,
         city,
       })
@@ -44,7 +44,9 @@ export function generateIntelligenceSuggestions(
       suggestions.push({
         id: "complete-profile",
         title: "Complete client profile",
-        rationale: `Missing: ${profile.missingFields.slice(0, 3).join(", ")}. Update in Client Profiles (Laiba / Labeba / Seemab).`,
+        rationale: profile.odoo
+          ? `Missing: ${profile.missingFields.slice(0, 3).join(", ")}. Update the family in Odoo or via Client Profiles → Edit.`
+          : `Missing: ${profile.missingFields.slice(0, 3).join(", ")}. Update in Client Profiles (Laiba / Labeba / Seemab).`,
         channel: "email",
         priority: "low",
       });

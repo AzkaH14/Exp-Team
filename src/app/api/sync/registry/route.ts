@@ -1,13 +1,20 @@
 import { NextResponse } from "next/server";
 import { syncSacredRegistryFromSheet } from "@/lib/client-registry/sheet-sync";
 import { isGoogleSheetsConfigured } from "@/lib/integrations/google-sheets";
+import { isOdooRegistryEnabled, syncOdooRegistry } from "@/lib/integrations/odoo-registry";
 import { revalidatePath } from "next/cache";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-/** Pull sacred client registry from Google Sheet + cross-check HubSpot new contacts */
+/** Refresh the client registry — from Odoo by default, or the legacy sacred sheet. */
 export async function POST() {
+  if (isOdooRegistryEnabled()) {
+    const result = await syncOdooRegistry();
+    if (result.ok) revalidatePath("/", "layout");
+    return NextResponse.json(result, { status: result.ok ? 200 : 500 });
+  }
+
   if (!isGoogleSheetsConfigured()) {
     return NextResponse.json(
       {
@@ -39,8 +46,12 @@ export async function POST() {
 }
 
 export async function GET() {
+  if (isOdooRegistryEnabled()) {
+    return NextResponse.json({ configured: true, source: "odoo" });
+  }
   return NextResponse.json({
     configured: isGoogleSheetsConfigured(),
+    source: "sheet",
     sheetId: process.env.GOOGLE_SHEETS_ID ?? "1pTj0G-cXt30Vx2A_qiLwIA9M2rQ4tqZPe60AGnUwcis",
     autoAddHubSpot: process.env.SACRED_AUTO_ADD_HUBSPOT?.trim() !== "false",
   });

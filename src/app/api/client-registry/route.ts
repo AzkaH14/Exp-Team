@@ -27,5 +27,6 @@ export async function GET() {
     hubspotDiscoveries,
     hubspotBirthdays,
     hubspotNotes,
+    odooUrl: process.env.ODOO_URL?.trim().replace(/\/+$/, "") || null,
   });
 }

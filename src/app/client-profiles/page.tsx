@@ -4,7 +4,7 @@ import { HubSpotSyncButton } from "@/components/dashboard/hubspot-sync-button";
 import { getClientProfileListItems } from "@/lib/client-registry/merge";
 import { kickOffHubSpotProfileRefreshIfStale } from "@/lib/client-registry/refresh-hubspot-profile-cache";
 import { reconcileHubSpotWithRegistry } from "@/lib/client-registry/reconcile";
-import { getRegistrySummary } from "@/lib/client-registry/store";
+import { getRegistrySource, getRegistrySummary } from "@/lib/client-registry/store";
 import { getDataSyncMeta } from "@/lib/data-source";
 import { ensureSession } from "@/lib/ensure-session";
 
@@ -20,14 +20,16 @@ export default async function ClientProfilesPage() {
     profiles: getClientProfileListItems(),
     reconcile: reconcileHubSpotWithRegistry(),
     sacredSummary: getRegistrySummary(),
+    odooUrl: process.env.ODOO_URL?.trim().replace(/\/+$/, "") || null,
   };
+  const fromOdoo = getRegistrySource() === "odoo";
 
   return (
     <>
       <AppHeader
         title="Client Profiles"
-        description="Sacred client registry — beneficiary (parent) profiles cross-checked with HubSpot"
-        badge={`${initial.reconcile.summary.sacredTotal} sacred clients`}
+        description={fromOdoo ? "Benefactors, beneficiaries, birthdays and family notes from Odoo contacts" : "Sacred client registry — beneficiary (parent) profiles cross-checked with HubSpot"}
+        badge={`${initial.reconcile.summary.sacredTotal} ${fromOdoo ? "Odoo" : "sacred"} clients`}
         actions={<HubSpotSyncButton />}
       />
       {syncMeta.source === "static" && (

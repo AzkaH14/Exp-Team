@@ -4,9 +4,13 @@
  * Not REST: one URL, one HTTP method. Every operation is a POST to
  * {ODOO_URL}/jsonrpc with a different body. See odoo_instruct.md §8.
  *
- * READ-ONLY BY CONVENTION. Only search_read / search_count / read_group /
- * fields_get are exposed here. The credential has full rights, so this file
- * is the guardrail — do not add a write helper.
+ * Reads go through execute() and are limited to search_read / search_count /
+ * read_group / fields_get. The credential has full rights, so this file is the
+ * guardrail: the ONLY writes are the allowlisted helpers at the bottom —
+ * updatePartnerFields() (res.partner name / date of birth / Family Overview),
+ * postPartnerNote() (a chatter note on a contact) and
+ * createExperienceTask() (one Field Service task in the Experience category).
+ * Do not widen them.
  */
 import "server-only";
 
@@ -126,12 +130,21 @@ function clearUid(config: OdooConfig): void {
 
 type ReadMethod = "search_read" | "search_count" | "read_group" | "fields_get";
 
-/** Any read method on any model. Writes are deliberately unreachable. */
-export async function execute<T>(
+/** Any read method on any model. Writes go through the allowlisted helpers below. */
+export function execute<T>(
   model: string,
   method: ReadMethod,
   args: unknown[],
   kwargs: Record<string, unknown> = {}
+): Promise<T> {
+  return executeKw<T>(model, method, args, kwargs);
+}
+
+async function executeKw<T>(
+  model: string,
+  method: string,
+  args: unknown[],
+  kwargs: Record<string, unknown>
 ): Promise<T> {
   const config = getOdooConfig();
   if (!config) throw new Error("Odoo is not configured");
@@ -188,4 +201,97 @@ export function readGroup<T>(
   groupBy: string[]
 ): Promise<T[]> {
   return execute<T[]>(model, "read_group", [domain, fields, groupBy], { lazy: false });
+}
+
+/** The only res.partner fields the portal may change. */
+const WRITABLE_PARTNER_FIELDS = new Set(["name", "x_studio_date_of_birth", "comment"]);
+
+export type PartnerFieldPatch = Partial<{
+  name: string;
+  /** YYYY-MM-DD, or false to clear. */
+  x_studio_date_of_birth: string | false;
+  /** Family Overview HTML. */
+  comment: string;
+}>;
+
+/** Update allowlisted fields on one contact. Throws on any other field. */
+export async function updatePartnerFields(
+  partnerId: number,
+  patch: PartnerFieldPatch
+): Promise<void> {
+  const keys = Object.keys(patch);
+  if (!keys.length) return;
+  for (const k of keys) {
+    if (!WRITABLE_PARTNER_FIELDS.has(k)) {
+      throw new Error(`Refusing to write res.partner.${k} — not in the portal allowlist`);
+    }
+  }
+  if (!Number.isInteger(partnerId) || partnerId <= 0) {
+    throw new Error("Invalid Odoo partner id");
+  }
+  const ok = await executeKw<boolean>("res.partner", "write", [[partnerId], patch], {});
+  if (!ok) throw new Error(`Odoo refused the update on res.partner ${partnerId}`);
+}
+
+/** Field Service project and Experience category — the only place tasks may be created. */
+export const FIELD_SERVICE_PROJECT = 2;
+export const EXPERIENCE_CATEGORY = 17;
+
+export interface ExperienceTaskValues {
+  name: string;
+  subcategory_id: number;
+  partner_id: number;
+  /** Naive UTC "YYYY-MM-DD HH:MM:SS". */
+  planned_date_begin?: string;
+  date_deadline?: string;
+  description?: string;
+  /** hr.employee ids (e.g. "Experience Team"). */
+  employee_ids?: number[];
+}
+
+/**
+ * Create ONE Field Service task in the Experience category. Project and
+ * category are fixed here, not taken from the caller; the customer is set on
+ * both Customer fields the form requires. Returns the new task id.
+ */
+export async function createExperienceTask(values: ExperienceTaskValues): Promise<number> {
+  const name = values.name.trim();
+  if (!name) throw new Error("Task title is required");
+  if (!Number.isInteger(values.partner_id) || values.partner_id <= 0) {
+    throw new Error("Invalid Odoo customer");
+  }
+  if (!Number.isInteger(values.subcategory_id) || values.subcategory_id <= 0) {
+    throw new Error("Invalid Odoo sub category");
+  }
+  const record: Record<string, unknown> = {
+    name,
+    project_id: FIELD_SERVICE_PROJECT,
+    category_id: EXPERIENCE_CATEGORY,
+    subcategory_id: values.subcategory_id,
+    partner_id: values.partner_id,
+    x_studio_customer_name: values.partner_id,
+    // Real Experience tasks carry the team in employee_ids and leave user_ids
+    // empty; without this Odoo auto-assigns the integration user (Tech Team).
+    user_ids: [[6, 0, []]],
+  };
+  if (values.planned_date_begin) record.planned_date_begin = values.planned_date_begin;
+  if (values.date_deadline) record.date_deadline = values.date_deadline;
+  if (values.description) record.description = values.description;
+  if (values.employee_ids?.length) record.employee_ids = [[6, 0, values.employee_ids]];
+
+  const id = await executeKw<number>("project.task", "create", [record], {});
+  if (!Number.isInteger(id)) throw new Error("Odoo did not return a task id");
+  return id;
+}
+
+/** Post an internal note (not an email) in a contact's chatter. Returns the message id. */
+export async function postPartnerNote(partnerId: number, bodyHtml: string): Promise<number> {
+  if (!Number.isInteger(partnerId) || partnerId <= 0) {
+    throw new Error("Invalid Odoo partner id");
+  }
+  return executeKw<number>("res.partner", "message_post", [[partnerId]], {
+    body: bodyHtml,
+    message_type: "comment",
+    subtype_xmlid: "mail.mt_note",
+  });
 }

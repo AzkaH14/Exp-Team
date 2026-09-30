@@ -41,6 +41,52 @@ export function buildFamilyProfileContext(registryId: string): FamilyProfileCont
     };
   }
 
+  if (profile.odoo) {
+    // Odoo registry mode: the Family Overview and family relations are the profile.
+    const family = profile.odoo;
+    const tagged = family.members.filter((m) => m.isBeneficiary);
+    const people = (tagged.length ? tagged : family.members).map((m) => ({
+      name: m.name,
+      birthday: m.birthday,
+      birthdayLabel: formatBirthday(m.birthday),
+    }));
+    const section = (re: RegExp) =>
+      family.overviewSections.find((s) => re.test(s.heading))?.body ?? null;
+    const medical = section(/medical|health/i);
+    const overviewText =
+      section(/general overview|client overview|^overview$/i) ??
+      family.overviewSections[0]?.body ??
+      null;
+    const allText = family.overviewSections.map((s) => s.body).join("\n");
+    return {
+      registryId: profile.id,
+      benefactor: profile.benefactor,
+      beneficiary: profile.beneficiary,
+      city: profile.city,
+      serviceTier: profile.serviceTier,
+      status: profile.status,
+      hobbies: [],
+      interests: family.interests,
+      engagementNotes: profile.resolvedEngagementNotes,
+      medicalHighlights: medical
+        ? medical
+            .split("\n")
+            .map((l) => l.replace(/^[-•*]\s*/, "").trim())
+            .filter(Boolean)
+        : [],
+      generalOverview: overviewText,
+      prefersLowTouch: /low[- ]touch/i.test(allText),
+      indoorOnly: false,
+      biraBeneficiaries: people,
+      biraSourceFile: null,
+      biraUrl: null,
+      profileCompleteness: profile.profileCompleteness,
+      missingFields: profile.missingFields,
+      hasInternalProfile: family.overviewSections.length > 0 || family.notes.length > 0,
+      hasBira: people.length > 0,
+    };
+  }
+
   const enrichment = profile.enrichment;
   const bira = profile.riskAssessment as
     | (typeof profile.riskAssessment & { sourceFile?: string })

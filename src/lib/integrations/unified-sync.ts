@@ -55,9 +55,22 @@ export interface UnifiedSyncResult {
 function filterByRegistry(tickets: Ticket[]): Ticket[] {
   const strict = process.env.CLIENT_REGISTRY_FILTER !== "false";
   const registry = getSacredRegistry();
+  // Live Odoo tasks carry the customer's partner id — an exact key that name
+  // matching can never misroute. Names are the fallback for history.
+  const byPartner = new Map(
+    registry
+      .filter((r) => typeof r.odooPartnerId === "number")
+      .map((r) => [r.odooPartnerId!, r] as const)
+  );
   const out: Ticket[] = [];
 
   for (const t of tickets) {
+    const partnerId = (t as Ticket & { partnerId?: number | null }).partnerId;
+    const owner = typeof partnerId === "number" ? byPartner.get(partnerId) : undefined;
+    if (owner) {
+      out.push(owner.benefactor === t.client ? t : { ...t, client: owner.benefactor });
+      continue;
+    }
     if (isExcludedHubSpotContact(t.client)) continue;
     const canonical = canonicalizeHubSpotClientName(t.client, registry);
     if (strict && matchRegistryRecord(canonical, registry) === null) continue;

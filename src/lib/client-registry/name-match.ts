@@ -149,23 +149,32 @@ export function matchRegistryRecord(
   registry: ClientRegistryRecord[]
 ): ClientRegistryRecord | null {
   const labels = hubSpotMatchLabels(hubspotName);
-
-  // Prefer exact normalized hits (aliases, benefactor) before fuzzy token overlap
-  for (const label of labels) {
+  const exact = (label: string, names: (r: ClientRegistryRecord) => string[]) => {
     const norm = normalizeRegistryName(label);
     const compact = compactRegistryName(label);
-    if (!norm) continue;
-    for (const r of registry) {
-      const names = [r.benefactor, r.beneficiary, ...r.aliases];
-      if (
-        names.some(
-          (n) =>
-            normalizeRegistryName(n) === norm || compactRegistryName(n) === compact
+    if (!norm) return null;
+    return (
+      registry.find((r) =>
+        names(r).some(
+          (n) => normalizeRegistryName(n) === norm || compactRegistryName(n) === compact
         )
-      ) {
-        return r;
-      }
-    }
+      ) ?? null
+    );
+  };
+
+  // 1. A family whose benefactor IS this name always wins. Without this tier an
+  //    alias or beneficiary on another family could claim the ticket first —
+  //    e.g. "Syeda Zehra Ali" (her own Odoo benefactor) was filed under Bilal
+  //    Iqbal Hameed via a stale alias, and "Syed Masood Ahmed" under Ibrahim
+  //    Masood via a beneficiary name.
+  for (const label of labels) {
+    const hit = exact(label, (r) => [r.benefactor]);
+    if (hit) return hit;
+  }
+  // 2. Exact alias / beneficiary hits before fuzzy token overlap.
+  for (const label of labels) {
+    const hit = exact(label, (r) => [r.beneficiary, ...r.aliases]);
+    if (hit) return hit;
   }
 
   for (const label of labels) {
@@ -190,14 +199,16 @@ export function buildRegistryCanonicalMap(
   registry: ClientRegistryRecord[]
 ): Map<string, string> {
   const map = new Map<string, string>();
-  for (const r of registry) {
-    for (const name of [r.benefactor, ...r.aliases]) {
-      const norm = normalizeRegistryName(name);
-      const compact = compactRegistryName(name);
-      if (norm) map.set(norm, r.benefactor);
-      if (compact) map.set(compact, r.benefactor);
-    }
-  }
+  const add = (name: string, benefactor: string) => {
+    const norm = normalizeRegistryName(name);
+    const compact = compactRegistryName(name);
+    if (norm) map.set(norm, benefactor);
+    if (compact) map.set(compact, benefactor);
+  };
+  // Aliases first, benefactors last — a real benefactor name must overwrite an
+  // alias of the same spelling on another family (see matchRegistryRecord).
+  for (const r of registry) for (const alias of r.aliases) add(alias, r.benefactor);
+  for (const r of registry) add(r.benefactor, r.benefactor);
   return map;
 }
 

@@ -3,12 +3,27 @@ import { ENGAGEMENT_CITIES } from "./team";
 
 const CALENDAR_CITY_SET = new Set<string>(ENGAGEMENT_CITIES);
 
-/** Clients the engagement calendar can schedule touchpoints for */
-export const CALENDAR_ELIGIBLE_STATUSES = new Set<ClientRegistryRecord["status"]>([
+/**
+ * Utilization rule, from the Odoo benefactor tags: only Active and Gratis
+ * families count. Paused and Churned (registry "cancelled") are excluded.
+ * Beneficiaries carry only the Beneficiary tag — their family's benefactor
+ * status decides.
+ */
+export const UTILIZATION_STATUSES = new Set<ClientRegistryRecord["status"]>([
   "active",
-  "pause",
   "gratis",
 ]);
+
+/**
+ * For engagement meta, where an unmatched client is "unknown" — those were
+ * always counted, so only an explicit paused / churned status excludes.
+ */
+export function isExcludedFromUtilization(status: string): boolean {
+  return status === "pause" || status === "potential_pause" || status === "cancelled";
+}
+
+/** Clients the engagement calendar tracks coverage for — the utilization set. */
+export const CALENDAR_ELIGIBLE_STATUSES = UTILIZATION_STATUSES;
 
 /**
  * Map home / satellite cities onto an engagement-team city.

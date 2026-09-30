@@ -5,6 +5,7 @@ import { refreshHubSpotBirthdaysFromHubSpot } from "./refresh-birthdays";
 import { refreshHubSpotNotesFromHubSpot } from "./refresh-notes";
 import { isHubSpotBirthdaysConfigured } from "../integrations/hubspot-birthdays-sync";
 import { isHubSpotNotesConfigured } from "../integrations/hubspot-notes-sync";
+import { getRegistrySource } from "./store";
 
 /** Don't block page render — refresh at most once per interval */
 const PROFILE_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
@@ -21,6 +22,8 @@ function isStale(syncedAt: string | null | undefined): boolean {
 
 /** Load profiles from disk immediately; refresh HubSpot birthdays/notes in background when stale */
 export function kickOffHubSpotProfileRefreshIfStale(): void {
+  // Odoo registry mode: birthdays and notes come from Odoo, never HubSpot.
+  if (getRegistrySource() === "odoo") return;
   const needsBirthdays =
     isHubSpotBirthdaysConfigured() && isStale(getHubSpotBirthdaysMeta().syncedAt);
   const needsNotes =

@@ -15,9 +15,53 @@ export interface ClientRegistryRecord {
   aliases: string[];
   /** Optional static benefactor emails to improve HubSpot contact matching. */
   contactEmails?: string[];
-  source: "sacred";
+  /** "odoo" = built from Odoo res.partner (Benefactor tag); "sacred" = legacy Google Sheet. */
+  source: "sacred" | "odoo";
   /** When set, client appears on engagement calendar for each listed city (e.g. dual-city families) */
   engagementCities?: ClientRegistryRecord["city"][];
+  /** Odoo res.partner id of the benefactor contact. */
+  odooPartnerId?: number;
+  /** Business client code from Odoo x_benefactor_id (ISB-1001 / KHI-3001 / LHR-2001). */
+  benefactorCode?: string | null;
+}
+
+/** One relative recorded on the benefactor's Odoo contact (prodo.partner.family.relation). */
+export interface OdooFamilyMember {
+  partnerId: number;
+  name: string;
+  /** The member's role relative to the benefactor ("Father", "Mother", …). */
+  relationship: string;
+  /** res.partner x_studio_date_of_birth (YYYY-MM-DD) — may carry a placeholder year. */
+  birthday: string | null;
+  isBeneficiary: boolean;
+}
+
+/** A heading + body block parsed from the Odoo "Family Overview" (res.partner.comment). */
+export interface OdooOverviewSection {
+  heading: string;
+  body: string;
+}
+
+/** Staff note posted in the chatter of the benefactor's Odoo contact. */
+export interface OdooChatterNote {
+  id: number;
+  body: string;
+  createdAt: string | null;
+  author: string | null;
+}
+
+/** Everything the portal shows about a family, read from Odoo. */
+export interface OdooFamilyProfile {
+  registryId: string;
+  partnerId: number;
+  benefactorCode: string | null;
+  benefactor: string;
+  benefactorBirthday: string | null;
+  members: OdooFamilyMember[];
+  overviewSections: OdooOverviewSection[];
+  /** From the "Hobbies & Interests" section of the Family Overview, when present. */
+  interests: string[];
+  notes: OdooChatterNote[];
 }
 
 export interface ClientEnrichment {
@@ -83,6 +127,8 @@ export interface ClientProfileOverrides {
 
 export interface MergedClientProfile extends ClientRegistryRecord {
   slug: string;
+  /** Odoo family data (members, Family Overview, chatter). Null in legacy sheet mode. */
+  odoo: OdooFamilyProfile | null;
   enrichment: ClientEnrichment | null;
   riskAssessment: HubSpotBirthdayRecord | null;
   hubspot: HubSpotBirthdayRecord | null;
@@ -103,8 +149,16 @@ export interface MergedClientProfile extends ClientRegistryRecord {
 export interface ClientProfileListItem
   extends Omit<
     MergedClientProfile,
-    "hubspotNotes" | "resolvedEngagementNotes" | "enrichment"
+    "hubspotNotes" | "resolvedEngagementNotes" | "enrichment" | "odoo"
   > {
+  /** Slim Odoo summary — full overview/notes load via GET /api/client-registry/[id]. */
+  odoo: {
+    partnerId: number;
+    benefactorCode: string | null;
+    members: OdooFamilyMember[];
+    noteCount: number;
+    hasOverview: boolean;
+  } | null;
   hubspotNotes: {
     beneficiaryNames?: string[];
     noteCount: number;

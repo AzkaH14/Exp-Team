@@ -23,6 +23,16 @@ import {
   updateHubSpotTicketFromEngagementEvent,
 } from "../integrations/hubspot-ticket-create";
 import { defaultDoctorForCity } from "./doctors";
+import { isOdooRegistryEnabled } from "../integrations/odoo-registry";
+import { createOdooTaskFromEvent } from "../integrations/odoo-engagement";
+
+/**
+ * HubSpot is retired once Odoo is the registry: entries are only logged, and
+ * an Odoo task is created solely via "Create ticket in Odoo" on the entry.
+ */
+function hubspotTicketsOn(): boolean {
+  return isHubSpotTicketCreateEnabled() && !isOdooRegistryEnabled();
+}
 
 interface CalendarFile {
   version: number;
@@ -93,6 +103,8 @@ function buildEvent(input: EngagementEventInput): EngagementEvent {
     notes: input.notes?.trim() ?? "",
     date: input.date,
     time: input.time?.trim() ? input.time.trim() : null,
+    endDate: input.endDate?.trim() ? input.endDate.trim() : null,
+    endTime: input.endTime?.trim() ? input.endTime.trim() : null,
     status: input.status ?? "planned",
     rescheduledFrom: null,
     assignedDoctor:
@@ -103,6 +115,9 @@ function buildEvent(input: EngagementEventInput): EngagementEvent {
           ? defaultDoctorForCity(scheduleCity)
           : null),
     hubspotTicketId: null,
+    odooSubcategoryId: input.odooSubcategoryId ?? null,
+    odooSubcategoryName: input.odooSubcategoryName ?? null,
+    odooTaskId: null,
     createdBy: input.createdBy?.trim() || lead,
     createdAt: now,
     updatedAt: now,
@@ -111,10 +126,16 @@ function buildEvent(input: EngagementEventInput): EngagementEvent {
 
 export interface EngagementEventPatch {
   type?: EngagementEvent["type"];
+  odooSubcategoryId?: number | null;
+  odooSubcategoryName?: string | null;
+  /** Set only by attachOdooTask(). */
+  odooTaskId?: number | null;
   title?: string;
   notes?: string;
   date?: string;
   time?: string | null;
+  endDate?: string | null;
+  endTime?: string | null;
   status?: EngagementEvent["status"];
   assignedDoctor?: string | null;
 }
@@ -124,6 +145,16 @@ function applyPatch(existing: EngagementEvent, patch: EngagementEventPatch): Eng
   return {
     ...existing,
     type: patch.type ?? existing.type,
+    odooSubcategoryId:
+      patch.odooSubcategoryId !== undefined
+        ? patch.odooSubcategoryId
+        : existing.odooSubcategoryId ?? null,
+    odooSubcategoryName:
+      patch.odooSubcategoryName !== undefined
+        ? patch.odooSubcategoryName
+        : existing.odooSubcategoryName ?? null,
+    odooTaskId:
+      patch.odooTaskId !== undefined ? patch.odooTaskId : existing.odooTaskId ?? null,
     title: patch.title != null ? patch.title.trim() : existing.title,
     notes: patch.notes != null ? patch.notes.trim() : existing.notes,
     date: patch.date ?? existing.date,
@@ -133,6 +164,18 @@ function applyPatch(existing: EngagementEvent, patch: EngagementEventPatch): Eng
           ? patch.time.trim()
           : null
         : existing.time,
+    endDate:
+      patch.endDate !== undefined
+        ? patch.endDate?.trim()
+          ? patch.endDate.trim()
+          : null
+        : existing.endDate ?? null,
+    endTime:
+      patch.endTime !== undefined
+        ? patch.endTime?.trim()
+          ? patch.endTime.trim()
+          : null
+        : existing.endTime ?? null,
     status:
       patch.status ??
       (dateChanged && existing.status === "planned" ? "rescheduled" : existing.status),
@@ -192,7 +235,7 @@ export async function addEvent(
   let event = buildEvent(input);
   let hubspotWarning: string | undefined;
 
-  try {
+  if (hubspotTicketsOn()) try {
     const hs = await createHubSpotTicketFromEngagementEvent(event, record);
     if (hs) {
       event = { ...event, hubspotTicketId: hs.id };
@@ -233,7 +276,7 @@ export async function updateEvent(
     const updated = applyPatch(existing, patch);
     const record = recordFor(updated);
 
-    if (record) {
+    if (record && hubspotTicketsOn()) {
       try {
         if (updated.status === "cancelled" && updated.hubspotTicketId) {
           await archiveHubSpotEngagementTicket(updated.hubspotTicketId);
@@ -265,7 +308,7 @@ export async function updateEvent(
   if (idx === -1) return null;
   const updated = applyPatch(events[idx], patch);
   const record = recordFor(updated);
-  if (record) {
+  if (record && hubspotTicketsOn()) {
     try {
       if (updated.status === "cancelled" && updated.hubspotTicketId) {
         await archiveHubSpotEngagementTicket(updated.hubspotTicketId);
@@ -290,13 +333,50 @@ export async function updateEvent(
   return updated;
 }
 
+const inFlightOdooTasks = new Map<string, Promise<{ event: EngagementEvent; created: boolean }>>();
+
+/**
+ * "Create ticket in Odoo" for one logged entry. Idempotent: an entry that
+ * already has a task returns it, and concurrent clicks share one request —
+ * a duplicate task is real work for the field team.
+ */
+export function createOdooTaskForEvent(
+  id: string
+): Promise<{ event: EngagementEvent; created: boolean }> {
+  const pending = inFlightOdooTasks.get(id);
+  if (pending) return pending;
+
+  const run = (async () => {
+    const all = await getAllEvents();
+    const existing = all.find((e) => e.id === id);
+    if (!existing) throw new Error("Event not found");
+    if (existing.odooTaskId) return { event: existing, created: false };
+    if (existing.status === "cancelled") {
+      throw new Error("This entry is cancelled — reopen it before creating a task");
+    }
+    const record = getSacredRegistry().find((r) => r.id === existing.registryId);
+    if (!record) throw new Error("This family is not in the client registry");
+
+    const task = await createOdooTaskFromEvent(existing, record);
+    // The task exists in Odoo now; record it even if the local save below fails.
+    const updated = await updateEvent(id, { odooTaskId: task.id });
+    if (!updated) {
+      throw new Error(`Odoo task ${task.id} was created, but the calendar entry could not be updated`);
+    }
+    return { event: updated, created: true };
+  })();
+
+  inFlightOdooTasks.set(id, run);
+  return run.finally(() => inFlightOdooTasks.delete(id));
+}
+
 export async function deleteEvent(id: string): Promise<boolean> {
   const allEvents = isCalendarSheetConfigured()
     ? await loadSheetEvents()
     : loadLocalEvents();
   const existing = allEvents.find((e) => e.id === id);
 
-  if (existing?.hubspotTicketId) {
+  if (existing?.hubspotTicketId && hubspotTicketsOn()) {
     try {
       await archiveHubSpotEngagementTicket(existing.hubspotTicketId);
     } catch (e) {

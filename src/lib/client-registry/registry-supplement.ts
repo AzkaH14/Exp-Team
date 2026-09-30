@@ -31,6 +31,51 @@ function findSupplementEntry(
   return {};
 }
 
+/**
+ * Odoo is the source of truth for names, status, city and beneficiaries. The
+ * supplement may only add matching aliases (old HubSpot / sheet spellings, so
+ * pre-cutover tickets still attach) and engagement-calendar city config.
+ */
+/**
+ * Drop aliases that name ANOTHER family's benefactor. Sheet-era aliases were
+ * written when some people were not yet their own client (e.g. "Syeda Zehra
+ * Ali" listed under Bilal Iqbal Hameed); in Odoo they are separate benefactors,
+ * and a stale alias would file one family's tickets under the other.
+ */
+export function dropForeignAliases(clients: ClientRegistryRecord[]): ClientRegistryRecord[] {
+  return clients.map((client) => {
+    const others = clients.filter((c) => c !== client).map((c) => c.benefactor);
+    const aliases = client.aliases.filter(
+      (alias) =>
+        namesMatch(alias, client.benefactor) ||
+        !others.some((other) => namesMatch(alias, other))
+    );
+    return aliases.length === client.aliases.length ? client : { ...client, aliases };
+  });
+}
+
+function applyOdooSafeSupplement(
+  clients: ClientRegistryRecord[],
+  byBenefactor: Record<string, SupplementEntry>
+): ClientRegistryRecord[] {
+  return dropForeignAliases(clients.map((client) => {
+    const sup = findSupplementEntry(client.benefactor, byBenefactor);
+    const fromAlias = client.aliases
+      .map((a) => findSupplementEntry(a, byBenefactor))
+      .find((e) => Object.keys(e).length > 0);
+    const entry = Object.keys(sup).length > 0 ? sup : fromAlias ?? {};
+    const aliases = [...new Set([...client.aliases, ...(entry.aliases ?? [])])];
+    const engagementCities = client.engagementCities ?? entry.engagementCities;
+    if (
+      aliases.length === client.aliases.length &&
+      engagementCities === client.engagementCities
+    ) {
+      return client;
+    }
+    return { ...client, aliases, engagementCities };
+  }));
+}
+
 /** Merge supplement aliases and HubSpot-only families onto the sacred registry */
 export function applyRegistrySupplement(
   clients: ClientRegistryRecord[]
@@ -38,6 +83,10 @@ export function applyRegistrySupplement(
   const file = supplementJson as SupplementFile;
   const byBenefactor = file.byBenefactor ?? {};
   const additional = file.additionalClients ?? [];
+
+  if (clients.length > 0 && clients.every((c) => c.source === "odoo")) {
+    return applyOdooSafeSupplement(clients, byBenefactor);
+  }
 
   const merged = clients.map((client) => {
     const sup = findSupplementEntry(client.benefactor, byBenefactor);

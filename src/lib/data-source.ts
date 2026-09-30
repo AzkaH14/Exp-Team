@@ -17,6 +17,7 @@ import {
 import { setHubSpotBirthdayCache } from "./client-registry/hubspot-birthdays";
 import { setHubSpotNotesCache } from "./client-registry/hubspot-notes";
 import { syncSacredRegistryFromSheet } from "./client-registry/sheet-sync";
+import { isOdooRegistryEnabled, syncOdooRegistry } from "./integrations/odoo-registry";
 import { filterExcludedTickets, filterAnalyticsData } from "./client-registry/hubspot-blocklist";
 import {
   filterCancelledAnalyticsClients,
@@ -313,11 +314,24 @@ export async function warmSession(
 
   store.syncPromise = (async () => {
     try {
+      const odooRegistry = isOdooRegistryEnabled();
       const syncSheet =
         options.syncSheet ??
         (force && process.env.SACRED_SHEET_ON_WARM?.trim() !== "false");
 
-      if (syncSheet && isGoogleSheetsConfigured()) {
+      if (odooRegistry) {
+        // Odoo is the client registry: benefactors, beneficiaries, status,
+        // birthdays, Family Overview and chatter. Runs BEFORE the ticket sync,
+        // which filters tickets against the registry.
+        const reg = await syncOdooRegistry();
+        if (!reg.ok) {
+          console.warn("Odoo registry sync:", reg.error);
+        } else {
+          console.info(
+            `Odoo registry: ${reg.clientCount} clients, ${reg.withoutBeneficiaries.length} without beneficiaries, ${reg.newIds.length} new ids`
+          );
+        }
+      } else if (syncSheet && isGoogleSheetsConfigured()) {
         const sheetResult = await syncSacredRegistryFromSheet({
           // Pull new HubSpot benefactors into the live registry (default on)
           autoAddHubSpot:
@@ -338,7 +352,9 @@ export async function warmSession(
           console.warn("Underutilising sheet fetch failed:", e);
         }
       }
-      if (isHubSpotBirthdaysConfigured()) {
+      // Birthdays and profile notes come from Odoo in registry mode; the
+      // HubSpot contact caches only feed the legacy sheet path.
+      if (!odooRegistry && isHubSpotBirthdaysConfigured()) {
         try {
           const { records, summary } = await syncHubSpotBirthdays();
           setHubSpotBirthdayCache(records);
@@ -349,7 +365,7 @@ export async function warmSession(
           console.warn("HubSpot birthday sync failed:", e);
         }
       }
-      if (isHubSpotNotesConfigured()) {
+      if (!odooRegistry && isHubSpotNotesConfigured()) {
         try {
           const { records, summary } = await syncHubSpotNotes();
           setHubSpotNotesCache(records);

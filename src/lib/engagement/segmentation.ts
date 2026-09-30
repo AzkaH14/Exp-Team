@@ -6,6 +6,7 @@ import {
   isUnderutilisingClient,
 } from "./last-activity";
 import { resolveEngagementClientMeta } from "./client-meta";
+import { isExcludedFromUtilization } from "./calendar-clients";
 import { collectUnderutilisingCandidates } from "./underutilising-candidates";
 import { getUnderutilisingSheetEntries } from "./underutilising-sheet";
 
@@ -52,9 +53,7 @@ export function getSegmentCounts(city?: string) {
 
   for (const c of analytics.clients) {
     const meta = resolveEngagementClientMeta(c.client);
-    if (meta.isPaused || meta.isGratis || meta.isCancelled || meta.status === "potential_pause") {
-      continue;
-    }
+    if (isExcludedFromUtilization(meta.status)) continue;
     if (city && city !== "all") {
       const displayCity = meta.registryId ? meta.city : c.city;
       if (displayCity !== city && c.city !== city) continue;

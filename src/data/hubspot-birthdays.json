@@ -1,15 +1,15 @@
 {
-  "syncedAt": "2026-08-25T11:00:16.032Z",
+  "syncedAt": "2026-09-30T05:28:27.379Z",
   "summary": {
     "hubspotContactFamilies": 206,
-    "matchedSacredClients": 134,
+    "matchedSacredClients": 135,
     "withBenefactorBirthday": 14,
     "withBeneficiaryBirthday": 58
   },
   "clients": [
     {
-      "id": "aamir-hanif",
-      "benefactor": "Aamir Hanif",
+      "id": "aamir-hanif-almas-hanif",
+      "benefactor": "Aamir Hanif/ / Almas Hanif",
       "beneficiary": "TBC",
       "hubspotKey": "Aamir Hanif",
       "benefactorBirthday": null,
@@ -197,16 +197,6 @@
           "name": "Amir Muhammad",
           "birthday": null,
           "relationship": "Father"
-        },
-        {
-          "name": "Mir Aamir",
-          "birthday": null,
-          "relationship": "Father"
-        },
-        {
-          "name": "Mir Akbar (Nick: Panni Uncle)",
-          "birthday": null,
-          "relationship": null
         }
       ],
       "beneficiaryBirthday": null
@@ -931,9 +921,29 @@
       "beneficiaryBirthday": null
     },
     {
+      "id": "mir-aamir",
+      "benefactor": "Mir Aamir",
+      "beneficiary": "Mir Akbar (Panni = Nickname)",
+      "hubspotKey": "MirAamir",
+      "benefactorBirthday": null,
+      "beneficiaries": [
+        {
+          "name": "Mir Aamir",
+          "birthday": null,
+          "relationship": "Father"
+        },
+        {
+          "name": "Mir Akbar (Nick: Panni Uncle)",
+          "birthday": null,
+          "relationship": null
+        }
+      ],
+      "beneficiaryBirthday": null
+    },
+    {
       "id": "mirza-humayun-afsar",
       "benefactor": "Mirza Humayun Afsar",
-      "beneficiary": "TBC",
+      "beneficiary": "Mirza Afsar / Tarannum Afsar",
       "hubspotKey": "Mirza Humayun Afsar",
       "benefactorBirthday": null,
       "beneficiaries": [],
@@ -1020,7 +1030,13 @@
       "beneficiary": "TBC",
       "hubspotKey": "Muhammad Akbar Bosan",
       "benefactorBirthday": null,
-      "beneficiaries": [],
+      "beneficiaries": [
+        {
+          "name": "Naheed Sultana Noor Ahmad Bosan",
+          "birthday": null,
+          "relationship": "Mother"
+        }
+      ],
       "beneficiaryBirthday": null
     },
     {
@@ -1813,7 +1829,7 @@
     {
       "id": "faraz-kazim",
       "benefactor": "Syed Faraz Kazim",
-      "beneficiary": "TBC",
+      "beneficiary": "Syed Younus Ahmed",
       "hubspotKey": "Syed FarazKazim",
       "benefactorBirthday": null,
       "beneficiaries": [],

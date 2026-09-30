@@ -33,9 +33,15 @@ const COLUMNS = [
   "createdBy",
   "createdAt",
   "updatedAt",
+  // Appended (never reordered) so existing rows keep their positions.
+  "odooSubcategoryId",
+  "odooSubcategoryName",
+  "odooTaskId",
+  "endDate",
+  "endTime",
 ] as const;
 
-const LAST_COL = "Q"; // 17 columns -> A..Q
+const LAST_COL = "V"; // 22 columns -> A..V
 const READ_CACHE_TTL_MS = 120_000;
 
 function getSheetId(): string {
@@ -126,10 +132,20 @@ function rowToEvent(row: string[]): EngagementEvent | null {
     rescheduledFrom: rescheduledFrom ? rescheduledFrom : null,
     assignedDoctor,
     hubspotTicketId,
+    odooSubcategoryId: positiveInt(row[17]),
+    odooSubcategoryName: row[18]?.trim() || null,
+    odooTaskId: positiveInt(row[19]),
+    endDate: row[20]?.trim() || null,
+    endTime: row[21]?.trim() || null,
     createdBy,
     createdAt,
     updatedAt,
   };
+}
+
+function positiveInt(raw: string | undefined): number | null {
+  const n = Number(String(raw ?? "").trim());
+  return Number.isInteger(n) && n > 0 ? n : null;
 }
 
 function eventToRow(e: EngagementEvent): string[] {
@@ -151,6 +167,11 @@ function eventToRow(e: EngagementEvent): string[] {
     e.createdBy,
     e.createdAt,
     e.updatedAt,
+    e.odooSubcategoryId ? String(e.odooSubcategoryId) : "",
+    e.odooSubcategoryName ?? "",
+    e.odooTaskId ? String(e.odooTaskId) : "",
+    e.endDate ?? "",
+    e.endTime ?? "",
   ];
 }
 

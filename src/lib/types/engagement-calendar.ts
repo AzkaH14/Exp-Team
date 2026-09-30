@@ -1,10 +1,25 @@
+/**
+ * "experience" = an Odoo Experience sub category (the event's odooSubcategoryId
+ * says which). The other values are legacy types kept so older logged entries
+ * still render; new entries always use "experience".
+ */
 export type EngagementEventType =
+  | "experience"
   | "doctor_call"
   | "psychologist_call"
   | "checkin_call"
   | "visit"
   | "outing"
   | "other";
+
+/** One Odoo service.category under the Experience root — the calendar's Type options. */
+export interface ExperienceSubcategory {
+  id: number;
+  /** Exactly as in Odoo (it has typos, e.g. "Engagaement Visit"). */
+  name: string;
+  /** Display / task-title label. */
+  label: string;
+}
 
 export type EngagementEventStatus =
   | "planned"
@@ -13,6 +28,7 @@ export type EngagementEventStatus =
   | "cancelled";
 
 export const ENGAGEMENT_EVENT_TYPE_LABELS: Record<EngagementEventType, string> = {
+  experience: "Experience",
   doctor_call: "Doctor call check-in",
   psychologist_call: "Psychologist call",
   checkin_call: "Regular call check-in",
@@ -40,10 +56,14 @@ export interface EngagementEvent {
   /** Optional free-text detail of the visit/call */
   title: string;
   notes: string;
-  /** Scheduled date, YYYY-MM-DD */
+  /** Start date, YYYY-MM-DD */
   date: string;
-  /** Optional time of day, HH:MM (24h) */
+  /** Start time, HH:MM (24h). Required for new entries; null on legacy rows. */
   time: string | null;
+  /** End date, YYYY-MM-DD. Required for new entries; null on legacy rows. */
+  endDate?: string | null;
+  /** End time, HH:MM (24h). Required for new entries; null on legacy rows. */
+  endTime?: string | null;
   status: EngagementEventStatus;
   /** Original date if this event has been rescheduled */
   rescheduledFrom: string | null;
@@ -51,18 +71,35 @@ export interface EngagementEvent {
   assignedDoctor: string | null;
   /** Linked HubSpot ticket id when auto-created */
   hubspotTicketId: string | null;
+  /** Odoo Experience sub category (type === "experience"). */
+  odooSubcategoryId?: number | null;
+  odooSubcategoryName?: string | null;
+  /** Odoo project.task created from this entry via "Create ticket in Odoo". */
+  odooTaskId?: number | null;
   createdBy: string;
   createdAt: string;
   updatedAt: string;
 }
 
+/** Display label for an event's type — the Odoo sub category when it has one. */
+export function engagementEventTypeLabel(e: Pick<EngagementEvent, "type" | "odooSubcategoryName">): string {
+  if (e.type === "experience" && e.odooSubcategoryName) {
+    return e.odooSubcategoryName.replace(/Engagaement/i, "Engagement");
+  }
+  return ENGAGEMENT_EVENT_TYPE_LABELS[e.type] ?? e.type;
+}
+
 export interface EngagementEventInput {
   registryId: string;
   type: EngagementEventType;
+  odooSubcategoryId?: number | null;
+  odooSubcategoryName?: string | null;
   title?: string;
   notes?: string;
   date: string;
   time?: string | null;
+  endDate?: string | null;
+  endTime?: string | null;
   status?: EngagementEventStatus;
   createdBy?: string;
   assignedDoctor?: string | null;
@@ -114,6 +151,10 @@ export interface EngagementCalendarData {
   hubspotAutoCreate: boolean;
   /** HubSpot portal id for ticket links (when configured) */
   hubSpotPortalId: string | null;
+  /** Type options: Odoo sub categories under Experience (includes "Other"). */
+  experienceTypes: ExperienceSubcategory[];
+  /** Odoo base URL for task links (not a secret). */
+  odooUrl: string | null;
   cities: CalendarCitySummary[];
   clients: CalendarClientRow[];
   weekEvents: EngagementEvent[];

@@ -46,11 +46,12 @@ const registry = filterSacredRegistryClients(
 ).filter((c) => c.status !== "cancelled");
 
 // The VERSION STRING must mirror getRegistryVersion() in client-registry/store.ts
-// byte for byte — it filters the raw file clients WITHOUT the supplement.
+// byte for byte — both call registryContentVersion() on the raw file clients.
 // Getting this wrong makes the frozen aggregate look permanently stale.
-const registryVersion = `${registryFile.version ?? 1}:${registryFile.updatedAt ?? "0"}:${
-  filterSacredRegistryClients(registryFile.clients).length
-}:bl${REGISTRY_BLOCKLIST_VERSION}`;
+const { registryContentVersion } = await import(
+  "../src/lib/client-registry/registry-version.ts"
+);
+const registryVersion = registryContentVersion(registryFile.clients);
 
 console.log("Fetching historical sheet…");
 const all = await fetchHistoricalTickets();

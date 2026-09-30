@@ -1,5 +1,32 @@
 {
   "version": 1,
   "description": "Local fallback for manual celebrations and generated-event note overlays.",
-  "events": []
+  "events": [
+    {
+      "id": "celebration_munt01sa_94rmjv",
+      "source": "manual",
+      "kind": "custom",
+      "categoryId": "public-holiday",
+      "categoryLabel": "Public Holiday",
+      "title": "Public Holiday",
+      "date": "2026-09-30",
+      "time": null,
+      "allDay": true,
+      "recurrence": "none",
+      "registryIds": [],
+      "clientLabels": [],
+      "cities": [
+        "Islamabad",
+        "Karachi",
+        "Lahore"
+      ],
+      "notes": "",
+      "status": "planned",
+      "createdBy": "Team",
+      "createdAt": "2026-09-30T07:48:33.417Z",
+      "updatedAt": "2026-09-30T07:48:33.417Z",
+      "ticketLinks": {},
+      "linkedGeneratedId": null
+    }
+  ]
 }
