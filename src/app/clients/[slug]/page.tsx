@@ -9,8 +9,10 @@ import { Badge } from "@/components/ui/badge";
 import { getClientProfileBySlug } from "@/lib/client-profiles";
 import { getTicketsByClient } from "@/lib/tickets-data";
 
-// ISR — was only dynamic transitively via the root layout's force-dynamic (removed).
-export const revalidate = 900;
+// Dynamic, not ISR: live data sits in each serverless instance's memory, and an
+// ISR copy rendered on a cold instance would serve the frozen baseline for up to
+// 15 min. The root layout's warmSession() keeps this cheap (per-instance cache).
+export const dynamic = "force-dynamic";
 
 interface ClientProfilePageProps {
   params: Promise<{ slug: string }>;

@@ -1,4 +1,5 @@
 import "server-only";
+import { waitUntil } from "@vercel/functions";
 import type { AnalyticsData } from "./analytics-data";
 import { getRegistryVersion } from "./client-registry/store";
 import { isBundledHubSpotAnalytics } from "./analytics-build";
@@ -417,6 +418,11 @@ export async function warmSession(
     await store.syncPromise;
     return getDataSyncMeta();
   }
+
+  // Background refresh of an aged cache: the response goes out now with the
+  // cached data. waitUntil keeps the Vercel function alive until the refresh
+  // finishes, so it is not cut off once the response is sent (no-op locally).
+  waitUntil(store.syncPromise);
 
   const state = store.cache ?? getStaticFallback();
   ensureDerived(state);
