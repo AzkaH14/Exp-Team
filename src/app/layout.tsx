@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AppSidebar } from "@/components/dashboard/app-sidebar";
 import { AutoHubSpotSync } from "@/components/dashboard/auto-hubspot-sync";
 import { getSidebarBootstrap } from "@/lib/sidebar-bootstrap";
+import { warmSession } from "@/lib/data-source";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Keep layout light — do not load tickets.json or rebuild QoL here.
+  // Warm this serverless instance before reading its sync state. On a cold or
+  // stale instance this blocks ~1-2s to pull the live Odoo delta (then cached
+  // ~12min); on a warm instance it is an instant cache reuse. This is what
+  // makes the board show the same figures on every tab move instead of
+  // flickering back to the frozen pre-cutover baseline on a cold instance.
+  await warmSession();
   const { period, syncSource, lastSyncedAt, live } = getSidebarBootstrap();
 
   return (

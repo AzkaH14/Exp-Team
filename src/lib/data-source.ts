@@ -268,20 +268,18 @@ export async function warmSession(
 ): Promise<DataSyncMeta> {
   const force = options.force ?? false;
 
-  // Serverless: avoid HubSpot pulls on every page render.
-  // If a recent force-sync (manual / cron / auto) warmed this instance, reuse it.
-  if (process.env.VERCEL && !force) {
-    const FRESH_MS = Number(process.env.HUBSPOT_CACHE_FRESH_MS ?? 12 * 60 * 1000);
-    if (
-      store.cache &&
-      Date.now() - store.cache.syncedAt < FRESH_MS &&
-      store.cache.registryVersion === getRegistryVersion()
-    ) {
-      ensureDerived(store.cache);
-      return getDataSyncMeta();
-    }
-    const state = getStaticFallback();
-    ensureDerived(state);
+  // Reuse a fresh in-memory snapshot as-is — the fast path for repeat renders
+  // on a warm instance. Each serverless instance keeps its own cache, so this
+  // is what stops a hot instance from re-pulling Odoo on every request.
+  const FRESH_MS = Number(process.env.HUBSPOT_CACHE_FRESH_MS ?? 12 * 60 * 1000);
+  const registryVersion = getRegistryVersion();
+  const cacheFresh =
+    store.cache !== null &&
+    Date.now() - store.cache.syncedAt < FRESH_MS &&
+    store.cache.registryVersion === registryVersion;
+
+  if (!force && cacheFresh) {
+    ensureDerived(store.cache!);
     return getDataSyncMeta();
   }
 
@@ -291,24 +289,24 @@ export async function warmSession(
     return getDataSyncMeta();
   }
 
-  const registryVersion = getRegistryVersion();
   const cacheStale =
     store.cache !== null && store.cache.registryVersion !== registryVersion;
-  const needsFetch = force || !store.cache || cacheStale;
 
-  if (!needsFetch) {
-    ensureDerived(store.cache!);
-    return getDataSyncMeta();
-  }
+  // Block the render on the fetch when this instance has nothing fresh to show
+  // (cold, or a version-stale cache) or a manual Sync forces it — so a cold
+  // serverless instance never serves the frozen pre-cutover baseline while it
+  // can reach Odoo. That is what keeps the board consistent across tab moves:
+  // every instance warms itself to the same figure on its first render.
+  // An instance whose cache has merely AGED keeps serving it and refreshes in
+  // the background, so navigation never flickers back to history.
+  const blockOnFetch = force || store.cache === null || cacheStale;
 
-  // Never block UI/report routes while a background sync is already running.
   if (store.syncPromise) {
-    if (store.cache) {
-      ensureDerived(store.cache);
+    if (blockOnFetch) {
+      await store.syncPromise;
       return getDataSyncMeta();
     }
-    const state = getStaticFallback();
-    ensureDerived(state);
+    ensureDerived(store.cache ?? getStaticFallback());
     return getDataSyncMeta();
   }
 
@@ -415,7 +413,7 @@ export async function warmSession(
     }
   })();
 
-  if (force) {
+  if (blockOnFetch) {
     await store.syncPromise;
     return getDataSyncMeta();
   }

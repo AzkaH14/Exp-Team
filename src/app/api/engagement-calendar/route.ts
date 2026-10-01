@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ensureSession } from "@/lib/ensure-session";
+import { warmSession } from "@/lib/data-source";
 import {
   getEngagementCalendarData,
   parseWeekParam,
@@ -73,7 +74,10 @@ function normalizeCity(raw: string | null): string {
 }
 
 export async function GET(request: NextRequest) {
-  await ensureSession();
+  // Warm this instance (cold → pulls the live Odoo delta, then cached) so week
+  // and city navigation returns the same figures the page rendered with,
+  // instead of the frozen baseline when the request lands on a cold instance.
+  await warmSession();
   const { searchParams } = request.nextUrl;
   const city = normalizeCity(searchParams.get("city"));
   const weekRef = parseWeekParam(searchParams.get("week"));
