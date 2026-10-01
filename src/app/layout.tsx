@@ -15,12 +15,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   // Keep layout light — do not load tickets.json or rebuild QoL here.
-  const { period, syncSource, lastSyncedAt } = getSidebarBootstrap();
+  const { period, syncSource, lastSyncedAt, live } = getSidebarBootstrap();
 
   return (
     <html lang="en">
       <body>
-        <AutoHubSpotSync />
+        <AutoHubSpotSync cold={!live} />
         <div className="flex min-h-screen">
           <AppSidebar
             period={period}

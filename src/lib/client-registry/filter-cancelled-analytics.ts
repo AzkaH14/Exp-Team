@@ -34,11 +34,32 @@ export function getCancelledClientKeys(): Set<string> {
   const version = getRegistryVersion();
   if (cancelledKeysCache?.version === version) return cancelledKeysCache.keys;
 
+  const all = getSacredRegistryIncludingCancelled();
+
+  // A cancelled family must never suppress a name that an ACTIVE family owns as
+  // its benefactor. A stale "foreign alias" — a cancelled record carrying an
+  // active benefactor's name — would otherwise drop every one of that live
+  // client's tickets (and hide them from the portfolio), reading as
+  // "never touched" / underutilising. Active benefactor names win.
+  const activeBenefactorKeys = new Set<string>();
+  for (const c of all) {
+    if (c.status === "cancelled") continue;
+    addNameKeys(activeBenefactorKeys, c.benefactor);
+  }
+
   const keys = new Set<string>();
-  for (const c of getSacredRegistryIncludingCancelled()) {
+  const addCancelledName = (name: string): void => {
+    for (const label of hubSpotMatchLabels(name)) {
+      const norm = normalizeRegistryName(label);
+      const compact = compactRegistryName(label);
+      if (norm && !activeBenefactorKeys.has(norm)) keys.add(norm);
+      if (compact && !activeBenefactorKeys.has(compact)) keys.add(compact);
+    }
+  };
+  for (const c of all) {
     if (c.status !== "cancelled") continue;
-    addNameKeys(keys, c.benefactor);
-    for (const alias of c.aliases ?? []) addNameKeys(keys, alias);
+    addCancelledName(c.benefactor);
+    for (const alias of c.aliases ?? []) addCancelledName(alias);
   }
   cancelledKeysCache = { version, keys };
   return keys;

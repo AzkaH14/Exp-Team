@@ -1,25 +1,25 @@
 {
   "version": 4,
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "source": "Odoo res.partner (Benefactor tag)",
   "summary": {
-    "total": 137,
-    "active": 125,
+    "total": 134,
+    "active": 122,
     "pause": 10,
-    "cancelled": 20,
+    "cancelled": 21,
     "gratis": 2,
     "byCity": {
-      "Islamabad": 26,
-      "Karachi": 63,
-      "Lahore": 32,
+      "Islamabad": 25,
+      "Karachi": 61,
+      "Lahore": 31,
       "Lodhran": 0,
-      "Gujranwala": 1,
+      "Gujranwala": 0,
       "Faisalabad": 1,
-      "Other": 2
+      "Other": 4
     },
     "source": "odoo",
-    "odooBenefactors": 159,
-    "withoutBeneficiaries": 39
+    "odooBenefactors": 157,
+    "withoutBeneficiaries": 29
   },
   "clients": [
     {
@@ -91,8 +91,8 @@
     {
       "id": "abdul-rehman-nazar",
       "benefactor": "Abdul Rehman Nazar",
-      "beneficiary": "",
-      "city": "Lahore",
+      "beneficiary": "Bina Shaukat",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "pause",
       "status": "pause",
@@ -316,8 +316,8 @@
     {
       "id": "ali-asghar-moiz",
       "benefactor": "Ali Asghar Moiz",
-      "beneficiary": "",
-      "city": "Karachi",
+      "beneficiary": "Farzana Salehbhoy",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "pause",
       "status": "pause",
@@ -660,25 +660,6 @@
       "benefactorCode": "ISB-1005"
     },
     {
-      "id": "ben-1",
-      "benefactor": "Ben 1",
-      "beneficiary": "Benifc 1",
-      "city": "Islamabad",
-      "signupDate": null,
-      "serviceTier": "premium",
-      "status": "active",
-      "country": null,
-      "linkedin": null,
-      "biraUrl": null,
-      "aliases": [],
-      "contactEmails": [
-        "azka.humayon01@gmail.com"
-      ],
-      "source": "odoo",
-      "odooPartnerId": 1082,
-      "benefactorCode": "ISB-1040"
-    },
-    {
       "id": "bilal-iqbal-hameed",
       "benefactor": "Bilal Iqbal Hameed",
       "beneficiary": "Iqbal Hameed / Sheerin Iqbal",
@@ -832,8 +813,8 @@
     {
       "id": "fahad-tanver-malik",
       "benefactor": "Fahad Tanveer Malik",
-      "beneficiary": "",
-      "city": "Karachi",
+      "beneficiary": "Tanvir Malik / Mrs. Tanvir Malik",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "pause",
       "status": "pause",
@@ -1086,8 +1067,8 @@
     {
       "id": "huda-rizvi",
       "benefactor": "Huda Rizvi",
-      "beneficiary": "",
-      "city": "Karachi",
+      "beneficiary": "Asad Abbas Rizvi / Azra Batool",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "cancelled",
@@ -1367,10 +1348,10 @@
       "id": "manzar-mustafa",
       "benefactor": "Manzar Mustafa",
       "beneficiary": "Talib Lodhi / Dr Arfa Sultana",
-      "city": "Karachi",
+      "city": "Other",
       "signupDate": "2026-09-11",
       "serviceTier": "premium",
-      "status": "active",
+      "status": "cancelled",
       "country": null,
       "linkedin": null,
       "biraUrl": null,
@@ -1385,8 +1366,8 @@
     {
       "id": "maria-faraz",
       "benefactor": "Maria Faraz",
-      "beneficiary": "",
-      "city": "Karachi",
+      "beneficiary": "Humera Zareen / Muhammad Sayeed",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "cancelled",
@@ -1409,8 +1390,8 @@
     {
       "id": "maria-hasnie",
       "benefactor": "Maria Hasnie",
-      "beneficiary": "Nadira Omar",
-      "city": "Lahore",
+      "beneficiary": "Nadira Omar / Kabir Omar",
+      "city": "Other",
       "signupDate": "2026-01-10",
       "serviceTier": "premium",
       "status": "active",
@@ -1632,8 +1613,8 @@
     {
       "id": "nasir-ali",
       "benefactor": "Muhammad Nasir Ali",
-      "beneficiary": "Ayub Ali",
-      "city": "Karachi",
+      "beneficiary": "Ayub Ali / Farah Naz",
+      "city": "Other",
       "signupDate": "2026-07-19",
       "serviceTier": "premium",
       "status": "active",
@@ -1705,7 +1686,7 @@
     {
       "id": "umar-habib",
       "benefactor": "Muhammad UmarHabib",
-      "beneficiary": "Bilquees Akhtar",
+      "beneficiary": "Bilquees Akhtar / Fatima Habib / Hamza Habib",
       "city": "Other",
       "signupDate": null,
       "serviceTier": "premium",
@@ -1731,8 +1712,8 @@
     {
       "id": "mujtaba-mahmood",
       "benefactor": "Mujtaba Mahmood",
-      "beneficiary": "",
-      "city": "Lahore",
+      "beneficiary": "Mehmood Ul Haq",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "cancelled",
@@ -1940,8 +1921,8 @@
     {
       "id": "neha-temuri",
       "benefactor": "Neha Mashhood Temuri",
-      "beneficiary": "",
-      "city": "Karachi",
+      "beneficiary": "Mashhood ul Hassan Temuri",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "pause",
       "status": "pause",
@@ -2112,8 +2093,8 @@
     {
       "id": "rabia-rauf",
       "benefactor": "Rabia Irfan Rauf",
-      "beneficiary": "",
-      "city": "Gujranwala",
+      "beneficiary": "Irfan Rauf",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "active",
@@ -2239,8 +2220,8 @@
     {
       "id": "saima-amin",
       "benefactor": "Saima Amin",
-      "beneficiary": "",
-      "city": "Lahore",
+      "beneficiary": "Atif Shahab",
+      "city": "Other",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "cancelled",
@@ -3277,25 +3258,6 @@
       "source": "odoo",
       "odooPartnerId": 618,
       "benefactorCode": "KHI-3074"
-    },
-    {
-      "id": "test-beneficiary",
-      "benefactor": "test",
-      "beneficiary": "",
-      "city": "Other",
-      "signupDate": null,
-      "serviceTier": "premium",
-      "status": "active",
-      "country": null,
-      "linkedin": null,
-      "biraUrl": null,
-      "aliases": [
-        "Test Person",
-        "Test Beneficiary"
-      ],
-      "source": "odoo",
-      "odooPartnerId": 1073,
-      "benefactorCode": "ISB-1039"
     }
   ]
 }

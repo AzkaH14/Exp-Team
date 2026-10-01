@@ -45,5 +45,11 @@ export function getSidebarBootstrap() {
       : bundledHubSpot
         ? baselineAnalytics.exportedAt ?? null
         : null,
+    /**
+     * Whether this serverless instance has live data in memory. When false the
+     * page is rendering the frozen pre-cutover baseline, which is now weeks
+     * stale, so the client should warm immediately (see AutoHubSpotSync).
+     */
+    live,
   };
 }

@@ -32,18 +32,22 @@ function buildIndex(registry: ClientRegistryRecord[]): RegistryClientIndex {
   const byNormalizedName = new Map<string, string>();
   const byCompactName = new Map<string, string>();
 
+  const add = (name: string, id: string): void => {
+    const norm = normalizeRegistryName(name);
+    const compact = compactRegistryName(name);
+    if (norm && !byNormalizedName.has(norm)) byNormalizedName.set(norm, id);
+    if (compact && !byCompactName.has(compact)) byCompactName.set(compact, id);
+  };
+
+  // Priority passes so a record's own BENEFACTOR name always wins over another
+  // record's alias/beneficiary. Without this, a stale "foreign alias" (one
+  // family carrying another active benefactor's name as an alias) would hijack
+  // that benefactor's name via first-write-wins and steal all their tickets —
+  // the active family then reads as "never touched" / underutilising.
+  for (const record of registry) add(record.benefactor, record.id);
+  for (const record of registry) add(record.beneficiary, record.id);
   for (const record of registry) {
-    const names = [record.benefactor, record.beneficiary, ...record.aliases];
-    for (const name of names) {
-      const norm = normalizeRegistryName(name);
-      const compact = compactRegistryName(name);
-      if (norm && !byNormalizedName.has(norm)) {
-        byNormalizedName.set(norm, record.id);
-      }
-      if (compact && !byCompactName.has(compact)) {
-        byCompactName.set(compact, record.id);
-      }
-    }
+    for (const alias of record.aliases) add(alias, record.id);
   }
 
   return {

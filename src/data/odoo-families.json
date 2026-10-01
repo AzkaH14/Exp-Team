@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-30T09:44:07.970Z",
+  "syncedAt": "2026-10-01T06:20:08.381Z",
   "families": [
     {
       "registryId": "nisar-akbar",
@@ -156,7 +156,15 @@
       "benefactorCode": "LHR-2001",
       "benefactor": "Abdul Rehman Nazar",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 275,
+          "name": "Bina Shaukat",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -648,7 +656,15 @@
       "benefactorCode": "KHI-3007",
       "benefactor": "Ali Asghar Moiz",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 456,
+          "name": "Farzana Salehbhoy",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -1238,25 +1254,6 @@
       "notes": []
     },
     {
-      "registryId": "ben-1",
-      "partnerId": 1082,
-      "benefactorCode": "ISB-1040",
-      "benefactor": "Ben 1",
-      "benefactorBirthday": null,
-      "members": [
-        {
-          "partnerId": 1083,
-          "name": "Benifc 1",
-          "relationship": "Father in Law",
-          "birthday": null,
-          "isBeneficiary": false
-        }
-      ],
-      "overviewSections": [],
-      "interests": [],
-      "notes": []
-    },
-    {
       "registryId": "bilal-iqbal-hameed",
       "partnerId": 171,
       "benefactorCode": "KHI-3016",
@@ -1549,7 +1546,22 @@
       "benefactorCode": "KHI-3020",
       "benefactor": "Fahad Tanveer Malik",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 642,
+          "name": "Tanvir Malik",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 748,
+          "name": "Mrs. Tanvir Malik",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -2071,7 +2083,22 @@
       "benefactorCode": "KHI-3026",
       "benefactor": "Huda Rizvi",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 637,
+          "name": "Asad Abbas Rizvi",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 638,
+          "name": "Azra Batool",
+          "relationship": "Father in Law",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -2547,7 +2574,7 @@
       "notes": [
         {
           "id": 9781,
-          "body": "Client Profile: Ghazala Siddiqui\nLocation: Karachi\nBenefactor: Madiha Ahsan (spouse of Ahsan Yusufzai)\n\nGeneral Overview\nMadiha Ahsan is Ahsan Yousufzai’s (Tahira Qurat ul Ain) and got these services for her mother, Ms Ghazala Siddiqui due to a good response by the Mohsyn team, and as her mother was moving into a new apartment and set ups were to be done.\nLPE pending.\n\nMedical Notes\n\nLifestyle & Support Structure\n\nDreamweaver Notes\n\nBenefactor Information\nName: Madiha Ahsan\nRelationship to Beneficiary: Daughter\nEducation:\nProfession: \nLocation: Houston, TX, USA\nLinkedIn Profile:",
+          "body": "Client Profile: Ghazala Siddiqui-+1 (832) 275-3354 \nLocation: Karachi\nBenefactor: Madiha Ahsan (spouse of Ahsan Yusufzai)\n\nGeneral Overview\nMadiha Ahsan is Ahsan Yousufzai’s (Tahira Qurat ul Ain) and got these services for her mother, Ms Ghazala Siddiqui due to a good response by the Mohsyn team, and as her mother was moving into a new apartment and set ups were to be done.\nLPE pending.\n\nMedical Notes\n\nLifestyle & Support Structure\n\nDreamweaver Notes\n\nBenefactor Information\nName: Madiha Ahsan\nRelationship to Beneficiary: Daughter\nEducation:\nProfession: \nLocation: Houston, TX, USA\nLinkedIn Profile:",
           "createdAt": "2026-08-10T05:36:17Z",
           "author": "Rizwan Ahmad"
         }
@@ -2698,7 +2725,22 @@
       "benefactorCode": "KHI-3030",
       "benefactor": "Maria Faraz",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 621,
+          "name": "Humera Zareen",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 620,
+          "name": "Muhammad Sayeed",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -2714,6 +2756,13 @@
           "partnerId": 316,
           "name": "Nadira Omar",
           "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 314,
+          "name": "Kabir Omar",
+          "relationship": "Father",
           "birthday": null,
           "isBeneficiary": true
         }
@@ -3218,6 +3267,13 @@
           "relationship": "Father",
           "birthday": null,
           "isBeneficiary": true
+        },
+        {
+          "partnerId": 616,
+          "name": "Farah Naz",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
         }
       ],
       "overviewSections": [
@@ -3392,6 +3448,20 @@
           "relationship": "Child",
           "birthday": null,
           "isBeneficiary": true
+        },
+        {
+          "partnerId": 285,
+          "name": "Fatima Habib",
+          "relationship": "Sister",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 282,
+          "name": "Hamza Habib",
+          "relationship": "Brother",
+          "birthday": null,
+          "isBeneficiary": true
         }
       ],
       "overviewSections": [],
@@ -3404,7 +3474,15 @@
       "benefactorCode": "LHR-2024",
       "benefactor": "Mujtaba Mahmood",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 336,
+          "name": "Mehmood Ul Haq",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [
         {
           "heading": "Client Profile",
@@ -3766,7 +3844,15 @@
       "benefactorCode": "KHI-3042",
       "benefactor": "Neha Mashhood Temuri",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 681,
+          "name": "Mashhood ul Hassan Temuri",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -4006,7 +4092,15 @@
       "benefactorCode": "GUJ-6001",
       "benefactor": "Rabia Irfan Rauf",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 276,
+          "name": "Irfan Rauf",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -4167,7 +4261,15 @@
       "benefactorCode": "LHR-2026",
       "benefactor": "Saima Amin",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 338,
+          "name": "Atif Shahab",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -6466,17 +6568,6 @@
           "body": "- Follow-Up: Await an update from Zohra following her conversation with her mother.\n\n- Service Plan Customization: Prepare an outdoor-focused service agreement that respects domestic entry boundaries.\n\n- Field Team Briefing: Ensure the local Karachi operational team is briefed regarding the ground-floor bank meeting protocol for initial consultations."
         }
       ],
-      "interests": [],
-      "notes": []
-    },
-    {
-      "registryId": "test-beneficiary",
-      "partnerId": 1073,
-      "benefactorCode": "ISB-1039",
-      "benefactor": "test",
-      "benefactorBirthday": null,
-      "members": [],
-      "overviewSections": [],
       "interests": [],
       "notes": []
     }

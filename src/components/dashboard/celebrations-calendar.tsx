@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CalendarPlus, ChevronLeft, ChevronRight, ExternalLink, Plus, X } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type {
@@ -291,17 +290,6 @@ export function CelebrationsCalendar({
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-center gap-2">
-        <Badge variant={data.storageMode === "sheet" ? "secondary" : "outline"}>
-          {data.storageMode === "sheet"
-            ? "Google Sheet storage"
-            : "Local JSON fallback (not durable on Vercel)"}
-        </Badge>
-        <Badge variant={data.hubspotEnabled ? "secondary" : "outline"}>
-          {data.hubspotEnabled ? "HubSpot tickets enabled" : "HubSpot tickets off"}
-        </Badge>
-      </div>
-
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
           {CITIES.map((value) => (

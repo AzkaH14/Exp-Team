@@ -372,16 +372,16 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
               + HubSpot ticket on save
             </Badge>
           )}
-          <span className="text-muted-foreground">Acting as</span>
+          <span className="text-muted-foreground">City</span>
           <select
             className="rounded-md border bg-background px-2 py-1.5 text-sm"
             value={actingAs}
             onChange={(e) => chooseIdentity(e.target.value as Lead | "")}
           >
-            <option value="">Select…</option>
+            <option value="">Select city…</option>
             {LEADS.map((l) => (
               <option key={l} value={l}>
-                {l} · {LEAD_CITY[l]}
+                {LEAD_CITY[l]}
               </option>
             ))}
           </select>
@@ -406,7 +406,6 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold">{c.city}</span>
-                <Badge variant="secondary">{c.lead}</Badge>
               </div>
               <p className="mt-1 text-2xl font-bold">{c.totalClients}</p>
               <p className="text-xs text-muted-foreground">clients this city</p>
@@ -457,22 +456,13 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
 
       {!actingAs && (
         <p className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
-          Select who you are (top right) to add or edit calendar entries. Laiba → Islamabad,
-          Seemab → Lahore, Labeba → Karachi.
+          Select your city (top right) to add or edit calendar entries.
         </p>
       )}
 
       {data.observanceBanner && (
         <p className="rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs text-sky-900">
           Upcoming: {data.observanceBanner}
-        </p>
-      )}
-
-      {!data.hubspotAutoCreate && (
-        <p className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
-          HubSpot auto-tickets are off. Set{" "}
-          <code className="rounded bg-amber-100 px-1">HUBSPOT_AUTO_CREATE_ENGAGEMENT_TICKETS=true</code>{" "}
-          on Vercel (and owner IDs) so new calendar entries create tickets.
         </p>
       )}
 
@@ -548,7 +538,7 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
             <thead className="bg-muted/50 text-left text-xs uppercase text-muted-foreground">
               <tr>
                 <th className="px-3 py-2 font-medium">Client</th>
-                <th className="px-3 py-2 font-medium">City / Lead</th>
+                <th className="px-3 py-2 font-medium">City</th>
                 <th className="px-3 py-2 font-medium">Last touch</th>
                 <th className="px-3 py-2 font-medium">This month</th>
                 <th className="px-3 py-2 font-medium">Open</th>
@@ -587,10 +577,7 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
                       <div className="mt-0.5 text-[11px] text-amber-800">{c.prompt}</div>
                     )}
                   </td>
-                  <td className="px-3 py-2 text-xs">
-                    {c.city}
-                    <span className="text-muted-foreground"> · {c.lead}</span>
-                  </td>
+                  <td className="px-3 py-2 text-xs">{c.city}</td>
                   <td className="px-3 py-2 text-xs">
                     {c.lastTouch ? (
                       <>
@@ -640,11 +627,7 @@ export function EngagementCalendar({ initial }: EngagementCalendarProps) {
                       size="sm"
                       disabled={!canAddFor(c)}
                       title={
-                        canAddFor(c)
-                          ? c.lead && actingAs !== c.lead
-                            ? `Add entry (city lead: ${c.lead})`
-                            : "Add entry"
-                          : "Choose who you are acting as first"
+                        canAddFor(c) ? "Add entry" : "Select your city first"
                       }
                       onClick={() =>
                         openAdd({

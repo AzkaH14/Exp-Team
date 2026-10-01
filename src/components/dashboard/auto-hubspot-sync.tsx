@@ -22,11 +22,23 @@ const STORAGE_KEY = "mohsyn.hubspot.lastAutoSyncAt";
  */
 export function AutoHubSpotSync({
   intervalMs = DEFAULT_INTERVAL_MS,
+  cold = false,
 }: {
   intervalMs?: number;
+  /**
+   * The server rendered this page WITHOUT live data (no in-memory cache on this
+   * serverless instance) — it is showing the frozen pre-cutover baseline. That
+   * baseline is now weeks past the cutover, so every client reads as stale /
+   * underutilising until a live sync lands. When cold, warm immediately and
+   * ignore the per-browser throttle: the throttle tracks this browser, but the
+   * cache is per-instance, so a browser that synced recently elsewhere must
+   * still warm a different cold instance it lands on.
+   */
+  cold?: boolean;
 }) {
   const router = useRouter();
   const inFlight = useRef(false);
+  const forcedColdSync = useRef(false);
 
   useEffect(() => {
     const due = () => {
@@ -51,8 +63,12 @@ export function AutoHubSpotSync({
     const run = async () => {
       if (document.visibilityState !== "visible") return;
       if (inFlight.current) return;
-      if (!due()) return;
+      // A cold render warms once per mount regardless of the throttle; every
+      // other check respects the per-browser interval.
+      const forceCold = cold && !forcedColdSync.current;
+      if (!forceCold && !due()) return;
       inFlight.current = true;
+      if (forceCold) forcedColdSync.current = true;
       try {
         const res = await fetch("/api/sync/hubspot", { method: "POST" });
         if (res.ok) {
@@ -66,16 +82,16 @@ export function AutoHubSpotSync({
       }
     };
 
-    // Check shortly after load (self-heal a stale/cold session quickly),
-    // then every few minutes to catch the interval elapsing while open.
-    const initial = window.setTimeout(run, 60_000);
+    // Cold instances self-heal within a couple of seconds; a warm page just
+    // checks whether the refresh interval has elapsed.
+    const initial = window.setTimeout(run, cold ? 2_000 : 60_000);
     const id = window.setInterval(run, CHECK_INTERVAL_MS);
 
     return () => {
       window.clearTimeout(initial);
       window.clearInterval(id);
     };
-  }, [intervalMs, router]);
+  }, [intervalMs, router, cold]);
 
   return null;
 }
