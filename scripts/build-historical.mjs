@@ -1,17 +1,4 @@
-/**
- * Freeze the HubSpot export into src/data/historical-*.json.
- *
- * Run once (and again only if the sheet, blocklist or registry changes):
- *   npx tsx scripts/build-historical.mjs
- *
- * Produces three files, all committed:
- *   historical-tickets-index.json   list + analytics fields  (hot path)
- *   historical-tickets-detail.json  descriptions + notes     (lazy)
- *   historical-aggregates.json      additive counts + meta   (hot path)
- *
- * This is a build/maintenance script. Nothing here runs at request time.
- * See odoo_instruct.md §4.4 and §12.3.
- */
+
 import { readFileSync, writeFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
