@@ -3,8 +3,8 @@
   "updatedAt": "2026-10-01",
   "source": "Odoo res.partner (Benefactor tag)",
   "summary": {
-    "total": 134,
-    "active": 122,
+    "total": 135,
+    "active": 123,
     "pause": 10,
     "cancelled": 21,
     "gratis": 2,
@@ -15,11 +15,11 @@
       "Lodhran": 0,
       "Gujranwala": 0,
       "Faisalabad": 1,
-      "Other": 4
+      "Other": 5
     },
     "source": "odoo",
-    "odooBenefactors": 157,
-    "withoutBeneficiaries": 29
+    "odooBenefactors": 158,
+    "withoutBeneficiaries": 30
   },
   "clients": [
     {
@@ -2944,6 +2944,25 @@
       "source": "odoo",
       "odooPartnerId": 156,
       "benefactorCode": "ISB-1023"
+    },
+    {
+      "id": "tasnim-ahmed",
+      "benefactor": "Tasnim Ahmed",
+      "beneficiary": "",
+      "city": "Other",
+      "signupDate": null,
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "test12345@gmail.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 993,
+      "benefactorCode": null
     },
     {
       "id": "tauseef-ali",

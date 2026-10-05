@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-01T07:49:24.248Z",
+  "syncedAt": "2026-10-01T08:11:53.822Z",
   "families": [
     {
       "registryId": "nisar-akbar",
@@ -5817,6 +5817,17 @@
           "body": "- Cognitive Support: Thrice-weekly visits from Physiotherapist Isha for brain-stimulating activities.\n\n- Medical Oversight: Monitoring cardiovascular health, diabetes, and hypertension.\n\n- Security Management: Addressing the lack of basic fire and surveillance infrastructure.\n\n- Emergency Contact: Faisal Wasim (Son in Islamabad)."
         }
       ],
+      "interests": [],
+      "notes": []
+    },
+    {
+      "registryId": "tasnim-ahmed",
+      "partnerId": 993,
+      "benefactorCode": null,
+      "benefactor": "Tasnim Ahmed",
+      "benefactorBirthday": null,
+      "members": [],
+      "overviewSections": [],
       "interests": [],
       "notes": []
     },
