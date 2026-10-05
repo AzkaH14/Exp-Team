@@ -7,8 +7,10 @@ import { isGoogleSheetsConfigured } from "@/lib/integrations/google-sheets";
 import { HubSpotSyncButton } from "@/components/dashboard/hubspot-sync-button";
 import { formatNumber, formatSyncTime } from "@/lib/utils";
 
-// ISR — was only dynamic transitively via the root layout's force-dynamic (removed).
-export const revalidate = 900;
+// Dynamic, not ISR: live data sits in each serverless instance's memory, and an
+// ISR copy rendered on a cold instance would serve the frozen baseline for up to
+// 15 min. The root layout's warmSession() keeps this cheap (per-instance cache).
+export const dynamic = "force-dynamic";
 
 export default function SettingsPage() {
   const syncMeta = getDataSyncMeta();

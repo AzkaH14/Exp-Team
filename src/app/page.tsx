@@ -3,8 +3,10 @@ import { DashboardLiveContent } from "@/components/dashboard/dashboard-live-cont
 import { ensureSession } from "@/lib/ensure-session";
 import { getDashboardLiveSnapshot } from "@/lib/data-provider";
 
-// ISR — was force-dynamic. Session cache is in-memory; revalidatePath() after a sync forces an immediate refresh (see sync routes), so this is a ceiling, not a wait.
-export const revalidate = 900;
+// Dynamic, not ISR: live data sits in each serverless instance's memory, and an
+// ISR copy rendered on a cold instance would serve the frozen baseline for up to
+// 15 min. The root layout's warmSession() keeps this cheap (per-instance cache).
+export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
   await ensureSession();
