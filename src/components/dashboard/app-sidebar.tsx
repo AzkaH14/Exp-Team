@@ -11,6 +11,7 @@ import {
   BookUser,
   FileText,
   CalendarDays,
+  PhoneCall,
 } from "lucide-react";
 import { cn, formatSyncTime } from "@/lib/utils";
 
@@ -18,6 +19,7 @@ const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/clients", label: "Client QoL", icon: HeartPulse },
   { href: "/engagement-calendar", label: "Engagement Calendar", icon: CalendarDays },
+  { href: "/touchbase", label: "Touchbase Tracker", icon: PhoneCall },
   { href: "/celebrations-calendar", label: "Celebrations Calendar", icon: CalendarDays },
   { href: "/client-profiles", label: "Client Profiles", icon: BookUser },
   { href: "/family-reports", label: "Family Reports", icon: FileText },

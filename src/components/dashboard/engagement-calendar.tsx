@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { odooTaskUrl } from "@/lib/utils";
 import {
   ENGAGEMENT_EVENT_STATUS_LABELS,
   engagementEventTypeLabel,
@@ -943,7 +944,7 @@ function EventModal({
                 Odoo task created:{" "}
                 {odooUrl ? (
                   <a
-                    href={`${odooUrl}/odoo/project/2/${form.odooTaskId}`}
+                    href={odooTaskUrl(odooUrl, form.odooTaskId)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary underline"

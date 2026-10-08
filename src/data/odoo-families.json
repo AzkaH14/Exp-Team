@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-01T08:11:53.822Z",
+  "syncedAt": "2026-10-08T11:05:59.002Z",
   "families": [
     {
       "registryId": "nisar-akbar",
@@ -55,7 +55,7 @@
           "partnerId": 1025,
           "name": "Almas Hanif",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-08-28",
           "isBeneficiary": true
         },
         {
@@ -74,6 +74,18 @@
       ],
       "interests": [],
       "notes": [
+        {
+          "id": 47863,
+          "body": "IMPORTANT: All payment-related receipts and transactions have to be discussed with Mr. Aamir via DM and not in the family group.",
+          "createdAt": "2026-10-02T09:09:01Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
+          "id": 47710,
+          "body": "Login credentials for StormFiber.",
+          "createdAt": "2026-10-02T03:17:50Z",
+          "author": "Rizwan Ahmad"
+        },
         {
           "id": 45550,
           "body": "No need to update client personally on DM anymore as per image below",
@@ -180,14 +192,14 @@
           "partnerId": 346,
           "name": "Fahim Sulaiman",
           "relationship": "Father",
-          "birthday": "1961-02-27",
+          "birthday": "2026-02-21",
           "isBeneficiary": true
         },
         {
           "partnerId": 347,
           "name": "Qudsia Fahim",
           "relationship": "Mother",
-          "birthday": "1966-05-14",
+          "birthday": "2026-05-14",
           "isBeneficiary": true
         }
       ],
@@ -252,7 +264,7 @@
           "partnerId": 278,
           "name": "Samina Shamim Ahmed Khan",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1956-07-22",
           "isBeneficiary": true
         }
       ],
@@ -396,12 +408,29 @@
       "interests": [],
       "notes": [
         {
+          "id": 49631,
+          "body": "Uzma Mahreen has requested the FSO to share the details of any visit with her personally as well.",
+          "createdAt": "2026-10-05T09:56:52Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
           "id": 38788,
           "body": "16/9/2026\nFurqan Kazi\nISlamabad, g13\nUS, indiana\nThrough twitter ad of junaid akram\nFor mil\nShe is diabetic, hypertensive. \nNeed help with dialysis. Tuesdays and thursadays\nPick her and take her to cmh for dialysis. \nMil is living with a married daughter who has a full support available for her in case of any emergency\nSil that lives with aunty is also from medical background. furqan s father is also from medical doctor. So keep doctor visits to only emergencies!",
           "createdAt": "2026-09-18T02:13:27Z",
           "author": "Rizwan Ahmad"
         }
       ]
+    },
+    {
+      "registryId": "ahmad-humayun",
+      "partnerId": 1102,
+      "benefactorCode": "KHI-3084",
+      "benefactor": "Ahmad Humayun",
+      "benefactorBirthday": null,
+      "members": [],
+      "overviewSections": [],
+      "interests": [],
+      "notes": []
     },
     {
       "registryId": "ahmed-aftab",
@@ -414,14 +443,14 @@
           "partnerId": 646,
           "name": "Aftab Iqbal",
           "relationship": "Father",
-          "birthday": "2026-09-04",
+          "birthday": null,
           "isBeneficiary": true
         },
         {
           "partnerId": 647,
           "name": "Naheed Aftab",
           "relationship": "Mother",
-          "birthday": "2026-12-04",
+          "birthday": null,
           "isBeneficiary": true
         }
       ],
@@ -529,7 +558,7 @@
           "partnerId": 351,
           "name": "Tahira Qurat- ul- Ain",
           "relationship": "Mother",
-          "birthday": "1945-07-03",
+          "birthday": "2026-07-03",
           "isBeneficiary": true
         }
       ],
@@ -580,14 +609,14 @@
           "partnerId": 354,
           "name": "Salam Khan",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-04-14",
           "isBeneficiary": true
         },
         {
           "partnerId": 355,
           "name": "Farhat Salam",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-05-21",
           "isBeneficiary": true
         }
       ],
@@ -813,14 +842,14 @@
           "partnerId": 280,
           "name": "Sajjad Hassan",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1944-02-11",
           "isBeneficiary": true
         },
         {
           "partnerId": 281,
           "name": "Shereen Sajjad",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1959-12-12",
           "isBeneficiary": true
         }
       ],
@@ -934,7 +963,7 @@
           "partnerId": 361,
           "name": "Anjum Ara",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-01-12",
           "isBeneficiary": true
         },
         {
@@ -1070,14 +1099,14 @@
           "partnerId": 942,
           "name": "Syed Sajid Kazmi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-01-17",
           "isBeneficiary": true
         },
         {
           "partnerId": 369,
           "name": "Shahgul (Musarrat Afroze) Kazmi",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-07-07",
           "isBeneficiary": true
         }
       ],
@@ -1108,7 +1137,7 @@
           "partnerId": 674,
           "name": "Musharaf Sherry Khan",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-11-23",
           "isBeneficiary": true
         }
       ],
@@ -1177,7 +1206,7 @@
           "partnerId": 283,
           "name": "Amin Waqar",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-10-24",
           "isBeneficiary": true
         },
         {
@@ -1236,7 +1265,7 @@
           "partnerId": 264,
           "name": "Khawaja Tariq Saeed",
           "relationship": "Father",
-          "birthday": "1948-10-10",
+          "birthday": null,
           "isBeneficiary": true
         }
       ],
@@ -1504,7 +1533,7 @@
           "partnerId": 388,
           "name": "Gul e Naz Tahir",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-12-12",
           "isBeneficiary": true
         }
       ],
@@ -1620,7 +1649,7 @@
           "partnerId": 667,
           "name": "Muhammad Yousaf Adil",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-07-04",
           "isBeneficiary": true
         }
       ],
@@ -1971,14 +2000,14 @@
           "partnerId": 293,
           "name": "Mohammad Ashraf Mehr",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1950-08-15",
           "isBeneficiary": true
         },
         {
           "partnerId": 295,
           "name": "Muzammal Ashraf",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1950-12-31",
           "isBeneficiary": true
         }
       ],
@@ -2025,7 +2054,7 @@
           "partnerId": 300,
           "name": "Hassan Sarmad",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1952-05-08",
           "isBeneficiary": true
         },
         {
@@ -2170,7 +2199,7 @@
           "partnerId": 644,
           "name": "Zareen Naveed Usman",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1941-07-16",
           "isBeneficiary": true
         }
       ],
@@ -2222,7 +2251,7 @@
           "partnerId": 1021,
           "name": "Tanzim Ul Haq Haqqi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-10-27",
           "isBeneficiary": true
         },
         {
@@ -2260,14 +2289,14 @@
           "partnerId": 660,
           "name": "Shahid Latif Qureshi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1943-05-20",
           "isBeneficiary": true
         },
         {
           "partnerId": 661,
           "name": "Zakia Tasneem",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1948-02-25",
           "isBeneficiary": true
         }
       ],
@@ -2416,7 +2445,7 @@
           "partnerId": 307,
           "name": "Nilofar Saleem",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1942-04-08",
           "isBeneficiary": true
         }
       ],
@@ -2560,7 +2589,7 @@
           "partnerId": 399,
           "name": "Ghazala Siddiqi",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-06-01",
           "isBeneficiary": true
         }
       ],
@@ -2602,14 +2631,14 @@
           "partnerId": 310,
           "name": "Musharraf Hussain Zaidi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1941-01-31",
           "isBeneficiary": true
         },
         {
           "partnerId": 311,
           "name": "Farhat Ruby Zaidi",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1960-02-21",
           "isBeneficiary": true
         }
       ],
@@ -2644,14 +2673,21 @@
         }
       ],
       "interests": [],
-      "notes": []
+      "notes": [
+        {
+          "id": 50043,
+          "body": "NOTE: For future reference, do not have any payment processed without the approval of Mr. Mamnoon Zaidi.",
+          "createdAt": "2026-10-05T17:29:50Z",
+          "author": "Rizwan Ahmad"
+        }
+      ]
     },
     {
       "registryId": "mansoora-sajjad",
       "partnerId": 140,
       "benefactorCode": "LHR-2017",
       "benefactor": "Mansoora Sajjad",
-      "benefactorBirthday": null,
+      "benefactorBirthday": "1945-01-03",
       "members": [],
       "overviewSections": [
         {
@@ -3032,14 +3068,14 @@
           "partnerId": 677,
           "name": "Bashir Ahmad Alvi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1938-03-10",
           "isBeneficiary": true
         },
         {
           "partnerId": 678,
           "name": "Muniba Alvi",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1953-06-15",
           "isBeneficiary": true
         }
       ],
@@ -3072,6 +3108,32 @@
       ]
     },
     {
+      "registryId": "monis-jaleel-ahmed",
+      "partnerId": 1095,
+      "benefactorCode": null,
+      "benefactor": "Monis Jaleel Ahmed",
+      "benefactorBirthday": null,
+      "members": [
+        {
+          "partnerId": 1096,
+          "name": "Jaleel Ahmed",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
+      "overviewSections": [],
+      "interests": [],
+      "notes": [
+        {
+          "id": 51169,
+          "body": "IMPORTANT\nV V V IMP Client\nDo NOT mess up in any task or query",
+          "createdAt": "2026-10-07T05:26:17Z",
+          "author": "Rizwan Ahmad"
+        }
+      ]
+    },
+    {
       "registryId": "ahsan-iqbal",
       "partnerId": 192,
       "benefactorCode": "LHR-2020",
@@ -3082,7 +3144,7 @@
           "partnerId": 329,
           "name": "Salma Shaheen",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1950-02-24",
           "isBeneficiary": true
         },
         {
@@ -3163,14 +3225,14 @@
           "partnerId": 630,
           "name": "Feroze Anwar Khan",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-10-07",
           "isBeneficiary": true
         },
         {
           "partnerId": 631,
           "name": "Kishwar Sultana",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-11-02",
           "isBeneficiary": true
         }
       ],
@@ -3182,6 +3244,18 @@
       ],
       "interests": [],
       "notes": [
+        {
+          "id": 50285,
+          "body": "TEMPORARY\nAs the road outside Ma'am's house is under construction she has requested all tasks such as taking Sir out for walks or the NBP task to be postponed until the road is fixed.\nThe on duty SA is requested to call and check when the road is fixed as Ma’am might forget to inform us.",
+          "createdAt": "2026-10-06T07:18:59Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
+          "id": 50283,
+          "body": "DONT discuss any financial matters with Ms Kishwar.",
+          "createdAt": "2026-10-06T07:17:25Z",
+          "author": "Rizwan Ahmad"
+        },
         {
           "id": 25105,
           "body": "Ms Sameen has made Mohsyn the primary contact of Tabbah Heart Institute so that we can receive the confirmation msgs and calls on behalf of her parents.",
@@ -3201,7 +3275,7 @@
           "partnerId": 325,
           "name": "Zahida Tauqeer",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-10-06",
           "isBeneficiary": true
         }
       ],
@@ -3265,7 +3339,7 @@
           "partnerId": 615,
           "name": "Ayub Ali",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-09-10",
           "isBeneficiary": true
         },
         {
@@ -3348,15 +3422,15 @@
           "partnerId": 680,
           "name": "Neelofar Aslam Khan",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1959-02-04",
           "isBeneficiary": true
         },
         {
-          "partnerId": 683,
-          "name": "Jamshed Aslam Khan",
+          "partnerId": 1094,
+          "name": "Aslam Khan",
           "relationship": "Father",
           "birthday": null,
-          "isBeneficiary": true
+          "isBeneficiary": false
         }
       ],
       "overviewSections": [
@@ -3387,14 +3461,14 @@
           "partnerId": 320,
           "name": "Saleem Akhtar",
           "relationship": "Father in Law",
-          "birthday": null,
+          "birthday": "1947-04-14",
           "isBeneficiary": true
         },
         {
           "partnerId": 322,
           "name": "Shahnaz Saleem",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1952-12-25",
           "isBeneficiary": true
         }
       ],
@@ -3707,6 +3781,12 @@
       "interests": [],
       "notes": [
         {
+          "id": 50393,
+          "body": "NOTE \nWater Tanker-\nEasypaisa\n03032153128\nMuhammad Bilal",
+          "createdAt": "2026-10-06T09:48:31Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
           "id": 42261,
           "body": "Before Task Creation ‼️\n\nPlease note that whenever there is a check-in visit for Ms. Naila Mor any update related to her, the update should be shared with her mother, Mrs. Parveen Makhdoom, via DM.",
           "createdAt": "2026-09-24T07:47:05Z",
@@ -3770,7 +3850,7 @@
           "partnerId": 666,
           "name": "Kehkashan Najmi",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-06-30",
           "isBeneficiary": true
         }
       ],
@@ -3818,14 +3898,14 @@
           "partnerId": 810,
           "name": "Sultana Iqbal",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-09-15",
           "isBeneficiary": true
         },
         {
           "partnerId": 663,
           "name": "Iqbal Bin Shams",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-12-10",
           "isBeneficiary": true
         }
       ],
@@ -4116,7 +4196,7 @@
           "partnerId": 606,
           "name": "Ausaf Aleem",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-09-20",
           "isBeneficiary": true
         }
       ],
@@ -4171,14 +4251,14 @@
           "partnerId": 675,
           "name": "Jawaid Ali Khan",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-02-01",
           "isBeneficiary": true
         },
         {
           "partnerId": 676,
           "name": "Lubna Jawaid",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-01-11",
           "isBeneficiary": true
         }
       ],
@@ -4285,7 +4365,7 @@
           "partnerId": 683,
           "name": "Jamshed Aslam Khan",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-01-12",
           "isBeneficiary": true
         },
         {
@@ -4391,7 +4471,7 @@
           "partnerId": 656,
           "name": "Abdul Hameed (LHR)",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1955-10-12",
           "isBeneficiary": true
         }
       ],
@@ -4463,14 +4543,14 @@
           "partnerId": 414,
           "name": "S M Nasim ul Haq",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-01-12",
           "isBeneficiary": true
         },
         {
           "partnerId": 415,
           "name": "Tahera Nasim",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-09-25",
           "isBeneficiary": true
         }
       ],
@@ -4501,7 +4581,7 @@
           "partnerId": 335,
           "name": "Asma Fakhr",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1968-02-20",
           "isBeneficiary": true
         }
       ],
@@ -4623,7 +4703,7 @@
           "partnerId": 407,
           "name": "Sardar Abdul Qayyum",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-04-11",
           "isBeneficiary": true
         },
         {
@@ -4681,14 +4761,14 @@
           "partnerId": 405,
           "name": "Mumshad Ahmed",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-11-16",
           "isBeneficiary": true
         },
         {
           "partnerId": 406,
           "name": "Kausar Mumshad",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-08-25",
           "isBeneficiary": true
         }
       ],
@@ -4791,7 +4871,7 @@
           "partnerId": 651,
           "name": "Saleem Lodhi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-12-06",
           "isBeneficiary": true
         }
       ],
@@ -4926,6 +5006,12 @@
       "interests": [],
       "notes": [
         {
+          "id": 47862,
+          "body": "IMPORTANT: All payment-related receipts and transactions have to be discussed with Mr. Shahzad via DM and not in the family group.",
+          "createdAt": "2026-10-02T09:08:37Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
           "id": 8176,
           "body": "All communication with Shahzad Jamal’s parents should be conducted via direct phone calls, as they do not use WhatsApp.",
           "createdAt": "2026-07-31T05:06:47Z",
@@ -5005,7 +5091,7 @@
           "partnerId": 393,
           "name": "Zakia Rana Atique",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-08-22",
           "isBeneficiary": true
         }
       ],
@@ -5093,7 +5179,7 @@
           "partnerId": 391,
           "name": "Shahida Suri",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-01-04",
           "isBeneficiary": true
         }
       ],
@@ -5151,7 +5237,7 @@
           "partnerId": 387,
           "name": "Anjum Ara Siddique",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-01-12",
           "isBeneficiary": true
         }
       ],
@@ -5235,14 +5321,14 @@
           "partnerId": 326,
           "name": "Muhammad Abdul Samad",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1944-12-01",
           "isBeneficiary": true
         },
         {
           "partnerId": 425,
           "name": "Saleha Rizwana Abdul Samad",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1944-12-01",
           "isBeneficiary": true
         }
       ],
@@ -5290,21 +5376,21 @@
           "partnerId": 385,
           "name": "Syed Umar Baqi",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-07-14",
           "isBeneficiary": true
         },
         {
           "partnerId": 383,
           "name": "Nighat Baqi",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-04-04",
           "isBeneficiary": true
         },
         {
           "partnerId": 384,
           "name": "Syed Hasan Baqi",
           "relationship": "Brother",
-          "birthday": null,
+          "birthday": "2026-02-02",
           "isBeneficiary": true
         }
       ],
@@ -5450,14 +5536,14 @@
           "partnerId": 381,
           "name": "Syed Abdul Rasheed",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-03-27",
           "isBeneficiary": true
         },
         {
           "partnerId": 382,
           "name": "Naeema Rasheed",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-05-05",
           "isBeneficiary": true
         }
       ],
@@ -5526,14 +5612,14 @@
           "partnerId": 309,
           "name": "Syed Atiqullah Shah",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1953-08-21",
           "isBeneficiary": true
         },
         {
           "partnerId": 308,
           "name": "Samra Atiq",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1958-11-24",
           "isBeneficiary": true
         },
         {
@@ -5589,14 +5675,14 @@
           "partnerId": 312,
           "name": "Syed Khalid Salam",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1942-11-23",
           "isBeneficiary": true
         },
         {
           "partnerId": 313,
           "name": "Nasreen Khalid",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1952-03-21",
           "isBeneficiary": true
         }
       ],
@@ -5736,7 +5822,7 @@
           "partnerId": 372,
           "name": "Abdul Shakoor Khan Aquil",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-05-21",
           "isBeneficiary": true
         }
       ],
@@ -5823,10 +5909,25 @@
     {
       "registryId": "tasnim-ahmed",
       "partnerId": 993,
-      "benefactorCode": null,
+      "benefactorCode": "TES-002",
       "benefactor": "Tasnim Ahmed",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 1076,
+          "name": "Test Beneficiary 1",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1077,
+          "name": "Test Beneficiary 2",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -5919,6 +6020,37 @@
           "author": "Rizwan Ahmad"
         }
       ]
+    },
+    {
+      "registryId": "umair-saleem",
+      "partnerId": 1092,
+      "benefactorCode": "KHI-3083",
+      "benefactor": "Umair Saleem",
+      "benefactorBirthday": null,
+      "members": [
+        {
+          "partnerId": 1093,
+          "name": "Jamila Khalique (Mami of Umair Saleem)",
+          "relationship": "Aunt",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1097,
+          "name": "Khalique Ahmed",
+          "relationship": "Uncle",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
+      "overviewSections": [
+        {
+          "heading": "Overview",
+          "body": "Client / Family Details\n\nPrimary contact: Umair\nUmair’s wife: Yusra Alvi, also on the call\nLocation: Netherlands\nPatient: Umair’s maternal uncle (Mamu), approximately 75 years old Syed Khalique Ahmed\nResidence: Block 1, Gulshan-e-Iqbal, Karachi\nFamily: His wife lives with him and frequently travels to Australia to visit their children. His sons have been living in Australia for several years and are currently unfamiliar with Karachi.\nUmair’s cousins (patient’s sons) have asked Yusra to take the lead in coordinating his care. They will be added to the WhatsApp group once they are onboarded.\nCurrent Situation\nThe patient was involved in an accident approximately 2–3 days ago, when a Qingqi/Chingchi rickshaw struck him.\nHe sustained a hip fracture and is likely to require hip replacement surgery.\nThe family only became aware of the accident last night.\nRandom bystanders initially took him to the hospital.\nHe first visited Ashfaq Hospital, where he was given a temporary/simple plaster.\nHe later visited TO Clinic with his nephew, where a further diagnosis was provided based on the initial X-ray, but the family would now like a proper orthopedic assessment and a more reliable diagnosis.\nAt present, the patient is reluctant/unwilling to go to the hospital and has only a basic bandage/plaster in place.\n\nPatient Background\nThe patient is very independent and strong-willed. He normally manages his own daily activities, including cooking and cleaning.\nThe family describes him as someone who prefers to do everything himself.\nHe is not abusive; however, he may be resistant to assistance and can sometimes tell elaborate stories or give reasons to discourage people from approaching him.\nThe team should therefore approach him patiently and introduce themselves as Umair’s friends to help establish trust.\nRequired Support\n\nThe family would like Mohsyn to take over the coordination of the patient's care, including:\n\nArrange an orthopedic consultation for a proper assessment and diagnosis.\nCoordinate transportation/medical assistance to take him to the hospital, potentially as an emergency case.\nThe family is considering AKUH for the initial assessment and would also like the surgery to be scheduled there if recommended.\nCoordinate the treatment and hospital process throughout.\nArrange a suitable caretaker to support him after surgery.\nOnce he has recovered sufficiently from surgery, arrange physiotherapy and ongoing rehabilitation support.\nKeep the family updated throughout the process.\nAdditional Medical Coordination\nUmair’s elder brother is a doctor, an AKU graduate, and currently practicing in the USA. He may also be involved in reviewing or advising on the patient's treatment.\nGiven the conflicting/limited assessments received so far, the family would like the next medical assessment to be comprehensive and based on proper imaging and orthopedic evaluation."
+        }
+      ],
+      "interests": [],
+      "notes": []
     },
     {
       "registryId": "umair-yar-khan",
@@ -6067,14 +6199,14 @@
           "partnerId": 356,
           "name": "Zakaria Lakhani",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-05-08",
           "isBeneficiary": true
         },
         {
           "partnerId": 357,
           "name": "Maimoona Lakhani",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-01-09",
           "isBeneficiary": true
         }
       ],
@@ -6211,14 +6343,14 @@
           "partnerId": 344,
           "name": "Raja Muhammad Asif",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-08-15",
           "isBeneficiary": true
         },
         {
           "partnerId": 345,
           "name": "Musarrat Asif",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-05-01",
           "isBeneficiary": true
         },
         {
@@ -6280,7 +6412,7 @@
           "partnerId": 1019,
           "name": "Afroze Jehan",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-01-23",
           "isBeneficiary": true
         },
         {
@@ -6342,7 +6474,7 @@
           "partnerId": 291,
           "name": "Abdul Majid",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1997-01-01",
           "isBeneficiary": true
         },
         {

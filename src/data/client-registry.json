@@ -1,24 +1,24 @@
 {
   "version": 4,
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-08",
   "source": "Odoo res.partner (Benefactor tag)",
   "summary": {
-    "total": 135,
-    "active": 123,
+    "total": 137,
+    "active": 125,
     "pause": 10,
-    "cancelled": 21,
+    "cancelled": 22,
     "gratis": 2,
     "byCity": {
       "Islamabad": 25,
-      "Karachi": 61,
+      "Karachi": 63,
       "Lahore": 31,
       "Lodhran": 0,
-      "Gujranwala": 0,
+      "Gujranwala": 1,
       "Faisalabad": 1,
-      "Other": 5
+      "Other": 4
     },
     "source": "odoo",
-    "odooBenefactors": 158,
+    "odooBenefactors": 161,
     "withoutBeneficiaries": 30
   },
   "clients": [
@@ -152,7 +152,7 @@
       "id": "affan-ahmed",
       "benefactor": "Affan Khan",
       "beneficiary": "Samina Shamim Ahmed Khan",
-      "city": "Lahore",
+      "city": "Other",
       "signupDate": "2026-04-02",
       "serviceTier": "premium",
       "status": "active",
@@ -231,6 +231,25 @@
       "benefactorCode": "ISB-1037"
     },
     {
+      "id": "ahmad-humayun",
+      "benefactor": "Ahmad Humayun",
+      "beneficiary": "",
+      "city": "Karachi",
+      "signupDate": null,
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "ahmad.humyn@gmail.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1102,
+      "benefactorCode": "KHI-3084"
+    },
+    {
       "id": "ahmed-aftab",
       "benefactor": "Ahmed Aftab",
       "beneficiary": "Aftab Iqbal / Naheed Aftab",
@@ -279,7 +298,7 @@
       "id": "aleya-salam",
       "benefactor": "Aleya Salam",
       "beneficiary": "Salam Khan / Farhat Salam",
-      "city": "Karachi",
+      "city": "Other",
       "signupDate": "2026-02-16",
       "serviceTier": "premium",
       "status": "active",
@@ -855,10 +874,10 @@
       "id": "faheem-yousaf",
       "benefactor": "Faheem Yousuf",
       "beneficiary": "Muhammad Yousaf Adil",
-      "city": "Karachi",
+      "city": "Other",
       "signupDate": "2026-05-31",
       "serviceTier": "premium",
-      "status": "active",
+      "status": "cancelled",
       "country": null,
       "linkedin": null,
       "biraUrl": null,
@@ -1391,7 +1410,7 @@
       "id": "maria-hasnie",
       "benefactor": "Maria Hasnie",
       "beneficiary": "Nadira Omar / Kabir Omar",
-      "city": "Other",
+      "city": "Lahore",
       "signupDate": "2026-01-10",
       "serviceTier": "premium",
       "status": "active",
@@ -1531,6 +1550,25 @@
       "benefactorCode": "LHR-2019"
     },
     {
+      "id": "monis-jaleel-ahmed",
+      "benefactor": "Monis Jaleel Ahmed",
+      "beneficiary": "Jaleel Ahmed",
+      "city": "Karachi",
+      "signupDate": null,
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "docmonis@hotmail.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1095,
+      "benefactorCode": null
+    },
+    {
       "id": "ahsan-iqbal",
       "benefactor": "Muhammad Ahsan Iqbal",
       "beneficiary": "Salma Shaheen / Haider Iqbal",
@@ -1614,7 +1652,7 @@
       "id": "nasir-ali",
       "benefactor": "Muhammad Nasir Ali",
       "beneficiary": "Ayub Ali / Farah Naz",
-      "city": "Other",
+      "city": "Karachi",
       "signupDate": "2026-07-19",
       "serviceTier": "premium",
       "status": "active",
@@ -1636,7 +1674,7 @@
     {
       "id": "owais-khan",
       "benefactor": "Muhammad Owais Khan",
-      "beneficiary": "Neelofar Aslam Khan / Jamshed Aslam Khan",
+      "beneficiary": "Neelofar Aslam Khan",
       "city": "Lahore",
       "signupDate": "2026-07-27",
       "serviceTier": "premium",
@@ -2094,7 +2132,7 @@
       "id": "rabia-rauf",
       "benefactor": "Rabia Irfan Rauf",
       "beneficiary": "Irfan Rauf",
-      "city": "Other",
+      "city": "Gujranwala",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "active",
@@ -2904,7 +2942,7 @@
       "id": "talha-aquil",
       "benefactor": "Talha Aquil",
       "beneficiary": "Dr. Razia Khan Aquil / Abdul Shakoor Khan Aquil",
-      "city": "Karachi",
+      "city": "Other",
       "signupDate": "2025-10-20",
       "serviceTier": "premium",
       "status": "active",
@@ -2948,8 +2986,8 @@
     {
       "id": "tasnim-ahmed",
       "benefactor": "Tasnim Ahmed",
-      "beneficiary": "",
-      "city": "Other",
+      "beneficiary": "Test Beneficiary 1 / Test Beneficiary 2",
+      "city": "Karachi",
       "signupDate": null,
       "serviceTier": "premium",
       "status": "active",
@@ -2962,7 +3000,7 @@
       ],
       "source": "odoo",
       "odooPartnerId": 993,
-      "benefactorCode": null
+      "benefactorCode": "TES-002"
     },
     {
       "id": "tauseef-ali",
@@ -3003,6 +3041,25 @@
       "source": "odoo",
       "odooPartnerId": 175,
       "benefactorCode": "KHI-3066"
+    },
+    {
+      "id": "umair-saleem",
+      "benefactor": "Umair Saleem",
+      "beneficiary": "Jamila Khalique (Mami of Umair Saleem) / Khalique Ahmed",
+      "city": "Karachi",
+      "signupDate": "2026-10-02",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "msalum323@outlook.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1092,
+      "benefactorCode": "KHI-3083"
     },
     {
       "id": "umair-yar-khan",

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "description": "Benefactor Touchbase Tracker — local fallback when the Google Sheet is not configured. Seeded from the October 2026 ops sheet.",
+  "entries": [
+    {
+      "key": "2026-10|sharmeen-khan",
+      "month": "2026-10",
+      "registryId": "sharmeen-khan",
+      "benefactorCode": "ISB-1036",
+      "benefactor": "Sharmeen Khan",
+      "city": "Islamabad",
+      "status": "done",
+      "callDate": "2026-10-07",
+      "attendee": "Laiba",
+      "note": "This was an inperson visit, we encouraged Ms Zeenat to use the service for her daily tasks she can outsource, we discussed the possibility of an open house or OLX, she wanted to sell the property first and then get onto these tasks. Miss Sharmeen shared she is getting married in 2 months and would require my help to plan her honeymoon in Pakistan",
+      "nextDue": "2026-11-07",
+      "updatedBy": "Laiba",
+      "updatedAt": "2026-10-07T12:00:00.000Z"
+    }
+  ]
+}

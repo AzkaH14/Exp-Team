@@ -39,3 +39,12 @@ export function formatSyncTime(iso: string | null | undefined): string {
 export function formatPct(n: number, digits = 1): string {
   return `${n.toFixed(digits)}%`;
 }
+
+/**
+ * A Field Service task in Odoo. `/odoo/project/2/<id>` opens the project
+ * record itself (an empty-looking project form) — the task lives under the
+ * project's "tasks" action.
+ */
+export function odooTaskUrl(odooUrl: string, taskId: number): string {
+  return `${odooUrl}/odoo/project/2/tasks/${taskId}`;
+}
