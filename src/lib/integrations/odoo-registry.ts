@@ -94,11 +94,28 @@ export interface OdooRegistrySyncResult {
   syncedAt: string;
 }
 
-function registryCity(raw: string): ClientRegistryRecord["city"] {
+/** Benefactor ID prefix → registry city, for contacts whose City field is empty. */
+const CODE_CITY: Record<string, ClientRegistryRecord["city"]> = {
+  ISB: "Islamabad",
+  RWP: "Islamabad", // Rawalpindi is served by the Islamabad team
+  KHI: "Karachi",
+  LHR: "Lahore",
+  MLT: "Lahore",
+  BWP: "Lahore",
+  FSD: "Faisalabad",
+  GUJ: "Gujranwala",
+};
+
+/**
+ * Contact city, else the city in the Benefactor ID (KHI-3065 → Karachi).
+ * Without this a contact with a blank City field lands in "Other" and drops
+ * out of every calendar — its birthdays included.
+ */
+function registryCity(raw: string, code: string | null): ClientRegistryRecord["city"] {
   const city = normalizeCity(raw);
-  return (REGISTRY_CITIES as string[]).includes(city)
-    ? (city as ClientRegistryRecord["city"])
-    : "Other";
+  if ((REGISTRY_CITIES as string[]).includes(city)) return city as ClientRegistryRecord["city"];
+  if (/rawalpindi|pindi/i.test(raw)) return "Islamabad";
+  return CODE_CITY[(code ?? "").split("-")[0].toUpperCase()] ?? "Other";
 }
 
 function statusFromTags(tagNames: Set<string>): ClientRegistryRecord["status"] {
@@ -327,7 +344,7 @@ export async function syncOdooRegistry(options: { writeFile?: boolean } = {}): P
         id,
         benefactor: name,
         beneficiary: beneficiaries.map((m) => m.name).join(" / "),
-        city: registryCity(str(p.city)),
+        city: registryCity(str(p.city), code),
         signupDate: isoDate(p.x_studio_onboarding_date),
         serviceTier: tierFromStatus(status),
         status,

@@ -160,6 +160,36 @@ function safeId(value: string): string {
     .slice(0, 48);
 }
 
+const NAME_NOISE = new Set(["dr", "mr", "mrs", "ms", "miss", "prof", "sir", "birthday", "bday"]);
+
+function nameTokens(text: string): Set<string> {
+  return new Set(
+    text
+      .toLowerCase()
+      .replace(/['’]s\b/g, " ")
+      .split(/[^a-z]+/)
+      .filter((t) => t.length >= 3 && !NAME_NOISE.has(t))
+  );
+}
+
+function isBirthdayEvent(event: CelebrationEvent): boolean {
+  return event.categoryId === "birthday" || /birth\s?day|bday/i.test(event.title);
+}
+
+/**
+ * Same person when the hand-entered title / client labels share two name words
+ * with the generated person (one, if the name has a single word) — so
+ * "Abdul Shakoor's birthday" matches "Abdul Shakoor Khan Aquil".
+ */
+function samePerson(manual: CelebrationEvent, generated: CelebrationEvent): boolean {
+  const person = nameTokens(generated.clientLabels[0] ?? generated.title);
+  if (!person.size) return false;
+  const other = nameTokens([manual.title, ...manual.clientLabels].join(" "));
+  let shared = 0;
+  for (const t of person) if (other.has(t)) shared++;
+  return shared >= Math.min(2, person.size);
+}
+
 function annualDate(raw: string | null | undefined, year: string): string | null {
   if (!raw) return null;
   const match = raw.match(/(?:\d{4}-)?(\d{2})-(\d{2})$/);
@@ -453,7 +483,17 @@ export async function getCelebrationsMonth(
         ? { ...event, date: `${targetYear}-${event.date.slice(5)}` }
         : event
     );
-  const events = [...generated, ...manual]
+  // A birthday someone already entered by hand wins over the Odoo-generated one.
+  const manualBirthdays = manual.filter(isBirthdayEvent);
+  const deduped = generated.filter(
+    (event) =>
+      !(
+        event.source === "profile" &&
+        event.kind === "birthday" &&
+        manualBirthdays.some((m) => m.date.slice(5) === event.date.slice(5) && samePerson(m, event))
+      )
+  );
+  const events = [...deduped, ...manual]
     .filter((event) => event.status !== "cancelled")
     .sort(
       (a, b) =>
