@@ -1,25 +1,25 @@
 {
   "version": 4,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-16",
   "source": "Odoo res.partner (Benefactor tag)",
   "summary": {
-    "total": 135,
-    "active": 123,
-    "pause": 10,
-    "cancelled": 24,
+    "total": 140,
+    "active": 127,
+    "pause": 11,
+    "cancelled": 23,
     "gratis": 2,
     "byCity": {
-      "Islamabad": 26,
-      "Karachi": 64,
-      "Lahore": 31,
+      "Islamabad": 28,
+      "Karachi": 65,
+      "Lahore": 32,
       "Lodhran": 0,
       "Gujranwala": 1,
       "Faisalabad": 1,
       "Other": 0
     },
     "source": "odoo",
-    "odooBenefactors": 161,
-    "withoutBeneficiaries": 30
+    "odooBenefactors": 165,
+    "withoutBeneficiaries": 31
   },
   "clients": [
     {
@@ -233,7 +233,7 @@
     {
       "id": "ahmad-humayun",
       "benefactor": "Ahmad Humayun",
-      "beneficiary": "",
+      "beneficiary": "Naheed Humayun",
       "city": "Karachi",
       "signupDate": null,
       "serviceTier": "premium",
@@ -1566,7 +1566,7 @@
       ],
       "source": "odoo",
       "odooPartnerId": 1095,
-      "benefactorCode": null
+      "benefactorCode": "KHI-3087"
     },
     {
       "id": "ahsan-iqbal",
@@ -1674,7 +1674,7 @@
     {
       "id": "owais-khan",
       "benefactor": "Muhammad Owais Khan",
-      "beneficiary": "Neelofar Aslam Khan",
+      "beneficiary": "Neelofar Aslam Khan / Aslam Khan",
       "city": "Lahore",
       "signupDate": "2026-07-27",
       "serviceTier": "premium",
@@ -1808,6 +1808,25 @@
       "source": "odoo",
       "odooPartnerId": 138,
       "benefactorCode": "KHI-3037"
+    },
+    {
+      "id": "nnn",
+      "benefactor": "NNN",
+      "beneficiary": "",
+      "city": "Lahore",
+      "signupDate": "2026-10-05",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "azka.humayon01@gmail.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1219,
+      "benefactorCode": "LHR-2042"
     },
     {
       "id": "nabeel-mian",
@@ -2088,6 +2107,29 @@
       "benefactorCode": "KHI-3045"
     },
     {
+      "id": "owais",
+      "benefactor": "Owais Mohammad",
+      "beneficiary": "Abdul Bari",
+      "city": "Karachi",
+      "signupDate": "2026-10-12",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [
+        "Muhammad Owais Khan",
+        "MuhammadOwais Khan",
+        "OwaisKhan"
+      ],
+      "contactEmails": [
+        "owais@provisiocare.co.uk"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1118,
+      "benefactorCode": "KHI-3086"
+    },
+    {
       "id": "qurratulain-chundigar",
       "benefactor": "Qurratulain Chundriger",
       "beneficiary": "",
@@ -2323,8 +2365,8 @@
       "beneficiary": "Abdul Hameed (LHR)",
       "city": "Lahore",
       "signupDate": "2026-05-16",
-      "serviceTier": "premium",
-      "status": "active",
+      "serviceTier": "pause",
+      "status": "pause",
       "country": null,
       "linkedin": null,
       "biraUrl": null,
@@ -2384,7 +2426,7 @@
     {
       "id": "saquib-farooq-malik",
       "benefactor": "Saquib Farooq Malik",
-      "beneficiary": "",
+      "beneficiary": "Farooq Zaman Malik",
       "city": "Islamabad",
       "signupDate": "2026-08-31",
       "serviceTier": "premium",
@@ -2984,28 +3026,9 @@
       "benefactorCode": "ISB-1023"
     },
     {
-      "id": "tasnim-ahmed",
-      "benefactor": "Tasnim Ahmed",
-      "beneficiary": "Test Beneficiary 1 / Test Beneficiary 2",
-      "city": "Karachi",
-      "signupDate": null,
-      "serviceTier": "premium",
-      "status": "active",
-      "country": null,
-      "linkedin": null,
-      "biraUrl": null,
-      "aliases": [],
-      "contactEmails": [
-        "test12345@gmail.com"
-      ],
-      "source": "odoo",
-      "odooPartnerId": 993,
-      "benefactorCode": "TES-002"
-    },
-    {
       "id": "tauseef-ali",
       "benefactor": "Tauseef Ali",
-      "beneficiary": "Muhammad Asghar",
+      "beneficiary": "Muhammad Asghar / Rizwana Asghar",
       "city": "Lahore",
       "signupDate": "2026-02-24",
       "serviceTier": "premium",
@@ -3022,13 +3045,32 @@
       "benefactorCode": "LHR-2037"
     },
     {
+      "id": "testtt",
+      "benefactor": "Testtt",
+      "beneficiary": "",
+      "city": "Islamabad",
+      "signupDate": "2026-10-14",
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "azka.humayon01@gmail.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1217,
+      "benefactorCode": "ISB-1041"
+    },
+    {
       "id": "umair-khan",
       "benefactor": "Umair Khan",
       "beneficiary": "Azimuddin Khan / Humra Khan",
       "city": "Karachi",
       "signupDate": null,
       "serviceTier": "premium",
-      "status": "cancelled",
+      "status": "active",
       "country": null,
       "linkedin": null,
       "biraUrl": null,
@@ -3256,6 +3298,25 @@
       "benefactorCode": "ISB-1024"
     },
     {
+      "id": "zafar-kazmi",
+      "benefactor": "Zafar Kazmi",
+      "beneficiary": "Syed Afzal Hussain kazmi / Ishrat Afzal kazmi / Furqan Masood / Dr Saman",
+      "city": "Lahore",
+      "signupDate": null,
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "zafar@kaygees.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1122,
+      "benefactorCode": "KHI-3085"
+    },
+    {
       "id": "zaheer-ahmed-waheed",
       "benefactor": "Zaheer Waheed",
       "beneficiary": "Nazeer Ahmed Waheed / Perveen Waheed",
@@ -3334,6 +3395,25 @@
       "source": "odoo",
       "odooPartnerId": 618,
       "benefactorCode": "KHI-3074"
+    },
+    {
+      "id": "test-benefactor",
+      "benefactor": "teSt benefactor",
+      "beneficiary": "",
+      "city": "Islamabad",
+      "signupDate": null,
+      "serviceTier": "premium",
+      "status": "active",
+      "country": null,
+      "linkedin": null,
+      "biraUrl": null,
+      "aliases": [],
+      "contactEmails": [
+        "test12@gmail.com"
+      ],
+      "source": "odoo",
+      "odooPartnerId": 1211,
+      "benefactorCode": null
     }
   ]
 }

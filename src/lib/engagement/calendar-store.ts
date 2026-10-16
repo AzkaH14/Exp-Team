@@ -24,7 +24,16 @@ import {
 } from "../integrations/hubspot-ticket-create";
 import { defaultDoctorForCity } from "./doctors";
 import { isOdooRegistryEnabled } from "../integrations/odoo-registry";
-import { createOdooTaskFromEvent } from "../integrations/odoo-engagement";
+import { createOdooTaskFromEvent, syncOdooTaskStage } from "../integrations/odoo-engagement";
+
+/** Mirror a status change onto the entry's Odoo task; never blocks the save. */
+async function syncOdooStage(previous: EngagementEvent, updated: EngagementEvent): Promise<void> {
+  try {
+    await syncOdooTaskStage(previous, updated);
+  } catch (e) {
+    console.warn(`Odoo stage sync failed for task ${updated.odooTaskId}:`, e);
+  }
+}
 
 /**
  * HubSpot is retired once Odoo is the registry: entries are only logged, and
@@ -297,6 +306,8 @@ export async function updateEvent(
       }
     }
 
+    await syncOdooStage(existing, updated);
+
     const ok = await updateSheetEvent(updated);
     if (!ok) return null;
     setSheetEventsCache(all.map((e) => (e.id === id ? updated : e)));
@@ -328,6 +339,7 @@ export async function updateEvent(
       console.warn("HubSpot ticket update failed:", e);
     }
   }
+  await syncOdooStage(events[idx], updated);
   events[idx] = updated;
   persistLocal(events);
   return updated;

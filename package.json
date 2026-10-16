@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run dev:clean",
-    "dev:clean": "pkill -f 'next dev -p 3000' 2>/dev/null || true; pkill -f 'next start' 2>/dev/null || true; rm -rf .next && next dev -p 3000",
+    "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev -p 3000",
     "sync:birthdays": "python3 scripts/sync-hubspot-birthdays.py",
     "sync:birthdays:api": "curl -sS -X POST http://localhost:3000/api/sync/birthdays",
     "sync:notes:api": "curl -sS -X POST http://localhost:3000/api/sync/notes",

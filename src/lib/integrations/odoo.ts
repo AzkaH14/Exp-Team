@@ -237,6 +237,33 @@ export async function updatePartnerFields(
 export const FIELD_SERVICE_PROJECT = 2;
 export const EXPERIENCE_CATEGORY = 17;
 
+/**
+ * Field Service stages the portal may move a task to (odoo_arc.md §4.4), with
+ * the matching `state` — Odoo keeps the two separately, so both are written.
+ */
+const FIELD_SERVICE_STAGES = {
+  planned: { stage_id: 17, state: "01_in_progress" },
+  done: { stage_id: 19, state: "1_done" },
+  cancelled: { stage_id: 20, state: "1_canceled" },
+} as const;
+
+export type FieldServiceStage = keyof typeof FIELD_SERVICE_STAGES;
+
+/** Move one Field Service task to a stage. */
+export async function setFieldServiceTaskStage(
+  taskId: number,
+  stage: FieldServiceStage
+): Promise<void> {
+  if (!Number.isInteger(taskId) || taskId <= 0) throw new Error("Invalid Odoo task id");
+  const ok = await executeKw<boolean>(
+    "project.task",
+    "write",
+    [[taskId], { ...FIELD_SERVICE_STAGES[stage] }],
+    {}
+  );
+  if (!ok) throw new Error(`Odoo refused the stage change on project.task ${taskId}`);
+}
+
 export interface ExperienceTaskValues {
   name: string;
   subcategory_id: number;

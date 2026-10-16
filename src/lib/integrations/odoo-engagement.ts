@@ -15,8 +15,32 @@ import {
   createExperienceTask,
   isOdooConfigured,
   searchRead,
+  setFieldServiceTaskStage,
   str,
+  type FieldServiceStage,
 } from "./odoo";
+
+/** Calendar status → Field Service stage. Rescheduled is still planned work. */
+function stageForStatus(status: EngagementEvent["status"]): FieldServiceStage {
+  if (status === "completed") return "done";
+  if (status === "cancelled") return "cancelled";
+  return "planned";
+}
+
+/**
+ * Keep the entry's Odoo task in the stage matching its calendar status. Only
+ * writes when the stage actually changes, so planned ↔ rescheduled never
+ * pulls a task the field team moved (e.g. to In Progress) back to Planned.
+ */
+export async function syncOdooTaskStage(
+  previous: Pick<EngagementEvent, "status">,
+  updated: Pick<EngagementEvent, "status" | "odooTaskId">
+): Promise<void> {
+  if (!updated.odooTaskId || !isOdooConfigured()) return;
+  const stage = stageForStatus(updated.status);
+  if (stage === stageForStatus(previous.status)) return;
+  await setFieldServiceTaskStage(updated.odooTaskId, stage);
+}
 
 const SUBCATEGORY_TTL_MS = 30 * 60 * 1000;
 

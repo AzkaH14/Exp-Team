@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-09T06:24:29.108Z",
+  "syncedAt": "2026-10-16T09:33:05.468Z",
   "families": [
     {
       "registryId": "nisar-akbar",
@@ -76,7 +76,7 @@
       "notes": [
         {
           "id": 47863,
-          "body": "IMPORTANT: All payment-related receipts and transactions have to be discussed with Mr. Aamir via DM and not in the family group.",
+          "body": "IMPORTANT: \nPayment approval are to be asked from Faiz\nReceipts only sent to Aamir Hanif",
           "createdAt": "2026-10-02T09:09:01Z",
           "author": "Rizwan Ahmad"
         },
@@ -371,7 +371,7 @@
           "partnerId": 1085,
           "name": "Sultana Hayat",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1951-07-07",
           "isBeneficiary": true
         }
       ],
@@ -427,7 +427,15 @@
       "benefactorCode": "KHI-3084",
       "benefactor": "Ahmad Humayun",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 1222,
+          "name": "Naheed Humayun",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [],
       "interests": [],
       "notes": []
@@ -443,14 +451,14 @@
           "partnerId": 646,
           "name": "Aftab Iqbal",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-09-04",
           "isBeneficiary": true
         },
         {
           "partnerId": 647,
           "name": "Naheed Aftab",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-12-12",
           "isBeneficiary": true
         }
       ],
@@ -970,7 +978,7 @@
           "partnerId": 363,
           "name": "Ishratun Nisa",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-05-12",
           "isBeneficiary": true
         }
       ],
@@ -1012,7 +1020,7 @@
           "partnerId": 365,
           "name": "Zarin Kamruddin",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-08-30",
           "isBeneficiary": true
         }
       ],
@@ -1113,11 +1121,17 @@
       "overviewSections": [
         {
           "heading": "Overview",
-          "body": "Client Profile: Syed Sajid Ali Kazmi and Shahgul Kazmi\nLocation: Karachi\nBenefactor: Atif Kazmi (spouse of Natasha Najmi) (Referral Fuad Rashid and Nabeel)\n\nGeneral Overview\nMr Sajid: First rubber technologist in Pakistan, chemical engineer. Likes to read and has a good memory. Has served as a director at National tyre, other tyre and rubber companies. Has played cricket. Uses Phone, iPad. Watches TV: into shows, news, cricket.\nHe is close to his brothers, two of whom live nearby.\nMs Shahgul (Musarrat Afroze): DOB7/7/1941 Originally from Peshawar. Part of DHA welfare clinic free treatment board with other women friends.\nShe is a well known horticulturist, Member of the horticulture community here, Clifton Flower Show judge panel. Brings seasonal fruit and plants from everywhere etc.\nLoves family pictures, history. Her grandfathers knew Jinnah, Gandhi, Nehru etc. Huge PTI and Imran Khan supporter.\nMahrukh shared: she is very temperamental, temper, not kind hearted, can be rude and brash with servants. Servants run away, get discomfited. She is on antidepressants.\nThey have 4 daughters and a son. Ms Unsa and Mr Atif are based in the US. Ms Gulrukh is based in the UK. Ms Aleena lives in Lahore, and Ms Mahrukh moved to Islamabad a week after the LPE.\nThe couple live downstairs and the upper portion of the house is on rent.\n\nMedical Notes\nMr Sajid: BP, Arrhythmia. Gets physio 3/ week.\nMs Shahgul: Hard of hearing. She is on antidepressants.\n\nLifestyle & Support Structure\nThe couple have one permanent staff member, Kareem Buksh, and other temporary/ rotating staff including househelp and gardener etc.\nThey don't have help at night which is a cause of concern to the family.\n\nDreamweaver Notes\nVisit often to keep them engaged and ensure they don't get lonely in Mahrukh’s absence as she lived with them for many years.\nKeep an eye out for plant varieties that would interest Ms Shahful.\n\nBenefactor Information\nName: Atif Kazmi\nRelationship to Beneficiary: Son\nEducation: MBA Finance\nProfession: Business Transformation, Growth and Customer Success at Broadcom Inc.\nLocation: San Francisco, CA, USA\nLinkedIn Profile: https://www.linkedin.com/in/akazmi/"
+          "body": "Client Profile: Syed Sajid Ali Kazmi and Shahgul Kazmi\nLocation: Karachi\nBenefactor: Atif Kazmi (spouse of Natasha Najmi) (Referral Fuad Rashid and Nabeel)\n\nThe visit on 14th, Oct 2016-\n\nUncle remembered Sarah's last name- and how she was quiet during the previous visit when the Islamabad team was accompanying.\nZainab was introduced on this visit. she was \"marked\" for her lovely long hair\n\nGeneral Overview\nMr Sajid: First rubber technologist in Pakistan, chemical engineer. Likes to read and has a good memory. Has served as a director at National tyre, other tyre and rubber companies. Has played cricket. Uses Phone, iPad. Watches TV: into shows, news, cricket.\nHe is close to his brothers, two of whom live nearby.\nMs Shahgul (Musarrat Afroze): DOB7/7/1941 Originally from Peshawar. Part of DHA welfare clinic free treatment board with other women friends.\nShe is a well known horticulturist, Member of the horticulture community here, Clifton Flower Show judge panel. Brings seasonal fruit and plants from everywhere etc.\nLoves family pictures, history. Her grandfathers knew Jinnah, Gandhi, Nehru etc. Huge PTI and Imran Khan supporter.\nMahrukh shared: she is very temperamental, temper, not kind hearted, can be rude and brash with servants. Servants run away, get discomfited. She is on antidepressants.\nThey have 4 daughters and a son. Ms Unsa and Mr Atif are based in the US. Ms Gulrukh is based in the UK. Ms Aleena lives in Lahore, and Ms Mahrukh moved to Islamabad a week after the LPE.\nThe couple live downstairs and the upper portion of the house is on rent.\n\nMedical Notes\nMr Sajid: BP, Arrhythmia. Gets physio 3/ week.\nMs Shahgul: Hard of hearing. She is on antidepressants.\n\nLifestyle & Support Structure\nThe couple have one permanent staff member, Kareem Buksh, and other temporary/ rotating staff including househelp and gardener etc.\nThey don't have help at night which is a cause of concern to the family.\n\nDreamweaver Notes\nVisit often to keep them engaged and ensure they don't get lonely in Mahrukh’s absence as she lived with them for many years.\nKeep an eye out for plant varieties that would interest Ms Shahful.\n\nBenefactor Information\nName: Atif Kazmi\nRelationship to Beneficiary: Son\nEducation: MBA Finance\nProfession: Business Transformation, Growth and Customer Success at Broadcom Inc.\nLocation: San Francisco, CA, USA\nLinkedIn Profile: https://www.linkedin.com/in/akazmi/"
         }
       ],
       "interests": [],
       "notes": [
+        {
+          "id": 58541,
+          "body": "14/10/2026 \n\nAssalamualaikum, Mr. Atif! 🌷\nHope you’re doing well!\nJust a little update from our engagement team here at MOHSYN. My colleague Zainab and I visited your family yesterday evening, around Asr time, and had a lovely time catching up with them in their garden, as always.\nIt was my second visit with the family, and it was lovely introducing Zainab to them as well. Towards the end of our visit, we took a little walk around your mom’s garden, which was a wonderful way to wrap up the evening. 🌿\nOverall, it was a really pleasant visit, and we enjoyed spending some time chatting with them in the comfort of their home.\nWe look forward to staying in touch and visiting them again soon! 🌷",
+          "createdAt": "2026-10-16T06:44:20Z",
+          "author": "Rizwan Ahmad"
+        },
         {
           "id": 9742,
           "body": "Client Profile: Syed Sajid Ali Kazmi and Shahgul Kazmi\nLocation: Karachi\nBenefactor: Atif Kazmi (spouse of Natasha Najmi) (Referral Fuad Rashid and Nabeel)\n\nGeneral Overview\nMr Sajid: First rubber technologist in Pakistan, chemical engineer. Likes to read and has a good memory. Has served as a director at National tyre, other tyre and rubber companies. Has played cricket. Uses Phone, iPad. Watches TV: into shows, news, cricket.\nHe is close to his brothers, two of whom live nearby.\nMs Shahgul (Musarrat Afroze): DOB7/7/1941 Originally from Peshawar. Part of DHA welfare clinic free treatment board with other women friends. \nShe is a well known horticulturist, Member of the horticulture community here, Clifton Flower Show judge panel. Brings seasonal fruit and plants from everywhere etc.\nLoves family pictures, history. Her grandfathers knew Jinnah, Gandhi, Nehru etc. Huge PTI and Imran Khan supporter.\nMahrukh shared: she is very temperamental, temper, not kind hearted, can be rude and brash with servants. Servants run away, get discomfited. She is on antidepressants.\nThey have 4 daughters and a son. Ms Unsa and Mr Atif are based in the US. Ms Gulrukh is based in the UK. Ms Aleena lives in Lahore, and Ms Mahrukh moved to Islamabad a week after the LPE.\nThe couple live downstairs and the upper portion of the house is on rent.\n\nMedical Notes\nMr Sajid: BP, Arrhythmia. Gets physio 3/ week.\nMs Shahgul: Hard of hearing. She is on antidepressants.\n\nLifestyle & Support Structure\nThe couple have one permanent staff member, Kareem Buksh, and other temporary/ rotating staff including househelp and gardener etc.\nThey don't have help at night which is a cause of concern to the family.\n\nDreamweaver Notes\nVisit often to keep them engaged and ensure they don't get lonely in Mahrukh’s absence as she lived with them for many years.\nKeep an eye out for plant varieties that would interest Ms Shahful.\n\nBenefactor Information\nName: Atif Kazmi\nRelationship to Beneficiary: Son\nEducation: MBA Finance\nProfession: Business Transformation, Growth and Customer Success at Broadcom Inc.\nLocation: San Francisco, CA, USA\nLinkedIn Profile: https://www.linkedin.com/in/akazmi/",
@@ -1168,14 +1182,14 @@
           "partnerId": 665,
           "name": "Khadija Aziz",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1944-01-08",
           "isBeneficiary": true
         },
         {
           "partnerId": 1024,
           "name": "Abdul Aziz",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "1943-03-13",
           "isBeneficiary": true
         }
       ],
@@ -1265,7 +1279,7 @@
           "partnerId": 264,
           "name": "Khawaja Tariq Saeed",
           "relationship": "Father",
-          "birthday": null,
+          "birthday": "2026-10-10",
           "isBeneficiary": true
         }
       ],
@@ -1471,7 +1485,7 @@
           "partnerId": 1011,
           "name": "Riffat Mirza",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-12-29",
           "isBeneficiary": true
         }
       ],
@@ -1613,7 +1627,7 @@
           "partnerId": 270,
           "name": "Azra Parveen",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-03-02",
           "isBeneficiary": true
         }
       ],
@@ -2036,6 +2050,12 @@
       "interests": [],
       "notes": [
         {
+          "id": 53611,
+          "body": "Ms. Hina Guzemair’s mother and father have agreed to have FSO Umar accompany them for their daily walks. However, her father has clearly insisted that the FSO must not be changed and that FSO Umar should continue to be assigned for the daily walks.",
+          "createdAt": "2026-10-10T14:08:03Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
           "id": 42243,
           "body": "Before Task Creation ‼️ \n\n1) Hina Guezmir’s mother, Mrs Muzammil, requested that FSO Umar should not be assigned for her tasks. For paperwork-related tasks (bank visits, documentation, etc.), please assign FSO Qasim, while general errands should be assigned to FSO Ahsan. FSO Umar is fine for Sir’s tasks, such as walks. \n\nShe shared that FSO Umar is generally less welcoming and doesn’t engage much with her, which makes her hesitant to request additional tasks from him.\n\n2) For Hina Guezmir's daily walk updates, kindly mention how his father completed the walk, including whether he used a walking stick or walker, and where the walk was done, such as inside the residence, on the road, or in a park.",
           "createdAt": "2026-09-24T07:24:02Z",
@@ -2379,7 +2399,7 @@
           "partnerId": 273,
           "name": "Bushra Fatima",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "2026-02-15",
           "isBeneficiary": true
         }
       ],
@@ -3110,7 +3130,7 @@
     {
       "registryId": "monis-jaleel-ahmed",
       "partnerId": 1095,
-      "benefactorCode": null,
+      "benefactorCode": "KHI-3087",
       "benefactor": "Monis Jaleel Ahmed",
       "benefactorBirthday": null,
       "members": [
@@ -3430,7 +3450,7 @@
           "name": "Aslam Khan",
           "relationship": "Father",
           "birthday": null,
-          "isBeneficiary": false
+          "isBeneficiary": true
         }
       ],
       "overviewSections": [
@@ -3653,6 +3673,17 @@
       ]
     },
     {
+      "registryId": "nnn",
+      "partnerId": 1219,
+      "benefactorCode": "LHR-2042",
+      "benefactor": "NNN",
+      "benefactorBirthday": "2026-10-07",
+      "members": [],
+      "overviewSections": [],
+      "interests": [],
+      "notes": []
+    },
+    {
       "registryId": "nabeel-mian",
       "partnerId": 139,
       "benefactorCode": "ISB-1014",
@@ -3780,6 +3811,18 @@
       ],
       "interests": [],
       "notes": [
+        {
+          "id": 56410,
+          "body": "When sending the payment receipt to Ma'am Parveen. Send the picture of the receipt and the text separately (in separate messages).",
+          "createdAt": "2026-10-13T19:46:18Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
+          "id": 54966,
+          "body": "IMP \nWhen making check in visit; add the task to see if the car is clean or not",
+          "createdAt": "2026-10-12T12:52:09Z",
+          "author": "Rizwan Ahmad"
+        },
         {
           "id": 50393,
           "body": "NOTE \nWater Tanker-\nEasypaisa\n03032153128\nMuhammad Bilal",
@@ -4106,6 +4149,56 @@
           "id": 9788,
           "body": "Client Profile: Tauqir Ali and Rana Tauqir\nLocation: Karachi\nBenefactor: Osama Ali\n\nGeneral Overview\nMr Tauqir Ali, in his late seventies, is a consultant for the Pakistan armed forces. He works in- office in M. Ali Society, and his timings are 10 am- 6 pm, six days a week. He also often travels nearby for work needs. He has Fridays off. \nMr Tauqir’s family is worried about his overall well-being as he still works very hard. He also manages hypertension, which can be worsened by his busy routine.\nMs Rana Tauqir is in her early seventies and runs a coworking space, working both remotely and in the office. \nShe is very active and does her own ironing and makes breakfast; however, since she has been getting unwell more often now, her family is looking for 24-hour care.\nShe has been in Dubai with her daughter since December 2025.\nThe couple’s children include: Umera, Osama, Uroosa and another daughter based in the USA.\n\nMedical Notes\nMr Tauqir Ali\nThe client is a 78-year-old managing hypertension among other comorbidities.\nMs Rana Tauqir\nThe client is 71 years old. She was diagnosed with epilepsy 15 years ago. At the LPE in December 2025, she had been fit-free for 8 months.\n\nLifestyle & Support Structure\nThe clients both have a busy personal and professional life. Prioritise gesture, check- ins as needed. \nRegularly remain in contact with Ms Umera and Mr Osama for updates.\n\nBenefactor Information\nName: Osama Ali\nRelationship to Beneficiary: Son\nEducation: \nProfession:\nLocation: USA\nLinkedIn Profile:",
           "createdAt": "2026-08-10T05:51:38Z",
+          "author": "Rizwan Ahmad"
+        }
+      ]
+    },
+    {
+      "registryId": "owais",
+      "partnerId": 1118,
+      "benefactorCode": "KHI-3086",
+      "benefactor": "Owais Mohammad",
+      "benefactorBirthday": null,
+      "members": [
+        {
+          "partnerId": 1119,
+          "name": "Abdul Bari",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1208,
+          "name": "Zareen Bari",
+          "relationship": "Mother",
+          "birthday": null,
+          "isBeneficiary": false
+        }
+      ],
+      "overviewSections": [
+        {
+          "heading": "Overview",
+          "body": "AbdulBari- Nov 15, 1941 - 03433371464\n\nZareen- Dec 18, 1949 - 03453097360\n\nHouse belongs to Eldest daughter who lives in Zurich\n\nUncle grew up in Calcutta lived there till '69. his father was a billiard champion. Aunty was born in Dhaka. they both got married there and stayed there till 74.\n\nAunty was retired headmistress, at Little Folks North Nazimabad. taught her kids to drive. attends dars once a week. stays in touch with old colleagues. she likes hosting. doesn't like going out- has to get ready. she has one brother in Toronto.\n\nUncle was banker at HBL (32 years) KASB, Prudential and Soneri(6 years) took a golden handshake at 55 (2009), played football, still drives on Sundays.\n\nRecently visited Zurich last year-"
+        }
+      ],
+      "interests": [],
+      "notes": [
+        {
+          "id": 56758,
+          "body": "IMPORTANT: \nAll payments through wallet.\nParents must NOT pay",
+          "createdAt": "2026-10-14T05:44:26Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
+          "id": 54813,
+          "body": "- family is very concerned about the maid and their work. they think maid recruitted through the agencies we work with will be very well mannered. counseled them that its not a compulsion, they will eventually have to be trained according to clients own needs\n- owais is leaving on the 20th. \n- sent user agreement\n- sent terms and conditions document\n- concerns about reviews\n- he thinks google reviews are not verified so thats not a valid point of reference.\nComplete Notes (Ops) :\n- family is very concerned about the maid and their work. they think maid recruitted through the agencies we work with will be very well mannered. counseled them that its not a compulsion, they will eventually have to be trained according to clients own needs\n- owais is leaving on the 20th. \n- sent user agreement\n- sent terms and conditions document\n- concerns about reviews\n- he thinks google reviews are not verified so thats not a valid point of reference.",
+          "createdAt": "2026-10-12T09:55:08Z",
+          "author": "Rizwan Ahmad"
+        },
+        {
+          "id": 54812,
+          "body": "Call ID : MC-20261010-BA8C5282\nCall Type : Follow-up\nPrevious Call ID : MC-20261009-D44C8FD2\nDate : 10 Oct 2026\nTime : 12:41\nCall Duration : 19:54\nOnboarding Specialist : Elma\nData Source : Zoom Call\nCall Outcome : Attended\nBenefactor Name : Owais\nBenefactor Gender : Male\nEmail : owais@provisiocare.co.uk\nBenefactor LinkedIn : —\nWhatsApp / Phone : +44447540192467\nCalling From – Country : United Kingdom\nCalling From – City : Manchester\nHow They Heard – Category : Digital Media & Social Channels\nHow They Heard – Detail : Instagram\nBenefactor Profession : —\nBeneficiary Name(s) : Abdul Bari; Zareen Bari\nBeneficiary Relation(s) : Father; Mother\nBeneficiary Age(s) : 86; 77\nBeneficiary Gender(s) : Male; Female\nBeneficiary City (Pakistan) : Karachi; Karachi\nBeneficiary Area / Locality : DHA phase 6, khayaban e saher; DHA phase 6, khayaban e saher\nBeneficiary Ailments : bp, prediabetic , start of dementia now.; diabetic, high bp\nFamily Backstory : 5 siblings. 3 siblings abroad. 2 sisters in pakistan. owais is the only son.\nServices Requested : Errands & everyday support, Emergency support, Domestic Support\nPackage Type : Premium\nFlexible Plan / Variation Details : —\nSubscription Plan : Monthly\nPayment Link Sent? : No\nLead Status : Hot\nPipeline Stage : Subscribed-Won\nPeculiarities / Additional Info : —\nOnboarding Specialist's Assessment : moderate lead. might convert if charges seem feasible for them. since the whole family was on call, charges were not discussed.\nWhat's Changed : follow up call to talk about the charges and implementation procedure since these things were not discussed in the initial call because all family members were present over there.",
+          "createdAt": "2026-10-12T09:54:57Z",
           "author": "Rizwan Ahmad"
         }
       ]
@@ -4616,7 +4709,15 @@
       "benefactorCode": "RWP-8001",
       "benefactor": "Saquib Farooq Malik",
       "benefactorBirthday": null,
-      "members": [],
+      "members": [
+        {
+          "partnerId": 1120,
+          "name": "Farooq Zaman Malik",
+          "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
       "overviewSections": [
         {
           "heading": "Overview",
@@ -5913,32 +6014,6 @@
       "notes": []
     },
     {
-      "registryId": "tasnim-ahmed",
-      "partnerId": 993,
-      "benefactorCode": "TES-002",
-      "benefactor": "Tasnim Ahmed",
-      "benefactorBirthday": null,
-      "members": [
-        {
-          "partnerId": 1076,
-          "name": "Test Beneficiary 1",
-          "relationship": "Mother",
-          "birthday": null,
-          "isBeneficiary": true
-        },
-        {
-          "partnerId": 1077,
-          "name": "Test Beneficiary 2",
-          "relationship": "Father",
-          "birthday": null,
-          "isBeneficiary": true
-        }
-      ],
-      "overviewSections": [],
-      "interests": [],
-      "notes": []
-    },
-    {
       "registryId": "tauseef-ali",
       "partnerId": 188,
       "benefactorCode": "LHR-2037",
@@ -5949,6 +6024,13 @@
           "partnerId": 301,
           "name": "Muhammad Asghar",
           "relationship": "Father",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1216,
+          "name": "Rizwana Asghar",
+          "relationship": "Mother",
           "birthday": null,
           "isBeneficiary": true
         }
@@ -5991,6 +6073,17 @@
           "body": "Hafiz Arshad – Driver\nBeenish – Housekeeping Staff\nBeenish’s Daughter – Housekeeping Support"
         }
       ],
+      "interests": [],
+      "notes": []
+    },
+    {
+      "registryId": "testtt",
+      "partnerId": 1217,
+      "benefactorCode": "ISB-1041",
+      "benefactor": "Testtt",
+      "benefactorBirthday": "2026-10-14",
+      "members": [],
+      "overviewSections": [],
       "interests": [],
       "notes": []
     },
@@ -6038,21 +6131,21 @@
           "partnerId": 1093,
           "name": "Jamila Khalique (Mami of Umair Saleem)",
           "relationship": "Aunt",
-          "birthday": null,
+          "birthday": "1945-02-15",
           "isBeneficiary": true
         },
         {
           "partnerId": 1097,
           "name": "Khalique Ahmed",
           "relationship": "Uncle",
-          "birthday": null,
+          "birthday": "1945-06-16",
           "isBeneficiary": true
         }
       ],
       "overviewSections": [
         {
           "heading": "Overview",
-          "body": "Client / Family Details\n\nPrimary contact: Umair\nUmair’s wife: Yusra Alvi, also on the call\nLocation: Netherlands\nPatient: Umair’s maternal uncle (Mamu), approximately 75 years old Syed Khalique Ahmed\nResidence: Block 1, Gulshan-e-Iqbal, Karachi\nFamily: His wife lives with him and frequently travels to Australia to visit their children. His sons have been living in Australia for several years and are currently unfamiliar with Karachi.\nUmair’s cousins (patient’s sons) have asked Yusra to take the lead in coordinating his care. They will be added to the WhatsApp group once they are onboarded.\nCurrent Situation\nThe patient was involved in an accident approximately 2–3 days ago, when a Qingqi/Chingchi rickshaw struck him.\nHe sustained a hip fracture and is likely to require hip replacement surgery.\nThe family only became aware of the accident last night.\nRandom bystanders initially took him to the hospital.\nHe first visited Ashfaq Hospital, where he was given a temporary/simple plaster.\nHe later visited TO Clinic with his nephew, where a further diagnosis was provided based on the initial X-ray, but the family would now like a proper orthopedic assessment and a more reliable diagnosis.\nAt present, the patient is reluctant/unwilling to go to the hospital and has only a basic bandage/plaster in place.\n\nPatient Background\nThe patient is very independent and strong-willed. He normally manages his own daily activities, including cooking and cleaning.\nThe family describes him as someone who prefers to do everything himself.\nHe is not abusive; however, he may be resistant to assistance and can sometimes tell elaborate stories or give reasons to discourage people from approaching him.\nThe team should therefore approach him patiently and introduce themselves as Umair’s friends to help establish trust.\nRequired Support\n\nThe family would like Mohsyn to take over the coordination of the patient's care, including:\n\nArrange an orthopedic consultation for a proper assessment and diagnosis.\nCoordinate transportation/medical assistance to take him to the hospital, potentially as an emergency case.\nThe family is considering AKUH for the initial assessment and would also like the surgery to be scheduled there if recommended.\nCoordinate the treatment and hospital process throughout.\nArrange a suitable caretaker to support him after surgery.\nOnce he has recovered sufficiently from surgery, arrange physiotherapy and ongoing rehabilitation support.\nKeep the family updated throughout the process.\nAdditional Medical Coordination\nUmair’s elder brother is a doctor, an AKU graduate, and currently practicing in the USA. He may also be involved in reviewing or advising on the patient's treatment.\nGiven the conflicting/limited assessments received so far, the family would like the next medical assessment to be comprehensive and based on proper imaging and orthopedic evaluation."
+          "body": "Client / Family Details\n\nPrimary contact: Umair\nUmair’s wife: Yusra Alvi, also on the call\nLocation: Netherlands\nPatient: Umair’s maternal uncle (Mamu), approximately 75 years old Syed Khalique Ahmed\nResidence: Block 1, Gulshan-e-Iqbal, Karachi\nFamily: His wife lives with him and frequently travels to Australia to visit their children. His sons have been living in Australia for several years and are currently unfamiliar with Karachi.\nUmair’s cousins (patient’s sons) have asked me Yusra to take the lead in coordinating his care. They will be added to the WhatsApp group once they are onboarded.\nCurrent Situation\nThe patient was involved in an accident approximately 2–3 days ago, when a Qingqi/Chingchi rickshaw struck him.\nHe sustained a hip fracture and is likely to require hip replacement surgery.\nThe family only became aware of the accident last night.\nRandom bystanders initially took him to the hospital.\nHe first visited Ashfaq Hospital, where he was given a temporary/simple plaster.\nHe later visited TO Clinic with his nephew, where a further diagnosis was provided based on the initial X-ray, but the family would now like a proper orthopedic assessment and a more reliable diagnosis.\nAt present, the patient is reluctant/unwilling to go to the hospital and has only a basic bandage/plaster in place.\n\nPatient Background\nThe patient is very independent and strong-willed. He normally manages his own daily activities, including cooking and cleaning.\nThe family describes him as someone who prefers to do everything himself.\nHe is not abusive; however, he may be resistant to assistance and can sometimes tell elaborate stories or give reasons to discourage people from approaching him.\nThe team should therefore approach him patiently and introduce themselves as Umair’s friends to help establish trust.\nRequired Support\n\nThe family would like Mohsyn to take over the coordination of the patient's care, including:\n\nArrange an orthopedic consultation for a proper assessment and diagnosis.\nCoordinate transportation/medical assistance to take him to the hospital, potentially as an emergency case.\nThe family is considering AKUH for the initial assessment and would also like the surgery to be scheduled there if recommended.\nCoordinate the treatment and hospital process throughout.\nArrange a suitable caretaker to support him after surgery.\nOnce he has recovered sufficiently from surgery, arrange physiotherapy and ongoing rehabilitation support.\nKeep the family updated throughout the process.\nAdditional Medical Coordination\nUmair’s elder brother is a doctor, an AKU graduate, and currently practicing in the USA. He may also be involved in reviewing or advising on the patient's treatment.\nGiven the conflicting/limited assessments received so far, the family would like the next medical assessment to be comprehensive and based on proper imaging and orthopedic evaluation.\n\nUncle and Aunty got married in 1969 and moved to the UAE in 1974, where Uncle, a biochemist, had moved a year earlier. Aunty worked as a microbiologist in a laboratory. Uncle grew up in Aligarh and had many friends, including the renowned poet Jaun Elia, who was his neighbour. Uncle and Aunty frequently attended gatherings with Jaun Elia and his wife, Zahida Hina.\n\nAround 20 years ago, they returned to Pakistan and settled in Karachi. They have three children: Osama, Asma, and Anas. Osama and Asma moved from the UAE to Australia and the USA, respectively, where they settled with their own families.\n\nBoth Uncle and Aunty are very active and independent, managing their daily activities themselves. Uncle particularly enjoys taking long walks through the streets of Karachi. Aunty is very chatty and loves telling stories from her life."
         }
       ],
       "interests": [],
@@ -6515,6 +6608,53 @@
       ]
     },
     {
+      "registryId": "zafar-kazmi",
+      "partnerId": 1122,
+      "benefactorCode": "KHI-3085",
+      "benefactor": "Zafar Kazmi",
+      "benefactorBirthday": null,
+      "members": [
+        {
+          "partnerId": 1123,
+          "name": "Syed Afzal Hussain kazmi",
+          "relationship": "Uncle",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1124,
+          "name": "Ishrat Afzal kazmi",
+          "relationship": "Aunt",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1125,
+          "name": "Furqan Masood",
+          "relationship": "Brother",
+          "birthday": null,
+          "isBeneficiary": true
+        },
+        {
+          "partnerId": 1126,
+          "name": "Dr Saman",
+          "relationship": "Sister",
+          "birthday": null,
+          "isBeneficiary": true
+        }
+      ],
+      "overviewSections": [],
+      "interests": [],
+      "notes": [
+        {
+          "id": 56380,
+          "body": "Benefactor Information\n- Name: Furqan Masood\n- Signed-Up Name: Zafar Kazmi\n- Gender: Male\n- Profession: General Manager at AGP Limited, a pharmaceutical company\n- Email: furqanmsafavi@gmail.com\n- LinkedIn: https://www.linkedin.com/in/furqanmasood \n- Phone/WhatsApp: +92923002009963\n- Country: Pakistan\n- City: Karachi\n- Source: Influencers & Podcasts\n- Source Details: Other Podcasts & Interviews\n\nBeneficiary Information\n\nBeneficiary 1: Afzal Kazmi (Uncle)\n- Age: 60+\n- Gender: Male\n- City: Lahore\n- Area: Township\n- Medical Condition: Developed neurological issues following a fall and was hospitalized earlier in 2026.\n- Current Condition: Has limited mobility but is not bedridden.\n- Support Needs: Medical assistance, physiotherapy, daily errands, and FSO support.\n\nBeneficiary 2: Ishrat Afzal (Aunt)\n- Age: 60+\n- Gender: Female\n- City: Lahore\n- Area: Township\n- Medical Conditions: Heart issues and diabetes.\n- Current Condition: Continues to manage household activities.\n- Support Needs: Medical assistance, medicine delivery, daily errands, and emergency support.\n\nFamily Background\n- The beneficiaries are the benefactor's wife's chacha and chachi.\n- They have no biological children.\n- Their two adopted sons currently live abroad.\n- The family requires reliable support for daily activities, medical needs, and routine errands.",
+          "createdAt": "2026-10-13T18:49:45Z",
+          "author": "Rizwan Ahmad"
+        }
+      ]
+    },
+    {
       "registryId": "zaheer-ahmed-waheed",
       "partnerId": 146,
       "benefactorCode": "KHI-3073",
@@ -6655,7 +6795,7 @@
           "partnerId": 619,
           "name": "Hajra Begum",
           "relationship": "Mother",
-          "birthday": null,
+          "birthday": "1952-09-15",
           "isBeneficiary": true
         }
       ],
@@ -6717,6 +6857,17 @@
           "body": "- Follow-Up: Await an update from Zohra following her conversation with her mother.\n\n- Service Plan Customization: Prepare an outdoor-focused service agreement that respects domestic entry boundaries.\n\n- Field Team Briefing: Ensure the local Karachi operational team is briefed regarding the ground-floor bank meeting protocol for initial consultations."
         }
       ],
+      "interests": [],
+      "notes": []
+    },
+    {
+      "registryId": "test-benefactor",
+      "partnerId": 1211,
+      "benefactorCode": null,
+      "benefactor": "teSt benefactor",
+      "benefactorBirthday": null,
+      "members": [],
+      "overviewSections": [],
       "interests": [],
       "notes": []
     }
